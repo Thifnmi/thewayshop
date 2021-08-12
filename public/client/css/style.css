@@ -32,6 +32,7 @@
 /*------------------------------------------------------------------
     SKELETON
 -------------------------------------------------------------------*/
+
  body {
      color: #666666;
      font-size: 15px;
@@ -84,11 +85,19 @@
  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
      opacity: .8 
 }
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
  a {
      color: #1f1f1f;
      text-decoration: none;
      outline: none;
 }
+
  a, .btn {
      text-decoration: none !important;
      outline: none !important;
@@ -1994,7 +2003,7 @@
 }
  .new-account-login h5 {
      font-size: 18px;
-     color: #1111111;
+     color: #1111;
      font-weight: 600;
 }
  .new-account-login h5 a:hover{
@@ -2394,25 +2403,3 @@
      white-space: nowrap;
 }
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

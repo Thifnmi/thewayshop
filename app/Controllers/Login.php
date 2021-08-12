@@ -5,7 +5,7 @@ class Login extends BaseController
 {
     public function index()
     {
-        return view('client/index');
+        return view('client/login');
         # code...
     }
 }
