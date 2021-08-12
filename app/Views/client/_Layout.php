@@ -57,24 +57,26 @@
                         <li class="nav-item active"><a class="nav-link" href="<?= base_url() ?>">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/About">About Us</a></li>
                         <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Product <i class="fad fa-chevron-down"></i></a>
+                            <a href="#" class="nav-link" data-toggle="dropdown">Jewelry <i class="fad fa-chevron-down"></i></a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
                                 <li>
                                     <div class="row">
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Top</h6>
+                                            <h6 class="title">Types</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Jackets</a></li>
-                                                    <li><a href="#">Shirts</a></li>
+                                                    <?php foreach ($categories as $item):?>
+                                                        <li><a href="<?= base_url()?>/category/<?= $item['id']?>"><?= $item['name']?></a></li>
+                                                    <?php endforeach;?>
+                                                    <!-- <li><a href="#">Shirts</a></li>
                                                     <li><a href="#">Sweaters & Cardigans</a></li>
-                                                    <li><a href="#">T-shirts</a></li>
+                                                    <li><a href="#">T-shirts</a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
                                         <!-- end col-3 -->
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Bottom</h6>
+                                            <h6 class="title">Material</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
                                                     <li><a href="#">Swimwear</a></li>
@@ -86,24 +88,80 @@
                                         </div>
                                         <!-- end col-3 -->
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Clothing</h6>
+                                            <h6 class="title">Collections</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Top Wear</a></li>
-                                                    <li><a href="#">Party wear</a></li>
-                                                    <li><a href="#">Bottom Wear</a></li>
-                                                    <li><a href="#">Indian Wear</a></li>
+                                                    <li><a href="#">Sun Flower</a></li>
+                                                    <li><a href="#">True Love</a></li>
+                                                    <li><a href="#">First Diamond</a></li>
+                                                    <li><a href="#">Mother's Day</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Accessories</h6>
+                                            <h6 class="title">Brands</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
                                                     <li><a href="#">Bags</a></li>
                                                     <li><a href="#">Sunglasses</a></li>
                                                     <li><a href="#">Fragrances</a></li>
                                                     <li><a href="#">Wallets</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                    </div>
+                                    <!-- end row -->
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Watches <i class="fad fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Gender</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Mens</a></li>
+                                                    <li><a href="#">Ladies</a></li>
+                                                    <li><a href="#">Unisex</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Material</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Diamond</a></li>
+                                                    <li><a href="#">Gold</a></li>
+                                                    <li><a href="#">Silver</a></li>
+                                                    <!-- <li><a href="#">Trousers</a></li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Collections</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">Sun Flower</a></li>
+                                                    <li><a href="#">True Love</a></li>
+                                                    <li><a href="#">First Diamond</a></li>
+                                                    <li><a href="#">Mother's Day</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Brands</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="#">PNJ</a></li>
+                                                    <li><a href="#">Silver|PNJ</a></li>
+                                                    <li><a href="#">Michael Kors</a></li>
+                                                    <li><a href="#">Fossil</a></li>
                                                 </ul>
                                             </div>
                                         </div>

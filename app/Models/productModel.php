@@ -16,4 +16,10 @@ class productmodel extends Model
     {
         return $this->find($id);
     }
+
+    public function getProductByCategory(int $cid)
+    {
+        return $this->where('category_id' ,$cid)->findAll();
+        # code...
+    }
 }
