@@ -119,7 +119,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="">Profile</a></li>
                                 <li><a href="">Login</a></li>
-                                <li><a href="l">Logout</a></li>
+                                <li><a href="">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -158,7 +158,7 @@
                             <p>1x - <span class="price">$40.00</span></p>
                         </li>
                         <li class="total">
-                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                            <a href="<?= base_url()?>/Cart" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
                             <span class="float-right"><strong>Total</strong>: $180.00</span>
                         </li>
                     </ul>

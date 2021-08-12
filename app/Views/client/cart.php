@@ -38,7 +38,7 @@
                                 <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="images/img-pro-01.jpg" alt="" />
+									<img class="img-fluid" src="<?= base_url()?>/client/images/img-pro-01.jpg" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">
@@ -62,7 +62,7 @@
                                 <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="images/img-pro-02.jpg" alt="" />
+									<img class="img-fluid" src="<?= base_url()?>/client/images/img-pro-02.jpg" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">
@@ -86,7 +86,7 @@
                                 <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="images/img-pro-03.jpg" alt="" />
+									<img class="img-fluid" src="<?= base_url()?>/client/images/img-pro-03.jpg" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">
@@ -164,7 +164,7 @@
                         </div>
                         <hr> </div>
                 </div>
-                <div class="col-12 d-flex shopping-box"><a href="checkout.html" class="ml-auto btn hvr-hover">Checkout</a> </div>
+                <div class="col-12 d-flex shopping-box"><a href="<?= base_url()?>/Checkout" class="ml-auto btn hvr-hover">Checkout</a> </div>
             </div>
 
         </div>
