@@ -4,10 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Site Metas -->
     <title>ThewayShop</title>
     <meta name="keywords" content="">
@@ -28,7 +26,6 @@
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/custom.css">
-
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -118,7 +115,7 @@
                             <a href="#" class="nav-link" data-toggle="dropdown">My Account <i class="fad fa-user-circle"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="">Profile</a></li>
-                                <li><a href="">Login</a></li>
+                                <li><a href="<?= base_url() ?>/Login">Login</a></li>
                                 <li><a href="">Logout</a></li>
                             </ul>
                         </li>
@@ -158,7 +155,7 @@
                             <p>1x - <span class="price">$40.00</span></p>
                         </li>
                         <li class="total">
-                            <a href="<?= base_url()?>/Cart" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                            <a href="<?= base_url() ?>/Cart" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
                             <span class="float-right"><strong>Total</strong>: $180.00</span>
                         </li>
                     </ul>
@@ -348,6 +345,7 @@
     <script src="<?= base_url() ?>/client/js/form-validator.min.js"></script>
     <script src="<?= base_url() ?>/client/js/contact-form-script.js"></script>
     <script src="<?= base_url() ?>/client/js/custom.js"></script>
+   
 
 </body>
 
