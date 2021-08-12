@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
+    <title>ThewayShop</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -114,7 +114,14 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/Contact">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">My Account <i class="fad fa-user-circle"></i></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">My Account <i class="fad fa-user-circle"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Profile</a></li>
+                                <li><a href="">Login</a></li>
+                                <li><a href="l">Logout</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
