@@ -42,13 +42,13 @@
                                                                 title="Detail"><i class="fas fa-info-circle"></i></a>
                                                         </div>
                                                         <div class="ac">
-                                                            <a href="<?php echo base_url().'/admin/admin/edit?id='.$row['id']?>" data-toggle="tooltip" data-placement="bottom"
+                                                            <a href="<?php echo base_url().'/admin/account/edit?id='.$row['id']?>" data-toggle="tooltip" data-placement="bottom"
                                                                 title="Edit"><i class="far fa-edit"></i> </a>
                                                         </div>
                                                         <div class="ac">
-                                                            <!-- <a href="<?php echo base_url().'/admin/admin/delete?id='.$row['id']?>" data-toggle="tooltip" data-placement="bottom"
+                                                            <!-- <a href="<?php echo base_url().'/admin/account/delete?id='.$row['id']?>" data-toggle="tooltip" data-placement="bottom"
                                                                 title="Delete" onclick="return confirm('Are you sure?');"><i class="far fa-trash-alt"></i></a> -->
-                                                                <a href="<?php echo base_url().'/admin/admin/delete?id='.$row['username']?>" data-toggle="tooltip" data-placement="bottom" onclick="return confirm('Are you sure?');"
+                                                                <a href="<?php echo base_url().'/admin/account/delete?id='.$row['username']?>" data-toggle="tooltip" data-placement="bottom" onclick="return confirm('Are you sure?');"
                                                                 id="sa-confirm" data-original-title="Delete"><i class="far fa-trash-alt"></i></a>
                                                         </div>
 

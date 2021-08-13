@@ -195,8 +195,8 @@
                                 aria-expanded="false"><i class="icon-people"></i><span
                                     class="hide-menu">Admin</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?= base_url() ?>/admin/admin">All Admin</a></li>
-                                <li><a href="<?= base_url() ?>/admin/admin/add">Add Admin</a></li>
+                                <li><a href="<?= base_url() ?>/admin/account">All Admin</a></li>
+                                <li><a href="<?= base_url() ?>/admin/account/add">Add Admin</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
