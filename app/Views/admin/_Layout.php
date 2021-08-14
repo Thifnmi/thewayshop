@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/admin/assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Admin The Way Shop</title>
     <!-- This page CSS -->
     <!-- chartist CSS -->
     <link href="<?= base_url() ?>/admin/assets/node_modules/morrisjs/morris.css" rel="stylesheet">
@@ -211,13 +211,13 @@
                                 <li><a href="<?= base_url() ?>/admin/supplier/add">Add Supplier</a></li>
                             </ul>
                         </li>
-
+<!-- 
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-receipt"></i><span class="hide-menu">Comment</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="<?= base_url() ?>/admin/comment">All Comment</a></li>
                                 <li><a href="<?= base_url() ?>/admin/comment/add">Add comment</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
                                 aria-expanded="false"><i class="ti-receipt"></i><span class="hide-menu">About
                                     page</span></a>

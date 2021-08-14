@@ -9,13 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/public/admin/assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/admin/assets/images/favicon.png">
+    <title>Admin The Way Shop </title>
     
     <!-- page css -->
-    <link rel="stylesheet" href="<?= base_url() ?>/public/admin/crm/dist/css/pages/login-register-lock.css" >
+    <link rel="stylesheet" href="<?= base_url() ?>/admin/crm/dist/css/pages/login-register-lock.css" >
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>/public/admin/crm/dist/css/style.min.css" >
+    <link rel="stylesheet" href="<?= base_url() ?>/admin/crm/dist/css/style.min.css" >
     
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,7 +34,7 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <section id="wrapper">
-        <div class="login-register" style="background-image:url(<?= base_url() ?>/public/admin/assets/images/background/login-register.jpg);">
+        <div class="login-register" style="background-image:url(<?= base_url() ?>/admin/assets/images/background/login-register.jpg);">
             <div class="login-box card">
                 <div class="card-body">
                     <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url().'/admin/login'?>" method="POST">
@@ -77,10 +77,10 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="<?= base_url() ?>/public/admin/assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <script src="<?= base_url() ?>/admin/assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="<?= base_url() ?>/public/admin/assets/node_modules/popper/popper.min.js"></script>
-    <script src="<?= base_url() ?>/public/admin/assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>/admin/assets/node_modules/popper/popper.min.js"></script>
+    <script src="<?= base_url() ?>/admin/assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!--Custom JavaScript -->
     
     
