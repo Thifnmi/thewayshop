@@ -7,7 +7,7 @@
             <div class="col-lg-12">
                 <h2>ABOUT US</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>/Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
                     <li class="breadcrumb-item active">About Us</li>
                 </ul>
             </div>

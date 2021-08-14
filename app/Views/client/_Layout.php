@@ -63,7 +63,7 @@
                                             <div class="content">
                                                 <ul class="menu-col">
                                                     <?php foreach ($categories as $item):?>
-                                                        <li><a href="<?= base_url()?>/category/<?= $item['id']?>"><?= $item['name']?></a></li>
+                                                        <li><a href="<?= base_url()?>/Category/<?= $item['id']?>"><?= $item['name']?></a></li>
                                                     <?php endforeach;?>
                                                     <!-- <li><a href="#">Shirts</a></li>
                                                     <li><a href="#">Sweaters & Cardigans</a></li>
@@ -246,7 +246,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-01.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -254,7 +254,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-02.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -262,7 +262,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-03.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -270,7 +270,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-04.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -278,7 +278,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-05.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -286,7 +286,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-06.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -294,7 +294,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-07.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -302,7 +302,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-08.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -310,7 +310,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-09.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -318,7 +318,7 @@
                 <div class="ins-inner-box">
                     <img src="<?= base_url() ?>/client/images/instagram-img-10.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -336,7 +336,7 @@
                         <div class="footer-link">
                             <h4>HELP</h4>
                             <ul>
-                                <li><a href="<?= base_url() ?>/Home">Advise </a></li>
+                                <li><a href="<?= base_url() ?>">Advise </a></li>
                                 <li><a href="<?= base_url() ?>/About">Shipping and Delivery</a></li>
                                 <li><a href="<?= base_url() ?>/About">Payment</a></li>
                                 <li><a href="<?= base_url() ?>/Contact">Returns</a></li>
@@ -347,7 +347,7 @@
                         <div class="footer-link">
                             <h4>Collection</h4>
                             <ul>
-                                <li><a href="<?= base_url() ?>/Home"> Home </a></li>
+                                <li><a href="<?= base_url() ?>"> Home </a></li>
                                 <li><a href="<?= base_url() ?>/About">About Us</a></li>
                                 <li><a href="<?= base_url() ?>/About">Product</a></li>
                                 <li><a href="<?= base_url() ?>/Contact">Contact Us</a></li>

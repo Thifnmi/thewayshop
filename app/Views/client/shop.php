@@ -8,7 +8,7 @@
             <div class="col-lg-12">
                 <h2>Shop</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>/Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
                     <li class="breadcrumb-item active">Shop</li>
                 </ul>
             </div>
@@ -227,16 +227,18 @@
                                                     <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                     <div class="mask-icon">
                                                         <ul>
-                                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                            <li><a href="<?= base_url()?>/Product/<?= $product['id']?>" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                            <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li> -->
                                                             <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
                                                         </ul>
                                                         <a class="cart" href="#">Add to Cart</a>
                                                     </div>
                                                 </div>
                                                 <div class="why-text">
-                                                    <h4><?= $product['product_name'] ?></h4>
-                                                    <h5><?= $product['price'] ?> vnd</h5>
+                                                    <a href="<?= base_url()?>/Product/<?= $product['id']?>">
+                                                        <h4><?= $product['product_name'] ?></h4>
+                                                        <h5><?= $product['price'] ?> vnd</h5>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -256,9 +258,9 @@
                                                         <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                         <div class="mask-icon">
                                                             <ul>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                                <li><a href="<?= base_url()?>/Product/<?= $product['id']?>" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
                                                             </ul>
 
                                                         </div>
@@ -267,13 +269,16 @@
                                             </div>
                                             <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
                                                 <div class="why-text full-width">
-                                                    <h4><?= $product['product_name'] ?></h4>
+                                                    <a href="<?= base_url()?>/Product/<?= $product['id']?>"><h4><?= $product['product_name'] ?></h4></a>
                                                     <!-- <del><?= $product['price'] ?></del> -->
                                                     <h5><?= $product['price'] ?> vnd</h5>
                                                     <?php $daylamota = $product['description'];
-                                                    $mota = explode(",", $daylamota); ?>
-                                                    <!-- for($i;$i<str_word_count($mota);i++): -->
-                                                    <p><?= $mota[0] ?></p>
+                                                        $mota = explode(",", $daylamota); ?>
+                                                        <p>
+                                                        <?php foreach($mota as $des):?>
+                                                            <?= $des ?>
+                                                        <?php endforeach;?>
+                                                        </p>
                                                     <?php ?>
                                                     <a class="btn hvr-hover" href="#">Add to Cart</a>
                                                 </div>

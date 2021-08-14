@@ -53,7 +53,7 @@
                     <button class="ghost" id="signIn">Sign In</button>
                     <p>Or you can</p>
                     <button class="ghost">
-                        <a style="color:#fff" href="<?= base_url() ?>/Home">Continue as guest</a>
+                        <a style="color:#fff" href="<?= base_url() ?>">Continue as guest</a>
                     </button>
                 </div>
                 <div class="overlay-panel overlay-right">
@@ -62,7 +62,7 @@
                     <button class="ghost" id="signUp">Sign Up</button>
                     <p>Or you can</p>
                     <button class="ghost">
-                        <a style="color:#fff" href="<?= base_url() ?>/Home">Continue as guest</a>
+                        <a style="color:#fff" href="<?= base_url() ?>">Continue as guest</a>
                     </button>
                 </div>
             </div>

@@ -8,7 +8,7 @@
             <div class="col-lg-12">
                 <h2>My Account</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>/Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
                     <li class="breadcrumb-item active">My Account</li>
                 </ul>
             </div>

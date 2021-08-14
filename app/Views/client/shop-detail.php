@@ -8,7 +8,7 @@
             <div class="col-lg-12">
                 <h2>Shop Detail</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>/Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
                     <li class="breadcrumb-item active">Shop Detail </li>
                 </ul>
             </div>
@@ -24,9 +24,14 @@
             <div class="col-xl-5 col-lg-5 col-md-6">
                 <div id="carousel-example-1" class="single-product-slider carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active"> <img class="d-block w-100" src="<?= base_url()?>/client/images/big-img-01.jpg" alt="First slide"> </div>
-                        <div class="carousel-item"> <img class="d-block w-100" src="<?= base_url()?>/client/images/big-img-02.jpg" alt="Second slide"> </div>
-                        <div class="carousel-item"> <img class="d-block w-100" src="<?= base_url()?>/client/images/big-img-03.jpg" alt="Third slide"> </div>
+                        <?php foreach($productImage as $image):?>
+                            <?php if ($image['url'] == $productImage[0]['url']):?>
+                                <div class="carousel-item active"> <img class="d-block w-100" src="<?= $image['url']?>" alt="First slide"> </div>
+                            <?php else: ?>
+                            <div class="carousel-item"> <img class="d-block w-100" src="<?= $image['url']?>" alt="Second slide"> </div>
+                            <!-- <div class="carousel-item"> <img class="d-block w-100" src="<?= base_url()?>/client/images/big-img-03.jpg" alt="Third slide"> </div> -->
+                            <?php endif?>
+                        <?php endforeach;?>
                     </div>
                     <a class="carousel-control-prev" href="#carousel-example-1" role="button" data-slide="prev">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -37,23 +42,28 @@
                         <span class="sr-only">Next</span>
                     </a>
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-1" data-slide-to="0" class="active">
-                            <img class="d-block w-100 img-fluid" src="<?= base_url()?>/client/images/smp-img-01.jpg" alt="" />
-                        </li>
-                        <li data-target="#carousel-example-1" data-slide-to="1">
-                            <img class="d-block w-100 img-fluid" src="<?= base_url()?>/client/images/smp-img-02.jpg" alt="" />
-                        </li>
-                        <li data-target="#carousel-example-1" data-slide-to="2">
+                        <?php foreach($productImage as $image):?>
+                            <?php if ($image['url'] == $productImage[0]['url']):?>
+                                <li data-target="#carousel-example-1" data-slide-to="0" class="active">
+                                    <img class="d-block w-100 img-fluid" src="<?= $image['url']?>" alt="" />
+                                </li>
+                            <?php else:?>
+                                <li data-target="#carousel-example-1" data-slide-to="1">
+                                    <img class="d-block w-100 img-fluid" src="<?= $image['url']?>" alt="" />
+                                </li>
+                            <?php endif;?>
+                        <?php endforeach;?>
+                        <!-- <li data-target="#carousel-example-1" data-slide-to="2">
                             <img class="d-block w-100 img-fluid" src="<?= base_url()?>/client/images/smp-img-03.jpg" alt="" />
-                        </li>
+                        </li> -->
                     </ol>
                 </div>
             </div>
             <div class="col-xl-7 col-lg-7 col-md-6">
                 <div class="single-product-details">
-                    <h2>Fachion Lorem ipsum dolor sit amet</h2>
-                    <h5> <del>$ 60.00</del> $40.79</h5>
-                    <p class="available-stock"><span> More than 20 available / <a href="#">8 sold </a></span>
+                    <h2><?=$product['product_name']?></h2>
+                    <h5><?=$product['price']?>VND</h5>
+                    <p class="available-stock"><span>In stock: <?=$product['quantity']?></span>
                     <p>
                     <h4>Short Description:</h4>
                     <p>Nam sagittis a augue eget scelerisque. Nullam lacinia consectetur sagittis. Nam sed neque id eros fermentum dignissim quis at tortor. Nullam ultricies urna quis sem sagittis pharetra. Nam erat turpis, cursus in ipsum at,
@@ -77,7 +87,7 @@
                         <li>
                             <div class="form-group quantity-box">
                                 <label class="control-label">Quantity</label>
-                                <input class="form-control" value="0" min="0" max="20" type="number">
+                                <input class="form-control" value="1" min="1" max="<?= $product['quantity']?>" type="number">
                             </div>
                         </li>
                     </ul>
