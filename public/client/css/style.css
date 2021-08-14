@@ -2400,4 +2400,11 @@ p {
      vertical-align: middle;
      white-space: nowrap;
 }
- 
+
+ /* More Info About Product */
+.txt{
+    font-weight: 600;
+    color: #0b75df;
+    font-size: 18px;
+    text-align: left;
+}
