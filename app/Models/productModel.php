@@ -17,9 +17,19 @@ class productModel extends Model
         return $this->find($id);
     }
 
-    public function getProductByCategory(int $cid)
+    public function getProductByCategory(int $cid, int $offset, int $recors_per_page)
     {
-        return $this->where('category_id' ,$cid)->findAll();
+        return $this->where('category_id' ,$cid)->orderby('id','desc')->findAll($recors_per_page, $offset);
+        # code...
+    }
+    public function getCountProduct(int $cid)
+    {
+        return $this->where('category_id', $cid)->countAllResults();
+        # code...
+    }
+    public function getShowProduct(int $cid)
+    {
+        return $this->where('category_id', $cid)->findAll();
         # code...
     }
 }

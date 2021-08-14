@@ -51,37 +51,15 @@
 <!-- Start Categories  -->
 <div class="categories-shop">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="<?= base_url() ?>/client/images/t-shirts-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">T-shirts</a>
+        <div class="row" style="display: inline-flex;">
+            <?php foreach($categories as $category):?>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="<?= $category['image']?>" alt="" />
+                        <a class="btn hvr-hover" href="<?= base_url()?>/Category/<?=$category['id']?>"><?= $category['name']?></a>
+                    </div>
                 </div>
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="<?= base_url() ?>/client/images/shirt-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Shirt</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="<?= base_url() ?>/client/images/wallet-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Wallet</a>
-                </div>
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="<?= base_url() ?>/client/images/women-bag-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Bags</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="<?= base_url() ?>/client/images/shoes-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Shoes</a>
-                </div>
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="<?= base_url() ?>/client/images/women-shoes-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Women Shoes</a>
-                </div>
-            </div>
+            <?php endforeach;?>
         </div>
     </div>
 </div>
@@ -94,7 +72,6 @@
             <div class="col-lg-12">
                 <div class="title-all text-center">
                     <h1>Featured Products</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
                 </div>
             </div>
         </div>
@@ -102,38 +79,43 @@
             <div class="col-lg-12">
                 <div class="special-menu text-center">
                     <div class="button-group filter-button-group">
-                        <button class="active" data-filter="*">All</button>
-                        <button data-filter=".top-featured">Top featured</button>
-                        <button data-filter=".best-seller">Best seller</button>
+                        <?php foreach($categories as $category):?>
+                            <?php if($category['name'] == 'Nhẫn'):?>
+                                <button class="active" data-filter=".<?= $category['name']?>"><?= $category['name']?></button>
+                            <?php else:?>
+                                <button data-filter=".<?= $category['name']?>"><?= $category['name']?></button>
+                            <?php endif?>
+                        <?php endforeach;?>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="row special-list">
-            <div class="col-lg-3 col-md-6 special-grid best-seller">
-                <div class="products-single fix">
-                    <div class="box-img-hover">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
+            <?php ?>
+                <div class="col-lg-3 col-md-6 special-grid Nhẫn">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="<?= base_url() ?>/client/images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
                         </div>
-                        <img src="<?= base_url() ?>/client/images/img-pro-01.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                            </ul>
-                            <a class="cart" href="#">Add to Cart</a>
+                        <div class="why-text">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h5> $7.79</h5>
                         </div>
-                    </div>
-                    <div class="why-text">
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <h5> $7.79</h5>
                     </div>
                 </div>
-            </div>
-
+            <?php ?>
             <div class="col-lg-3 col-md-6 special-grid top-featured">
                 <div class="products-single fix">
                     <div class="box-img-hover">

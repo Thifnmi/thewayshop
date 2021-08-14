@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">Colections 
+                                <a class="list-group-item list-group-item-action" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">Colections
                                     <small class="text-muted">(100)</small>
                                     <i style="margin-left:100px" class="fas fa-caret-down"></i>
                                 </a>
@@ -227,7 +227,7 @@
                                                     <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                     <div class="mask-icon">
                                                         <ul>
-                                                            <li><a href="<?= base_url()?>/Product/<?= $product['id']?>" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                            <li><a href="<?= base_url() ?>/Product/<?= $product['id'] ?>" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                                             <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li> -->
                                                             <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
                                                         </ul>
@@ -235,7 +235,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="why-text">
-                                                    <a href="<?= base_url()?>/Product/<?= $product['id']?>">
+                                                    <a href="<?= base_url() ?>/Product/<?= $product['id'] ?>">
                                                         <h4><?= $product['product_name'] ?></h4>
                                                         <h5><?= $product['price'] ?> vnd</h5>
                                                     </a>
@@ -258,7 +258,7 @@
                                                         <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                         <div class="mask-icon">
                                                             <ul>
-                                                                <li><a href="<?= base_url()?>/Product/<?= $product['id']?>" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="<?= base_url() ?>/Product/<?= $product['id'] ?>" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                                                 <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
                                                                 <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
                                                             </ul>
@@ -269,16 +269,18 @@
                                             </div>
                                             <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
                                                 <div class="why-text full-width">
-                                                    <a href="<?= base_url()?>/Product/<?= $product['id']?>"><h4><?= $product['product_name'] ?></h4></a>
+                                                    <a href="<?= base_url() ?>/Product/<?= $product['id'] ?>">
+                                                        <h4><?= $product['product_name'] ?></h4>
+                                                    </a>
                                                     <!-- <del><?= $product['price'] ?></del> -->
                                                     <h5><?= $product['price'] ?> vnd</h5>
                                                     <?php $daylamota = $product['description'];
-                                                        $mota = explode(",", $daylamota); ?>
-                                                        <p>
-                                                        <?php foreach($mota as $des):?>
+                                                    $mota = explode(",", $daylamota); ?>
+                                                    <p>
+                                                        <?php foreach ($mota as $des) : ?>
                                                             <?= $des ?>
-                                                        <?php endforeach;?>
-                                                        </p>
+                                                        <?php endforeach; ?>
+                                                    </p>
                                                     <?php ?>
                                                     <a class="btn hvr-hover" href="#">Add to Cart</a>
                                                 </div>
@@ -289,13 +291,34 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- End Shop Page -->
+
+<!-- . -->
+<div class="clearfix lfr-pagination">
+    <ul class="lfr-pagination-buttons pager">
+        <?php if ($page > 1) : ?>
+            <li class="page-item"><a class="page-link" href="<?= "?page=1" ?>">Trang đầu<i class="linearicons-arrow-left"></i></a></li>
+        <?php endif; ?>
+        <?php
+        for ($i = 1; $i < $total_pages + 1; $i++) {
+            if ($page == $i) {
+                echo "<li class='page-item active'><a class='page-link' href='#'>" . $i . "</a></li>";
+            } else {
+                echo "<li class='page-item'><a class='page-link' href='?page=" . $i . "'>" . $i . "</a></li>";
+            }
+        }
+        ?>
+        <?php if ($page < $total_pages) : ?>
+            <li class="page-item"><a class="page-link" href="<?= "?page=" . $total_pages ?>"> Trang cuối<i class="linearicons-arrow-right"></i></a></li>
+        <?php endif; ?>
+    </ul>
+</div>
+<!-- . -->
 
 
 <?= $this->endSection() ?>
