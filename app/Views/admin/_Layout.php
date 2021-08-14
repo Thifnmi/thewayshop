@@ -177,10 +177,10 @@
 
                         <li class="nav-small-cap">--- QUẢN LÝ</li>
 
-                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-people"></i><span class="hide-menu">Admin</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-people"></i><span class="hide-menu">Account</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?= base_url() ?>/admin/account">All Admin</a></li>
-                                <li><a href="<?= base_url() ?>/admin/account/add">Add Admin</a></li>
+                                <li><a href="<?= base_url() ?>/admin/account">All Account</a></li>
+                                <li><a href="<?= base_url() ?>/admin/account/add">Add Account</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-docs"></i><span class="hide-menu">Products</span></a>
@@ -211,32 +211,6 @@
                                 <li><a href="<?= base_url() ?>/admin/supplier/add">Add Supplier</a></li>
                             </ul>
                         </li>
-<!-- 
-                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-receipt"></i><span class="hide-menu">Comment</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?= base_url() ?>/admin/comment">All Comment</a></li>
-                                <li><a href="<?= base_url() ?>/admin/comment/add">Add comment</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                                aria-expanded="false"><i class="ti-receipt"></i><span class="hide-menu">About
-                                    page</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Curent</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- 
-                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                                aria-expanded="false"><i class="ti-settings"></i><span
-                                    class="hide-menu">Widgets</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="widget-data.html">Data Widgets</a></li>
-                                <li><a href="widget-apps.html">Apps Widgets</a></li>
-                                <li><a href="widget-charts.html">Charts Widgets</a></li>
-                            </ul>
-                        </li> -->
-
-
 
                     </ul>
                 </nav>
@@ -323,7 +297,7 @@
         <!-- footer -->
         <!-- ============================================================== -->
         <footer class="footer">
-            © 2020 tình yêu là duy tâm hay là duy vật
+            All Rights Reserved © 2021 The Way Shop Design By : Nhóm 2 69DCTT21
         </footer>
         <!-- ============================================================== -->
         <!-- End footer -->
