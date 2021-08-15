@@ -108,8 +108,8 @@
             <hr width="100%" size="3px" align="center" />
         </h1>
         <div data-children=".sub-men">
-            <div class="list-group-collapse sub-men">
-                <div class="collapse" id="sub-men1" data-parent="#list-group-men" style="display:inline-block">
+            <div class="list-group-collapse sub-men" id="sub-men1" >
+                <div  data-parent="#list-group-men" style="display:inline-block">
                     <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Brand
                         <span style="float:right; margin-left: 300px">PNJ</span>
                         <hr width="80%" size="3px" align="center" />
@@ -134,7 +134,7 @@
         <!-- My Service -->
         <h1 class="list-group-item list-group-item-action" style="font-style: bold; font-size:25px; align:center; width:60%;font-weight: bold" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">MY SERVICE
 
-            <i style="margin-left:360px; margin-top: 30px" class="fas fa-caret-down"></i>
+            <i style="margin-left:385px; margin-top: 30px" class="fas fa-caret-down"></i>
             <hr width="100%" size="3px" align="center" />
         </h1>
         <div data-children=".sub-men">

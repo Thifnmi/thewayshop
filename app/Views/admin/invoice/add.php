@@ -50,9 +50,7 @@
                                             <div class="form-group">
                                                 <!-- <input type="text" class="form-control" id="Schoolname" name="name[]" value="" placeholder="Name"> -->
                                                 <select name="name[]" class='form-control'>
-                                                <?php foreach($product as $row):?>
-                                                    <option value="<?= $row['product_id'] ?>"><?= $row['name']?></option>
-                                                <?php endforeach;?>
+                                                
                                                 </select>
                                             </div>
                                         </div>
