@@ -8,17 +8,17 @@
             <div class="card-body">
                 <h5 class="card-title">Basic Information</h5>
                 <?= \Config\Services::validation()->listErrors(); ?>
-                <form action="<?= base_url()?>/admin/category/add" method="post" class="form-material form-horizontal m-t-30">
+                <form action="#" method="post" class="form-material form-horizontal m-t-30">
                     <div class="form-group">
-                        <label class="col-md-12" for="example-text">Tên loại hàng</span>
+                        <label class="col-md-12" for="example-text">Name of Category</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text" name="cName" class="form-control" placeholder="Nhập tên loại hàng">
+                            <input type="text" id="example-text" name="cName" class="form-control" placeholder="Enter name of Category">
                         </div>
-                        <label class="col-md-12" for="example-text">Mô tả</span>
+                        <label class="col-md-12" for="example-text">Description</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text" name="cDesription" class="form-control" placeholder="Nhập mô tả">
+                            <input type="text" id="example-text" name="cDesription" class="form-control" placeholder="Enter description of category  ">
                         </div>
                     </div>
 
@@ -33,8 +33,8 @@
                                         </div>
                                     </div> -->
 
-                    <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Xác nhận</button>
-                    <a href="<?= base_url() ?>/admin/category" class="btn btn-inverse waves-effect waves-light m-r-10">Hủy</button>
+                    <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>
+                    <a href="#" class="btn btn-inverse waves-effect waves-light m-r-10">Cancel</button>
                 </form>
             </div>
         </div>

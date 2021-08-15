@@ -12,39 +12,32 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên</th>
-                                <th>Mô tả</th>
-                                <th>Ngày tạo</th>
-                                <th>Tạo bởi</th>
-                                <th align="center">Hành động</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Create On</th>
+                                <th>Create By</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            <?php foreach($category as $item): ?>
-                            <tr class="obj-item">
-                                <td><?= $item['category_id'] ?></td>
-                                <td><?= $item['name'] ?></td>
-                                <td><?= $item['description'] ?></td>
-                                <td><?= date("d-m-Y H:i:s", strtotime($item['createdDate'])) ?></td>
-                                <td><?= $item['createdBy'] ?></td>
-                                <td>
-                                    <div class="obj-action">
-                                        <!-- <div class="ac">
-
-                                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="fas fa-info-circle"></i></a>
-                                        </div> -->
-                                        <div class="ac">
-                                            <a href="<?= base_url().'/admin/category/edit?id='.$item['category_id']?>" data-toggle="tooltip" data-placement="bottom" title="Sửa"><i class="far fa-edit"></i> </a>
+                                <tr class="obj-item">
+                                    <td>ID</td>
+                                    <td>Name</td>
+                                    <td>Description</td>
+                                    <td>Create On</td>
+                                    <td>Create By</td>
+                                    <td>
+                                        <div class="obj-action">
+                                            <div class="ac">
+                                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="far fa-edit"></i> </a>
+                                            </div>
+                                            <div class="ac">
+                                                <a href="#" onclick="return confirm('Are you sure?');" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
+                                            </div>
                                         </div>
-                                        <div class="ac">
-                                            <a href="<?php echo base_url().'/admin/category/delete?id='.$item['category_id']?>" onclick="return confirm('Are you sure?');" data-toggle="tooltip" data-placement="bottom" title="Xóa"><i class="far fa-trash-alt"></i></a>
-                                        </div>
-
-                                    </div>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>                         
+                                    </td>
+                                </tr>
                         </tbody>
                     </table>
                 </div>

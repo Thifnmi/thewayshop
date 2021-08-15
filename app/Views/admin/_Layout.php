@@ -185,22 +185,22 @@
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-docs"></i><span class="hide-menu">Products</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?= base_url() ?>/admin/product">All Product</a></li>
-                                <li><a href="<?= base_url() ?>/admin/product/add">Add Product</a></li>
+                                <li><a href="<?= base_url() ?>/admin/products">All Product</a></li>
+                                <li><a href="<?= base_url() ?>/admin/products/add">Add Product</a></li>
 
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fab fa-cuttlefish"></i><span class="hide-menu">Category</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?= base_url() ?>/admin/category">All Category</a></li>
-                                <li><a href="<?= base_url() ?>/admin/category/add">Add Category</a></li>
+                                <li><a href="<?= base_url() ?>/admin/categories">All Category</a></li>
+                                <li><a href="<?= base_url() ?>/admin/categories/add">Add Category</a></li>
                             </ul>
                         </li>
 
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-receipt"></i><span class="hide-menu">Invoice</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?= base_url() ?>/admin/invoice">All new Invoice</a></li>
-                                <li><a href="<?= base_url() ?>/admin/invoice/add">Add Invoice</a></li>
+                                <li><a href="<?= base_url() ?>/admin/invoices">All new Invoice</a></li>
+                                <li><a href="<?= base_url() ?>/admin/invoices/add">Add Invoice</a></li>
                                 <!-- <li><a href="#">History</a></li> -->
                             </ul>
                         </li>
@@ -236,7 +236,7 @@
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item"><a href="<?= base_url() ?>/Admin/Dashboard">Home</a></li>
                                 <li class="breadcrumb-item active"></li>
                             </ol>
                             <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
