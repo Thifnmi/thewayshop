@@ -220,19 +220,11 @@
                                     <?php foreach ($products as $product) : ?>
                                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                             <div class="products-single fix">
-                                                <div class="box-img-hover">
+                                                <div class="box-img-hover dat">
                                                     <!-- <div class="type-lb">
                                                         <p class="sale">Sale</p>
                                                     </div> -->
                                                     <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
-                                                    <div class="mask-icon">
-                                                        <ul>
-                                                            <li><a href="<?= base_url() ?>/Product/<?= $product['id'] ?>" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                            <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li> -->
-                                                            <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
-                                                        </ul>
-                                                        <a class="cart" href="#">Add to Cart</a>
-                                                    </div>
                                                 </div>
                                                 <div class="why-text">
                                                     <a href="<?= base_url() ?>/Product/<?= $product['id'] ?>">
