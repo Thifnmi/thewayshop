@@ -26,7 +26,7 @@
                     <div class="carousel-inner" role="listbox">
                         <?php foreach ($productImage as $image) : ?>
                             <?php if ($image['url'] == $productImage[0]['url']) : ?>
-                                <div class="carousel-item active"> <img class="d-block w-100" src="<?= $image['url'] ?>" alt="First slide"> </div>
+                                <div class="carousel-item active"> <img class="d-block w-100 dat" src="<?= $image['url'] ?>" alt="First slide"> </div>
                             <?php else : ?>
                                 <div class="carousel-item"> <img class="d-block w-100" src="<?= $image['url'] ?>" alt="Second slide"> </div>
                                 <!-- <div class="carousel-item"> <img class="d-block w-100" src="<?= base_url() ?>/client/images/big-img-03.jpg" alt="Third slide"> </div> -->

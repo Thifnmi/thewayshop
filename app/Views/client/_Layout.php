@@ -57,9 +57,9 @@
                                             <h6 class="title">Types</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <?php foreach ($categories as $item):?>
-                                                        <li><a href="<?= base_url()?>/Category/<?= $item['id']?>"><?= $item['name']?></a></li>
-                                                    <?php endforeach;?>
+                                                    <?php foreach ($categories as $item) : ?>
+                                                        <li><a href="<?= base_url() ?>/Category/<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
+                                                    <?php endforeach; ?>
                                                     <!-- <li><a href="#">Shirts</a></li>
                                                     <li><a href="#">Sweaters & Cardigans</a></li>
                                                     <li><a href="#">T-shirts</a></li> -->
@@ -167,7 +167,7 @@
                         <li class="dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">My Account <i class="fad fa-user-circle"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="">Profile</a></li>
+                                <li><a href="<?= base_url() ?>/Account">My Profile</a></li>
                                 <li><a href="<?= base_url() ?>/Login">Login</a></li>
                                 <li><a href="">Logout</a></li>
                             </ul>
@@ -398,7 +398,7 @@
     <script src="<?= base_url() ?>/client/js/form-validator.min.js"></script>
     <script src="<?= base_url() ?>/client/js/contact-form-script.js"></script>
     <script src="<?= base_url() ?>/client/js/custom.js"></script>
-   
+
 
 </body>
 

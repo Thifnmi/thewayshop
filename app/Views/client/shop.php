@@ -247,15 +247,7 @@
                                                         <!-- <div class="type-lb">
                                                             <p class="new">New</p>
                                                         </div> -->
-                                                        <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
-                                                        <div class="mask-icon">
-                                                            <ul>
-                                                                <li><a href="<?= base_url() ?>/Product/<?= $product['id'] ?>" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                                <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
-                                                            </ul>
-
-                                                        </div>
+                                                        <img class="dat" src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                     </div>
                                                 </div>
                                             </div>
