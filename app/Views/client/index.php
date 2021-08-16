@@ -99,15 +99,8 @@
                             <div class="type-lb">
                                 <p class="sale">Sale</p>
                             </div>
-                            <img src="<?= base_url() ?>/client/images/img-pro-01.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Add to Cart</a>
-                            </div>
+                            <img class="dat" src="<?= base_url() ?>/client/images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                            
                         </div>
                         <div class="why-text">
                             <h4>Lorem ipsum dolor sit amet</h4>
@@ -122,15 +115,7 @@
                         <div class="type-lb">
                             <p class="new">New</p>
                         </div>
-                        <img src="<?= base_url() ?>/client/images/img-pro-02.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                            </ul>
-                            <a class="cart" href="#">Add to Cart</a>
-                        </div>
+                        <img class="dat" src="<?= base_url() ?>/client/images/img-pro-02.jpg" class="img-fluid" alt="Image">
                     </div>
                     <div class="why-text">
                         <h4>Lorem ipsum dolor sit amet</h4>
@@ -145,15 +130,7 @@
                         <div class="type-lb">
                             <p class="sale">Sale</p>
                         </div>
-                        <img src="<?= base_url() ?>/client/images/img-pro-03.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                            </ul>
-                            <a class="cart" href="#">Add to Cart</a>
-                        </div>
+                        <img class="dat" src="<?= base_url() ?>/client/images/img-pro-03.jpg" class="img-fluid" alt="Image">
                     </div>
                     <div class="why-text">
                         <h4>Lorem ipsum dolor sit amet</h4>
@@ -168,15 +145,7 @@
                         <div class="type-lb">
                             <p class="sale">Sale</p>
                         </div>
-                        <img src="<?= base_url() ?>/client/images/img-pro-04.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                            </ul>
-                            <a class="cart" href="#">Add to Cart</a>
-                        </div>
+                        <img class="dat" src="<?= base_url() ?>/client/images/img-pro-04.jpg" class="img-fluid" alt="Image">
                     </div>
                     <div class="why-text">
                         <h4>Lorem ipsum dolor sit amet</h4>
