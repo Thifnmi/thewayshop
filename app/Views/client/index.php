@@ -92,24 +92,38 @@
         </div>
 
         <div class="row special-list">
-            <?php ?>
-                <div class="col-lg-3 col-md-6 special-grid Nhẫn">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Sale</p>
+            <?php foreach($products as $product):?>
+                <?php foreach($product as $item):?>
+                    <div class="col-lg-3 col-md-6 active special-grid Nhẫn">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="sale">Sale</p>
+                                </div>
+                                <img src="<?=$item['image']?>" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                        <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
                             </div>
+<<<<<<< HEAD
                             <img class="dat" src="<?= base_url() ?>/client/images/img-pro-01.jpg" class="img-fluid" alt="Image">
                             
-                        </div>
-                        <div class="why-text">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <h5> $7.79</h5>
+=======
+                            <div class="why-text">
+                                <h4><?=$item['product_name']?></h4>
+                                <h5><?=$item['price']?></h5>
+                            </div>
+>>>>>>> a467455 (no edit)
                         </div>
                     </div>
-                </div>
-            <?php ?>
-            <div class="col-lg-3 col-md-6 special-grid top-featured">
+                <?php endforeach;?>
+            <?php endforeach;?>
+            <!-- <div class="col-lg-3 col-md-6 special-grid top-featured">
                 <div class="products-single fix">
                     <div class="box-img-hover">
                         <div class="type-lb">
@@ -152,7 +166,7 @@
                         <h5> $15.79</h5>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
