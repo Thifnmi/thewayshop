@@ -74,16 +74,21 @@
                                 <label class="size-label">Size</label>
                                 <select id="basic" class="selectpicker show-tick form-control">
                                     <option value="0">Size</option>
-                                    <option value="0">S</option>
-                                    <option value="1">M</option>
-                                    <option value="1">L</option>
-                                    <option value="1">XL</option>
-                                    <option value="1">XXL</option>
-                                    <option value="1">3XL</option>
-                                    <option value="1">4XL</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
                                 </select>
                             </div>
+                            <div class="sizing">
+                                <a>Hướng dẫn chọn size <span><img src="<?= base_url() ?>/client/images/sizing.png" alt="image" height="300" /></span></a>
+                            </div>
                         </li>
+
                         <li>
                             <div class="form-group quantity-box">
                                 <label class="control-label">Quantity</label>
@@ -103,13 +108,13 @@
         </div>
 
         <!-- Description Product -->
-        <h1 class="list-group-item list-group-item-action" style="font-style: bold; font-size:25px; align:center; width:60%;font-weight: bold" href="#sub-men1" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men1">DESCRIPTION PRODUCT
-            <i style="margin-left:250px; margin-top: 30px" class="fas fa-caret-down"></i>
+        <h1 class="list-group-item" style="font-style: bold; font-size:25px; align:center; width:60%;font-weight: bold" href="#sub-men1" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men1">DESCRIPTION PRODUCT
+            <i style="float:right" class="fas fa-caret-down"></i>
             <hr width="100%" size="3px" align="center" />
         </h1>
-        <div data-children=".sub-men">
-            <div class="list-group-collapse sub-men" id="sub-men1" >
-                <div  data-parent="#list-group-men" style="display:inline-block">
+        <div>
+            <div id="sub-men1">
+                <div data-parent="#list-group-men" style="display:inline-block">
                     <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Brand
                         <span style="float:right; margin-left: 300px">PNJ</span>
                         <hr width="80%" size="3px" align="center" />
@@ -133,12 +138,11 @@
 
         <!-- My Service -->
         <h1 class="list-group-item list-group-item-action" style="font-style: bold; font-size:25px; align:center; width:60%;font-weight: bold" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">MY SERVICE
-
-            <i style="margin-left:385px; margin-top: 30px" class="fas fa-caret-down"></i>
+            <i style="float:right" class="fas fa-caret-down"></i>
             <hr width="100%" size="3px" align="center" />
         </h1>
-        <div data-children=".sub-men">
-            <div class="list-group-collapse sub-men" id="sub-men3">
+        <div>
+            <div id="sub-men3">
                 <div data-parent="#list-group-men" style="width:60%;">
                     <h3 class="txt">Bảo Hành Miễn Phí 6 Tháng</h3>
                     <div>Bảo hành 6 tháng lỗi kỹ thuật, nước xi. </div>
