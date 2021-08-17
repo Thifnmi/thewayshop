@@ -27,6 +27,11 @@ class productModel extends Model
         return $this->where('category_id', $cid)->countAllResults();
         # code...
     }
+    public function getAllProduct()
+    {
+        return $this->findAll();
+        # code...
+    }
     public function getShowProduct(int $cid)
     {
         return $this->where('category_id', $cid)->findAll();

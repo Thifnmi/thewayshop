@@ -258,14 +258,6 @@
                                                     </a>
                                                     <!-- <del><?= $product['price'] ?></del> -->
                                                     <h5><?= $product['price'] ?> vnd</h5>
-                                                    <?php $daylamota = $product['description'];
-                                                    $mota = explode(",", $daylamota); ?>
-                                                    <p>
-                                                        <?php foreach ($mota as $des) : ?>
-                                                            <?= $des ?>
-                                                        <?php endforeach; ?>
-                                                    </p>
-                                                    <?php ?>
                                                     <a class="btn hvr-hover" href="#">Add to Cart</a>
                                                 </div>
                                             </div>

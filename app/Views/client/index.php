@@ -55,7 +55,7 @@
             <?php foreach($categories as $category):?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= $category['image']?>" alt="<?= $category['name']?>" />
+                        <img href="<?= base_url()?>/Category/<?=$category['id']?>" class="img-fluid" src="<?= $category['image']?>" alt="<?= $category['name']?>"/>
                         <a class="btn hvr-hover" href="<?= base_url()?>/Category/<?=$category['id']?>"><?= $category['name']?></a>
                     </div>
                 </div>
@@ -80,10 +80,10 @@
                 <div class="special-menu text-center">
                     <div class="button-group filter-button-group">
                         <?php foreach($categories as $category):?>
-                            <?php if($category['name'] == 'Nhẫn'):?>
-                                <button class="active" data-filter=".<?= $category['name']?>"><?= $category['name']?></button>
+                            <?php if($category['meta_title'] == 'ring'):?>
+                                <button class="active" data-filter=".<?= $category['meta_title']?>"><?= $category['name']?></button>
                             <?php else:?>
-                                <button data-filter=".<?= $category['name']?>"><?= $category['name']?></button>
+                                <button data-filter=".<?= $category['meta_title']?>"><?= $category['name']?></button>
                             <?php endif?>
                         <?php endforeach;?>
                     </div>
@@ -92,71 +92,51 @@
         </div>
 
         <div class="row special-list">
-            <?php foreach($products as $product):?>
-                <?php foreach($product as $key => $item):?>
-                    <?php if ($key < 4):?>
-                        <a href="<?= base_url()?>/Product/<?=$item['id']?>">
-                        <div class="col-lg-3 col-md-6 active special-grid Nhẫn">
-                            <div class="products-single fix">
-                                <div class="box-img-hover">
-                                    <div class="type-lb">
-                                        <p class="sale">Sale</p>
+            <?php foreach($categories as $category):
+                $i = 1?>
+                <?php foreach($products as $item):?>
+                    <?php if($category['id'] == $item['category_id']):  if($i < 5): $i++; ?>
+                        <?php if($item['category_id'] != 1):?>
+                            <div class="col-lg-3 col-md-6 special-grid <?=$category['meta_title']?>" style="display :none">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                        <a href="<?= base_url()?>/Product/<?= $item['id']?>">
+                                            <div class="type-lb">
+                                                <p class="sale">Sale</p>
+                                            </div>
+                                            <img class="img-fluid dat" src="<?=$item['image']?>" alt="<?=$item['product_name']?>">
+                                        </a>
                                     </div>
-                                    <img class="img-fluid dat" src="<?=$item['image']?>" alt="<?=$item['product_name']?>">
-                                </div>
-                                <div class="why-text">
-                                    <h4><?=$item['product_name']?></h4>
-                                    <h5 style="color:red;"><?=$item['price']?> VNĐ</h5>
+                                    <div class="why-text">
+                                        <h4><a href="<?= base_url()?>/Product/<?= $item['id']?>"><?=$item['product_name']?></a></h4>
+                                        <h5 style="color:red;"><?=$item['price']?> VNĐ</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div></a>
+                        <?php else: ?>
+                            <div class="col-lg-3 col-md-6 active special-grid <?=$category['meta_title']?>">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                    <a href="<?= base_url()?>/Product/<?= $item['id']?>">
+                                        <div class="type-lb">
+                                            <p class="sale">Sale</p>
+                                        </div>
+                                        <img class="img-fluid dat" src="<?=$item['image']?>" alt="<?=$item['product_name']?>">
+                                    </a>
+                                    </div>
+                                    <div class="why-text">
+                                        <h4><a href="<?= base_url()?>/Product/<?= $item['id']?>"><?=$item['product_name']?></a></h4>
+                                        <h5 style="color:red;"><?=$item['price']?> VNĐ</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endif?>
+                    <?php else:
+                        break;?>
                     <?php endif ?>
+                <?php endif ?>
                 <?php endforeach;?>
             <?php endforeach;?>
-            <!-- <div class="col-lg-3 col-md-6 special-grid top-featured">
-                <div class="products-single fix">
-                    <div class="box-img-hover">
-                        <div class="type-lb">
-                            <p class="new">New</p>
-                        </div>
-                        <img class="dat" src="<?= base_url() ?>/client/images/img-pro-02.jpg" class="img-fluid" alt="Image">
-                    </div>
-                    <div class="why-text">
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <h5> $9.79</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 special-grid top-featured">
-                <div class="products-single fix">
-                    <div class="box-img-hover">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
-                        </div>
-                        <img class="dat" src="<?= base_url() ?>/client/images/img-pro-03.jpg" class="img-fluid" alt="Image">
-                    </div>
-                    <div class="why-text">
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <h5> $10.79</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 special-grid best-seller">
-                <div class="products-single fix">
-                    <div class="box-img-hover">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
-                        </div>
-                        <img class="dat" src="<?= base_url() ?>/client/images/img-pro-04.jpg" class="img-fluid" alt="Image">
-                    </div>
-                    <div class="why-text">
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <h5> $15.79</h5>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>
