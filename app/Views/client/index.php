@@ -95,11 +95,7 @@
             <?php foreach($products as $product):?>
                 <?php foreach($product as $key => $item):?>
                     <?php if ($key < 4):?>
-                        <div class="col-lg-3 col-md-6 active special-grid <?php foreach($categories as $category):?>
-                                                                                <?php if ($category['id'] = $item['category_id']):?>
-                                                                                    <?= $category['name']?>
-                                                                                <?php endif?>
-                                                                            <?php endforeach;?>">
+                        <div class="col-lg-3 col-md-6 active special-grid Nhẫn">
                             <div class="products-single fix">
                                 <div class="box-img-hover">
                                     <div class="type-lb">
