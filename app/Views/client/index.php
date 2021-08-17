@@ -55,7 +55,7 @@
             <?php foreach($categories as $category):?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= $category['image']?>" alt="" />
+                        <img class="img-fluid" src="<?= $category['image']?>" alt="<?= $category['name']?>" />
                         <a class="btn hvr-hover" href="<?= base_url()?>/Category/<?=$category['id']?>"><?= $category['name']?></a>
                     </div>
                 </div>
@@ -95,28 +95,21 @@
             <?php foreach($products as $product):?>
                 <?php foreach($product as $key => $item):?>
                     <?php if ($key < 4):?>
+                        <a href="<?= base_url()?>/Product/<?=$item['id']?>">
                         <div class="col-lg-3 col-md-6 active special-grid Nhẫn">
                             <div class="products-single fix">
                                 <div class="box-img-hover">
                                     <div class="type-lb">
                                         <p class="sale">Sale</p>
                                     </div>
-                                    <img src="<?=$item['image']?>" class="img-fluid" alt="Image">
-                                    <div class="mask-icon">
-                                        <ul>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                            <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
-                                        </ul>
-                                        <a class="cart" href="#">Add to Cart</a>
-                                    </div>
+                                    <img class="img-fluid dat" src="<?=$item['image']?>" alt="<?=$item['product_name']?>">
                                 </div>
                                 <div class="why-text">
                                     <h4><?=$item['product_name']?></h4>
-                                    <h5><?=$item['price']?> VNĐ</h5>
+                                    <h5 style="color:red;"><?=$item['price']?> VNĐ</h5>
                                 </div>
                             </div>
-                        </div>
+                        </div></a>
                     <?php endif ?>
                 <?php endforeach;?>
             <?php endforeach;?>
