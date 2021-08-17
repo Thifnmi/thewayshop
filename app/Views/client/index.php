@@ -93,34 +93,35 @@
 
         <div class="row special-list">
             <?php foreach($products as $product):?>
-                <?php foreach($product as $item):?>
-                    <div class="col-lg-3 col-md-6 active special-grid Nhẫn">
-                        <div class="products-single fix">
-                            <div class="box-img-hover">
-                                <div class="type-lb">
-                                    <p class="sale">Sale</p>
+                <?php foreach($product as $key => $item):?>
+                    <?php if ($key < 4):?>
+                        <div class="col-lg-3 col-md-6 active special-grid <?php foreach($categories as $category):?>
+                                                                                <?php if ($category['id'] = $item['category_id']):?>
+                                                                                    <?= $category['name']?>
+                                                                                <?php endif?>
+                                                                            <?php endforeach;?>">
+                            <div class="products-single fix">
+                                <div class="box-img-hover">
+                                    <div class="type-lb">
+                                        <p class="sale">Sale</p>
+                                    </div>
+                                    <img src="<?=$item['image']?>" class="img-fluid" alt="Image">
+                                    <div class="mask-icon">
+                                        <ul>
+                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                            <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
+                                        </ul>
+                                        <a class="cart" href="#">Add to Cart</a>
+                                    </div>
                                 </div>
-                                <img src="<?=$item['image']?>" class="img-fluid" alt="Image">
-                                <div class="mask-icon">
-                                    <ul>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                        <!-- <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li> -->
-                                    </ul>
-                                    <a class="cart" href="#">Add to Cart</a>
+                                <div class="why-text">
+                                    <h4><?=$item['product_name']?></h4>
+                                    <h5><?=$item['price']?> VNĐ</h5>
                                 </div>
                             </div>
-<<<<<<< HEAD
-                            <img class="dat" src="<?= base_url() ?>/client/images/img-pro-01.jpg" class="img-fluid" alt="Image">
-                            
-=======
-                            <div class="why-text">
-                                <h4><?=$item['product_name']?></h4>
-                                <h5><?=$item['price']?></h5>
-                            </div>
->>>>>>> a467455 (no edit)
                         </div>
-                    </div>
+                    <?php endif ?>
                 <?php endforeach;?>
             <?php endforeach;?>
             <!-- <div class="col-lg-3 col-md-6 special-grid top-featured">
