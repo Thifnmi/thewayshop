@@ -46,7 +46,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="<?= base_url() ?>">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/About">About Us</a></li>
                         <li class="dropdown megamenu-fw">
                             <a href="#" class="nav-link" data-toggle="dropdown">Jewelry <i class="fad fa-chevron-down"></i></a>
@@ -398,6 +398,7 @@
     <script src="<?= base_url() ?>/client/js/form-validator.min.js"></script>
     <script src="<?= base_url() ?>/client/js/contact-form-script.js"></script>
     <script src="<?= base_url() ?>/client/js/custom.js"></script>
+    <script src="<?= base_url() ?>/client/js/dialog.js"></script>
 
 
 </body>
