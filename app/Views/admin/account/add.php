@@ -76,14 +76,7 @@
                                                 class="form-control" placeholder="enter your address">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                    <label class="col-md-12" for="phone">Country</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="text" maxlength="11" id="country" name="country"
-                                                class="form-control" placeholder="enter your country">
-                                        </div>
-                                    </div>
+                                    
                                     <div class="form-group">
                                     <label class="col-md-12" for="phone">Facebook</span>
                                         </label>
