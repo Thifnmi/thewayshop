@@ -54,13 +54,13 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                                    <input type="email" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" name="name" placeholder="Subject" required data-error="Please enter your Subject">
+                                    <input type="tel" class="form-control" id="phone" name="name" placeholder="Phone Number" required data-error="Please enter your Phone number">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
