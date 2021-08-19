@@ -16,6 +16,10 @@ class accountModel extends Model
         return $this->find($id);
     }
 
+    public function checkUsername(string $username)
+    {
+        return $this->where('username',$username)->find();
+    }
     public function getAllAccount()
     {
         return $this->findAll();

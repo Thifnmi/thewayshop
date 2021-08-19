@@ -11,8 +11,7 @@ class supplierModel extends Model
 
     protected $returnType     = 'array';
     protected $allowedFields = ['id', 'name'];
-    // protected $createField = '';
-    // protected $updatedField = '';
+  
     public function getAllSupplier()
     {
         return $this->findAll();
