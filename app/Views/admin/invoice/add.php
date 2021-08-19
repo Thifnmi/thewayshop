@@ -6,34 +6,40 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Information</h5>
-                <form class="form-horizontal m-t-30" method='POST' >
+                <form class="form-horizontal m-t-30" method='POST'>
 
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Client Name</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text3" name="client_name" class="form-control" placeholder="">
+                            <input type="text" id="example-text3" name="fullname" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Phone Number</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="number" id="example-text3" name="phone" class="form-control" placeholder="">
+                            <input type="tel" id="example-text3" name="phone" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="example-text3">Email</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="text" id="example-text3" name="email" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Address</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text3" name="address" class="form-control" placeholder="">
+                            <input type="text" id="example-text3" name="bill_address" class="form-control" placeholder="">
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label class="col-sm-12">Status</label>
                         <div class="col-sm-12">
-                            <select class="form-control" name="status">
+                            <select class="form-control" name="paid_status">
                                 <option value="0">Have Not Paid</option>
                                 <option value="1">Have Paid</option>
                             </select>
@@ -50,20 +56,20 @@
                                             <div class="form-group">
                                                 <!-- <input type="text" class="form-control" id="Schoolname" name="name[]" value="" placeholder="Name"> -->
                                                 <select name="name[]" class='form-control'>
-                                                
+                                                    <?php foreach ($product as $row) : ?>
+                                                        <option value="<?= $row['id'] ?>"><?= $row['product_name'] ?></option>
+                                                    <?php endforeach; ?>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-3 nopadding">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="Major" name="value[]" value="" placeholder="value">
+                                                <input type="number" class="form-control" id="Major" name="value[]" value="" placeholder="Quantity" required>
                                             </div>
                                         </div>
                                         <div class="input-group-append" style="height: 40px;">
                                             <button class="btn btn-success" type="button" onclick="education_1fields();"><i class="fa fa-plus"></i></button>
                                         </div>
-                                        
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -100,16 +106,6 @@
                         </div>
                     </div> -->
 
-
-
-                    <!-- <div class="form-group">
-                                        <label class="col-sm-12">Attachment</label>
-                                        <div class="col-sm-12">
-                                            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                                <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                                                <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
-                                        </div>
-                                    </div> -->
                     <div class="form-group">
                         <label class="col-md-12">Note</label>
                         <div class="col-md-12">

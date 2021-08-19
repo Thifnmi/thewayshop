@@ -13,31 +13,33 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>Description</th>
-                                <th>Create On</th>
-                                <th>Create By</th>
+                                <th>Image</th>
+                                <th>Meta Title</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-
                         <tbody>
+                            <?php foreach ($category as $item) : ?>
                                 <tr class="obj-item">
-                                    <td>ID</td>
-                                    <td>Name</td>
-                                    <td>Description</td>
-                                    <td>Create On</td>
-                                    <td>Create By</td>
-                                    <td>
-                                        <div class="obj-action">
-                                            <div class="ac">
-                                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="far fa-edit"></i> </a>
+                                    <<td><?= $item['id'] ?></td>
+                                        <td><?= $item['name'] ?></td>
+                                        <td>
+                                            <img src="<?= $item['image'] ?>" alt="" width="50" height="50">
+                                        </td>
+                                        </td>
+                                        <td><?= $item['meta_title'] ?></td>
+                                        <td>
+                                            <div class="obj-action">
+                                                <div class="ac">
+                                                    <a href="<?=base_url()?>/admin/Categories/edit?id=<?=$item['id']?>" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="far fa-edit"></i> </a>
+                                                </div>
+                                                <div class="ac">
+                                                    <a href="<?=base_url()?>/admin/Categories/delete?id=<?=$item['id']?>" onclick="return confirm('Are you sure?');" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
+                                                </div>
                                             </div>
-                                            <div class="ac">
-                                                <a href="#" onclick="return confirm('Are you sure?');" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
-                                            </div>
-                                        </div>
-                                    </td>
+                                        </td>
                                 </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

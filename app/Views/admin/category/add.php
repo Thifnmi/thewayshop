@@ -13,12 +13,17 @@
                         <label class="col-md-12" for="example-text">Name of Category</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text" name="cName" class="form-control" placeholder="Enter name of Category">
+                            <input type="text" id="example-text" name="name" class="form-control" placeholder="Enter name of Category">
                         </div>
-                        <label class="col-md-12" for="example-text">Description</span>
+                        <label class="col-md-12" for="example-text">Meta Title</label>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text" name="cDesription" class="form-control" placeholder="Enter description of category  ">
+                            <input type="text" id="example-text" name="meta_title" class="form-control" placeholder="Enter meta title ">
+                        </div>
+                        <label class="col-md-12" for="example-text">Image</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="file" id="input-file-now" name="image" class="form-control" placeholder="Enter link of image">
                         </div>
                     </div>
 

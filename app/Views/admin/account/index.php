@@ -8,9 +8,7 @@
                 <h6 class="card-subtitle">All projects Admin</h6>
                 <div class="table-responsive">
                     <table id="example23" class="table table-striped">
-                        <?php
-                        session_start();
-                        ?>
+                        
                         <thead>
                             <tr>
                                 <th>No</th>
