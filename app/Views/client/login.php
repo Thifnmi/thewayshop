@@ -14,23 +14,17 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="<?=base_url()?>/Register" method="post">
                 <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" required="" placeholder="Name" />
-                <input type="text" required="" placeholder="Username" />
-                <input type="password" required="" placeholder="Password" />
-                <button>Sign Up</button>
-
+                <input type="text" name="Rfullname" required="" placeholder="Full Name" />
+                <input type="text" name="Rusername" required="" placeholder="Username" />
+                <input type="password" name="Rpassword" required="" placeholder="Password" />
+                <input type="text" name="Raddress" required="" placeholder="Address" />
+                <button type="submit" name="signup">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="<?=base_url()?>/Login" method="POST">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -38,10 +32,10 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="text" required="" placeholder="Username" />
-                <input type="password" required="" placeholder="Password" />
+                <input type="text" name="username" required="" placeholder="Username" />
+                <input type="password" name="password" required="" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button type="submit" name="login">Sign In</button>
 
             </form>
         </div>
