@@ -10,7 +10,7 @@ class productModel extends Model
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['id', 'category_id', 'supplier_id', 'product_name', 'price', 'product_code', 'image','description','quantity'];
+    protected $allowedFields = ['id', 'category_id', 'supplier_id', 'product_name', 'price', 'product_code', 'image', 'quantity', 'collection', 'main_stone_type', 'gender'];
 
     public function getProductById(int $id)
     {
@@ -19,7 +19,7 @@ class productModel extends Model
 
     public function getProductByCategory(int $cid, int $offset, int $recors_per_page)
     {
-        return $this->where('category_id' ,$cid)->orderby('id','desc')->findAll($recors_per_page, $offset);
+        return $this->where('category_id', $cid)->orderby('id', 'desc')->findAll($recors_per_page, $offset);
         # code...
     }
     public function getCountProduct(int $cid)
@@ -36,5 +36,9 @@ class productModel extends Model
     {
         return $this->where('category_id', $cid)->findAll();
         # code...
+    }
+    public function getMaxId()
+    {
+        return $this->selectMax('id')->find();
     }
 }

@@ -24,7 +24,6 @@
                                 <h6><?= $user['phone_number']?></h6> <small class="text-muted p-t-30 db">Address</small>
                                 <h6><?= $user['address']?></h6>
                                 
-
                                 <br>
                                 <button class="btn btn-circle btn-secondary"><i class="fab fa-facebook-f"></i></button>
                                 <button class="btn btn-circle btn-secondary"><i class="fab fa-twitter"></i></button>
