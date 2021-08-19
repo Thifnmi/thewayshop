@@ -16,7 +16,8 @@
     <link rel="shortcut icon" href="<?= base_url() ?>/client/images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="<?= base_url() ?>/client/images/apple-touch-icon.png">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/bootstrap.min.css">
@@ -60,9 +61,6 @@
                                                     <?php foreach ($categories as $item) : ?>
                                                         <li><a href="<?= base_url() ?>/Category/<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
                                                     <?php endforeach; ?>
-                                                    <!-- <li><a href="#">Shirts</a></li>
-                                                    <li><a href="#">Sweaters & Cardigans</a></li>
-                                                    <li><a href="#">T-shirts</a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -165,11 +163,19 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/Contact">Contact Us</a></li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">My Account <i class="fad fa-user-circle"></i></a>
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <?php if(empty($_SESSION['customer'])):?>
+                                    My Account 
+                                <?php else: ?>
+                                    <?=$_SESSION['customer']['fullname']?>
+                                <?php endif?><i class="fad fa-user-circle"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?= base_url() ?>/Account">My Profile</a></li>
-                                <li><a href="<?= base_url() ?>/Login">Login</a></li>
-                                <li><a href="">Logout</a></li>
+                                <?php if(empty($_SESSION['customer'])):?>
+                                    <li><a href="<?= base_url() ?>/Login">Login</a></li>
+                                <?php else: ?>
+                                    <li><a href="<?= base_url() ?>/Account">My Profile</a></li>
+                                    <li><a href="<?=base_url()?>/Login/logout">Logout</a></li>
+                                <?php endif?>
                             </ul>
                         </li>
                     </ul>
