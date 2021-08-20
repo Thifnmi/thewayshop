@@ -14,7 +14,6 @@ class Home extends BaseController
 		$categoryModel = new categoryModel();
 		$categories = $categoryModel->getAllcategory();
 		$productModel = new productModel();
-		// foreach($categories as $category)
 		$products = $productModel->getAllProduct();
 		$data['categories'] = $categories;
 		$data['products'] = $products;
