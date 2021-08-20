@@ -10,7 +10,7 @@ class supplierModel extends Model
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['id', 'name'];
+    protected $allowedFields = ['id', 'name','email'];
   
     public function getAllSupplier()
     {

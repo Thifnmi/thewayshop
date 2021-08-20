@@ -44,7 +44,7 @@ class Invoices extends BaseController
                 'paid_status' => (int)$paid_status,
                 'create_on' => date("Y-m-d"),
                 'shipping_status' => 0,
-                
+
             ];
             // var_dump($data_insert);
             $product_var = $this->request->getVar('name[]');
@@ -72,18 +72,97 @@ class Invoices extends BaseController
         $data['product'] = $product_model->findAll();
         echo view('admin/invoice/add', $data);
     }
+
     public function edit()
     {
-        return view('admin/invoice/edit');
+        session_start();
+        if (empty($_SESSION['user'])) {
+            return redirect()->to(base_url() . '/admin/login');
+        }
+        $id = $_GET['id'];
+        $product_model = new ProductModel();
+        $data['product'] = $product_model->findAll();
+        $model = new invoiceModel();
+        $model_detail = new invoiceDetailModel();
+        $test = $model->find($id);
+        $product_order = $model_detail->where('invoice_id', $id)->findAll();
+        $data['product_order'] = $product_order;
+        if ($this->request->getMethod() == 'post') {
+            $fullname = $this->request->getVar('fullname');
+            $phone = $this->request->getVar('phone');
+            $email = $this->request->getVar('email');
+            $bill_address = $this->request->getVar('bill_address');
+            $note = $this->request->getVar('note');
+            $paid_status = $this->request->getVar('paid_status');
+            $data_insert = [
+                'fullname' => $fullname,
+                'phone' => $phone,
+                'email' => $email,
+                'bill_address' => $bill_address,
+                'note' => $note,
+                'paid_status' => (int)$paid_status,
+                'create_on' => date("Y-m-d"),
+                'shipping_status' => 0,
+
+            ];
+            $check = $model->save($data_insert);
+            $model_detail->where('invoice_id', $id)->delete();
+            $product_var = $this->request->getVar('name');
+            $product_amount = $this->request->getVar('value');
+            for ($i = 0; $i < count($product_var); $i++) {
+                $price = str_replace(".", "", $product_model->find($product_var[$i])['price']);
+                $total = (int)$price * (int) $product_amount[$i];
+                // echo $total;
+                $data_order_insert = [
+                    'order_id' => $id,
+                    'product_id' => (int) $product_var[$i],
+                    'total_price' => (int) $total,
+                    'product_amount' => (int) $product_amount[$i]
+                ];
+                var_dump($data_order_insert);
+                $model_detail->insert($data_order_insert);
+            }
+            return redirect()->to(base_url() . '/admin/invoice');
+        }
+
+        $data['info'] = $test;
+        $data['title'] = 'invoice';
+        return view('admin/invoice/edit', $data);
+        //--------------------------------------------------------------------
     }
+
     public function detail()
     {
-        return view('admin/invoice/detail');
-        # code...
+        session_start();
+        if (empty($_SESSION['user'])) {
+            return redirect()->to(base_url() . '/admin/login');
+        }
+        $db = db_connect();
+        $id = $_GET['id'];
+        $model = new invoiceModel();
+        $user = $model->find($id);
+        $data['user_detail'] = $user;
+        $sql = 'select product.name, product.price, invoice_detail.total_price, invoice_detail.product_amount 
+                from product, invoice_detail
+                where product.product_id = invoice_detail.product_id and invoice_id=' . $id;
+        $detail = $db->query($sql)->getResult('array');
+        $data['detail'] = $detail;
+        return view('admin/invoice/detail', $data);
     }
-    // public function delete()
-    // {
-    //     return view('admin/account/index');
-    //     # code...
-    // }
+
+    public function delete()
+    {
+        session_start();
+        if (empty($_SESSION['user'])) {
+            return redirect()->to(base_url() . '/admin/login');
+        }
+        $id = $_GET['id'];
+        $model = new invoiceModel();
+        $model_detail = new invoiceDetailModel();
+        $model_detail->where('invoice_id',(int)$id)->delete();
+        $model->delete($id);
+        $data['title'] = 'invoice';
+        $data['user'] = $model->findAll();
+        return redirect()->to(base_url() . '/admin/invoices');
+    }
 }
