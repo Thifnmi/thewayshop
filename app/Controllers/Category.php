@@ -7,7 +7,7 @@ use App\Models\productModel;
 
 class Category extends BaseController
 {
-    public function index(int $cid)
+    public function index(string $cmeta)
     {
         session_start();
         if (isset($_GET['page'])){
@@ -19,13 +19,25 @@ class Category extends BaseController
         $categoryModel = new categoryModel();
 		$categories = $categoryModel->getAllcategory();
         $productModel = new productModel();
-        $total_product = $productModel->getCountProduct($cid);
+        $cate = $categoryModel->getCategoryIdByMetalTitle($cmeta);
+        $total_product = $productModel->getCountProduct((int)($cate[0]['id']));
         $total_pages = ceil($total_product / 9);
-        $products = $productModel->getProductByCategory($cid,$offset,9);
+        $products = $productModel->getProductByCategory((int)($cate[0]['id']),$offset,9);
         $data['page'] = $page;
 		$data['total_pages'] = $total_pages;
 		$data['categories'] = $categories;
         $data['products'] = $products;
         return view('client/shop',$data);
+    }
+    public function getWatch(string $cgender)
+    {
+        if (isset($_GET['page'])){
+			$page =  $_GET['page'];
+		} else{
+			$page = 1;
+		}
+        $offset = ($page-1) * 9;
+        return view('client/shop',);
+        # code...
     }
 }

@@ -77,6 +77,7 @@
                         <button type="button" id="edit" class="btn btn-warning" style="margin-right:30px">Edit</button>
                         <button type="submit" class="btn btn-info waves-effect waves-light m-r-10" id='btnacc' name="submit">Submit</button>
                         <button type="button" onclick="window.history.back();" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                    </div>
                 </form>
             </div>
         </div>

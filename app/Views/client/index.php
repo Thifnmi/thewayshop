@@ -55,8 +55,8 @@
             <?php foreach($categories as $category):?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img href="<?= base_url()?>/Category/<?=$category['id']?>" class="img-fluid" src="<?= $category['image']?>" alt="<?= $category['name']?>"/>
-                        <a class="btn hvr-hover" href="<?= base_url()?>/Category/<?=$category['id']?>"><?= $category['name']?></a>
+                        <img class="img-fluid" src="<?= $category['image']?>" alt="<?= $category['name']?>">
+                        <a class="btn hvr-hover" href="<?= base_url()?>/Category/<?=$category['meta_title']?>"><?= $category['name']?></a>
                     </div>
                 </div>
             <?php endforeach;?>
@@ -130,7 +130,6 @@
                                             <h5 style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
                                             <a class="btn hvr-hover" href="#">Add to Cart</a>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -145,6 +144,5 @@
     </div>
 </div>
 <!-- End Products  -->
-
 
 <?= $this->endSection() ?>

@@ -58,8 +58,10 @@
                                             <h6 class="title">Types</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <?php foreach ($categories as $item) : ?>
-                                                        <li><a href="<?= base_url() ?>/Category/<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
+                                                    <?php foreach ($categories as $item) : 
+                                                        if($item['id'] != 4):?>
+                                                            <li><a href="<?= base_url() ?>/Category/<?= $item['meta_title'] ?>"><?= $item['name'] ?></a></li>
+                                                        <?php endif?>
                                                     <?php endforeach; ?>
                                                 </ul>
                                             </div>
@@ -106,7 +108,7 @@
                             </ul>
                         </li>
                         <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Watches <i class="fad fa-chevron-down"></i></a>
+                            <a href="<?=base_url()?>/Category/watch" class="nav-link" data-toggle="dropdown">Watches <i class="fad fa-chevron-down"></i></a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
                                 <li>
                                     <div class="row">
