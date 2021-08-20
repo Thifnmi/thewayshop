@@ -18,207 +18,77 @@
 <!-- End All Title Box -->
 
 <!-- Start My Account  -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
 
-<div class="my-account-box-main">
-    <div class="container">
-        <div class="my-account-page">
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <div class="account-box">
-                        <div class="service-box">
-                            <div class="service-icon btn1">
-                                <a href="#"> <i class="fa fa-gift"></i> </a>
-                            </div>
-                            <div class="service-desc">
-                                <h4 class="btn1">Your Orders</h4>
-                                <p>Track, return, or buy things again</p>
-                            </div>
+                <form class="form-material form-horizontal m-t-30" method="POST" action="#" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="col-md-12" for="example-text">User Name</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="text" id="example-text" name="username" readonly="readonly" class="form-control field left" readonly="readonly" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="password">Password</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="password" id="password" name="password" readonly="readonly" class="form-control" placeholder="enter your password" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="fName">Full Name</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="text" id="fName" name="fullname" readonly="readonly" class="form-control" value="" placeholder="enter your full name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="bdate">Date of Birth</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="date" id="bdate" name="birthday" readonly="readonly" class="form-control mydatepicker" value=''>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="email">Email</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="email" id="email" name="email" class="form-control field left" readonly="readonly" value='' placeholder="enter your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="phone">Phone</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="tel" maxlength="11" id="phone" name="phone" readonly="readonly" value='' class="form-control" placeholder="enter your phone">
+                        </div>
+                    </div>
 
+                    <div class="form-group">
+                        <label class="col-md-12" for="phone">Address</span>
+                        </label>
+                        <div class="col-md-12">
+                            <input type="text" id="address" name="address" value='' class="form-control" placeholder="enter your address">
                         </div>
                     </div>
-                    <!--Start Modal 1 -->
-                    <div class="modal">
-                        <div class="modal-content">
-                            <h1>Ten khach hang</h1>
-                            <div class="table-responsive">
-                                <table id="example23" class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Product Name</th>
-                                            <th>Category</th>
-                                            <th>Quantity</th>
-                                            <th>Price</th>
-                                            <th>Image</th>
-                                            <th>Create On</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="obj-item">
-                                            <td>1</td>
-                                            <td>Nhẫn Vàng 18K đính đá CZ PNJ XMXMY001683 </td>
-                                            <td>Nhẫn</td>
-                                            <td>
-                                                <input style="width: 50px" type="number" name="quantity" min="1">
-                                            </td>
-                                            <td>5.192.000VND</td>
-                                            <td>
-                                                <img width="50" height="50" src="<?= base_url() ?>/client/images/img-3.jpg">
-                                            </td>
-                                            <td>18/8/2021</td>
-                                            <td>Shipping</td>
-                                            <td>
-                                                <span class="close">&times;</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <span>
-                                    <button class="btn1 btn-info" style="float:right" id="save">Save</button>
-                                    <button class="btn1 btn-cancel" style="float:right" id="cancel">Cancel</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Model 1 -->
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="account-box">
-                        <div class="service-box">
-                            <div class="service-icon btn2">
-                                <a href="#"><i class="fa fa-lock"></i> </a>
-                            </div>
-                            <div class="service-desc">
-                                <h4 class="btn2">Login &amp; security</h4>
-                                <p>Edit login, name, and mobile number</p>
-                            </div>
-                            <!--Start Modal 2 -->
-                            <div class="modal2">
-                                <div class="modal-content2">
-                                    <h1>khach hang</h1>
-                                    <div class="table-responsive">
-                                        <table id="example23" class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>FullName</th>
-                                                    <th>UserName</th>
-                                                    <th>Password</th>
-                                                    <th>Phone Number</th>
-                                                    <th>Email Address</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="obj-item">
-                                                    <td>Full Name</td>
-                                                    <td>client1 </td>
-                                                    <td> Password </td>
-                                                    <td>0923123213</td>
-                                                    <td>sadsa@gmail.com</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <span>
-                                            <button class="btn2 btn-info" style="float:right" id="save">Save</button>
-                                            <button class="btn2 btn-cancel2" style="float:right" id="cancel">Cancel</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Model 2 -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="account-box">
-                        <div class="service-box">
-                            <div class="service-icon btn3">
-                                <a href="#"> <i class="fa fa-location-arrow"></i> </a>
-                            </div>
-                            <div class="service-desc">
-                                <h4 class="btn3">Your Addresses</h4>
-                                <p>Edit addresses for orders and gifts</p>
-                            </div>
-                            <!--Start Modal 3 -->
-                            <div class="modal3">
-                                <div class="modal-content3">
-                                    <h1>Thong tin</h1>
-                                    <div class="table-responsive">
-                                        <table id="example23" class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Your Address</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="obj-item">
-                                                    <td>Your Address</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <span>
-                                            <button class="btn3 btn-info" style="float:right" id="save">Save</button>
-                                            <button class="btn3 btn-cancel3" style="float:right" id="cancel">Cancel</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Model 3 -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="account-box">
-                        <div class="service-box">
-                            <div class="service-icon btn4">
-                                <a href="#"> <i class="fa fa-credit-card"></i> </a>
-                            </div>
-                            <div class="service-desc">
-                                <h4 class="btn4">Payment options</h4>
-                                <p>Edit or add payment methods</p>
-                            </div>
-                            <!--Start Modal 4 -->
-                            <div class="modal4">
-                                <div class="modal-content4">
-                                    <h1 class="btn4">Payments</h1>
-                                    <div class="table-responsive">
-                                        <table id="example243" class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Payment Method</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="obj-item">
-                                                    <td class=dropdown-menu>
-                                                        <select>
-                                                            <option>Bank</option>
-                                                            <option>Off</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <span>
-                                            <button class="btn4 btn-info" style="float:right" id="save">Save</button>
-                                            <button class="btn4 btn-cancel4" style="float:right" id="cancel">Cancel</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Model 4 -->
-                        </div>
-                    </div>
-                </div>
-
+                    <div class="form-group">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info waves-effect waves-light m-r-10" onClick='myFunc' id='btnacc' name="submit">Submit</button>
+                            <button type="button" onclick="window.history.back();" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                </form>
             </div>
-
-
         </div>
     </div>
-</div>
+</div> 
 
+<script>
+    document.getElementById('btnacc').onclick = function() {
+        document.getElementsByClassName('form-control').removeAttribute('readonly');
+    };
+</script>
 <!-- End My Account -->
 
 <?= $this->endSection() ?>

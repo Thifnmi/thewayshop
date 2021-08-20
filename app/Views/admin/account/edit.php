@@ -65,7 +65,7 @@
                                         <label class="col-md-12" for="phone">Phone</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="number" maxlength="11" id="phone" name="phone" value='<?= $user['phone_number']?>'
+                                            <input type="tel" maxlength="11" id="phone" name="phone" value='<?= $user['phone_number']?>'
                                                 class="form-control" placeholder="enter your phone">
                                         </div>
                                     </div>
@@ -79,13 +79,6 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                    <label class="col-md-12" for="phone">Country</span>
-                                        </label>
-                                        <div class="col-md-12">
-                                            <input type="text" maxlength="11" id="country" name="country" value=<?= $user['country']?>'
-                                                class="form-control" placeholder="enter your country">
-                                        </div>
-                                    </div>
                                     <div class="form-group">
                                     <label class="col-md-12" for="phone">Facebook</span>
                                         </label>

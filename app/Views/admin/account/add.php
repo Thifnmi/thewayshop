@@ -63,7 +63,7 @@
                                         <label class="col-md-12" for="phone">Phone</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="number" maxlength="11" id="phone" name="phone"
+                                            <input type="tel" maxlength="11" id="phone" name="phone"
                                                 class="form-control" placeholder="enter your phone">
                                         </div>
                                     </div>

@@ -9,42 +9,35 @@
                 <h6 class="card-subtitle">all projects Admin</h6>
                 <div class="table-responsive">
                     <table id="example23" class="table table-striped">
-                        <?php
-                        session_start();
-                        ?>
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th>Company Name</th>
-                                <th>Website</th>
-                                <th>Country</th>
-                                <th>Product</th>
-                                <th>Action</th>
+                                <th>Email</th>
+                                <th style="text-align:center">Action</th>
                             </tr>
                         </thead>
-                        <tbody>                         
+                        <tbody>
+                            <?php foreach ($supplier as $row) : ?>
                                 <tr class="obj-item">
-                                    <td>id</td>
-                                    <td>Company Name</td>
-                                    <td>Url</td>
-                                    <td>country</td>
-                                    <td>product type</td>
+                                    <td><?= $row['id'] ?></td>
+                                    <td><?= $row['name'] ?></td>
+                                    <td><?= $row['email'] ?></td>
                                     <td>
-                                        <div class="obj-action">
+                                        <div class="obj-action" style="text-align:center">
                                             <div class="ac">
-
-                                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="fas fa-info-circle"></i></a>
+                                                <a href="<?= base_url() ?>/admin/Supplier/detail?id=<?= $row['id'] ?>" data-toggle="tooltip" data-placement="bottom" title="Detail"><i class="fas fa-info-circle"></i></a>
                                             </div>
                                             <div class="ac">
-                                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="far fa-edit"></i> </a>
+                                                <a href="<?= base_url() ?>/admin/Supplier/edit?id=<?= $row['id'] ?>" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="far fa-edit"></i> </a>
                                             </div>
                                             <div class="ac">
-                                                <a href="#" data-toggle="tooltip" data-placement="bottom" onclick="return confirm('Are you sure?');" id="sa-confirm" data-original-title="Delete"><i class="far fa-trash-alt"></i></a>
+                                                <a href="<?= base_url() ?>/admin/Supplier/delete?id=<?= $row['id'] ?>" data-toggle="tooltip" data-placement="bottom" onclick="return confirm('Are you sure?');" id="sa-confirm" data-original-title="Delete"><i class="far fa-trash-alt"></i></a>
                                             </div>
-
                                         </div>
                                     </td>
                                 </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
