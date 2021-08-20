@@ -9,7 +9,7 @@ class Cart extends BaseController
     {
         session_start();
 
-        if (empty($_SESSION['user']))
+        if (empty($_SESSION['customer']))
 		{
             return redirect()->to(base_url().'/Login');
         }
