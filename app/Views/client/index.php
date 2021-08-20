@@ -126,7 +126,11 @@
                                     </div>
                                     <div class="why-text">
                                         <h4><a href="<?= base_url()?>/Product/<?= $item['id']?>"><?=$item['product_name']?></a></h4>
-                                        <h5 style="color:red;"><?=$item['price']?> VNĐ</h5>
+                                        <div align="center">
+                                            <h5 style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
+                                            <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>

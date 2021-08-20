@@ -9,10 +9,10 @@ class Cart extends BaseController
     {
         session_start();
 
-        if (empty($_SESSION['customer']))
-		{
-            return redirect()->to(base_url().'/Login');
-        }
+        // if (empty($_SESSION['customer']))
+		// {
+        //     return redirect()->to(base_url().'/Login');
+        // }
         $categoryModel = new categoryModel();
 		$categories = $categoryModel->getAllcategory();
 		$data['categories'] = $categories;

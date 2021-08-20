@@ -11,8 +11,10 @@ class Login extends BaseController
         // if ($_SESSION['customer']) {
         //     return redirect()->to(base_url());
         // }
+        session_start();
+        // $_SESSION['current_page'] = $_SERVER['HTTP_REFERER'];
+
         if ($this->request->getMethod() == 'post') {
-            session_start();
             $model = new accountModel();
             $username = $this->request->getVar('username');
             $password = $this->request->getvar('password');
@@ -24,8 +26,17 @@ class Login extends BaseController
             $user = $model->where($data)->first();
             if ($user) {
                 $_SESSION['customer'] = $user;
-                var_dump($_SESSION['customer']);
-                return redirect()->to(base_url() . '/');
+                echo "<script language=javascript> javascript:history.go(-2);</script>";
+                // var_dump($_SESSION['customer']);
+                // if(isset($_SESSION['current_page'])){
+                //     var_dump($_SESSION['current_page']);
+                //     echo 'login được';
+                //     die();
+                //     header("Location: ". $_SESSION['current_page']);
+                // } else {
+                //     header('location: http://localhost:8080/thewayshop/public');
+                // }
+                // return redirect()->to(base_url() . '/');
             } else {
                 echo '<script>alert("Username/Email or Password don\'t match");</script>';
             }

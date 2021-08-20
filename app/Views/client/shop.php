@@ -199,7 +199,6 @@
                                     <option value="4">Best Selling</option>
                                 </select>
                             </div>
-                            <p>Showing all 4 results</p>
                         </div>
                         <div class="col-12 col-sm-4 text-center text-sm-right">
                             <ul class="nav nav-tabs ml-auto">
@@ -229,7 +228,10 @@
                                                 <div class="why-text">
                                                     <a href="<?= base_url() ?>/Product/<?= $product['id'] ?>">
                                                         <h4><?= $product['product_name'] ?></h4>
-                                                        <h5><?= $product['price'] ?> vnd</h5>
+                                                        <div align="center" >
+                                                            <h5 style="color:red;"><?= $product['price'] ?> VNĐ</h5>
+                                                            <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                        </div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -257,7 +259,7 @@
                                                         <h4><?= $product['product_name'] ?></h4>
                                                     </a>
                                                     <!-- <del><?= $product['price'] ?></del> -->
-                                                    <h5><?= $product['price'] ?> vnd</h5>
+                                                    <h5><?= $product['price'] ?> VNĐ</h5>
                                                     <a class="btn hvr-hover" href="#">Add to Cart</a>
                                                 </div>
                                             </div>
