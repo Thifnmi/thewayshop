@@ -230,7 +230,7 @@
                                                         <h4><?= $product['product_name'] ?></h4>
                                                         <div align="center" >
                                                             <h5 style="color:red;"><?= $product['price'] ?> VNĐ</h5>
-                                                            <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Add to Cart</a>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -258,9 +258,15 @@
                                                     <a href="<?= base_url() ?>/Product/<?= $product['id'] ?>">
                                                         <h4><?= $product['product_name'] ?></h4>
                                                     </a>
-                                                    <!-- <del><?= $product['price'] ?></del> -->
+                                                    <h7><?= $product['product_name'] ?> là sản phẩm chính hãng tại ThewayShop
+                                                        <?php if($product['collection'] != ""):?>, nằm trong bộ sưu tập <?=$product['collection']?><?php endif?>
+                                                        <?php if($product['gender'] != ""):?>. Sản phẩm phù hợp để tặng cho <?=$product['gender']?><?php endif?>
+                                                        <?php if($product['gift_for'] != ""):?>, đặc biệt là <?=$product['gift_for']?><?php endif?>
+                                                        <?php if($product['gift_giving_occasions'] != ""):?>, vào các dịp như: <?=$product['gift_giving_occasions']?><?php endif?>
+                                                        <?php if($product['style'] != ""):?>. Là dòng sản phẩm <?=$product['style']?><?php endif?>
+                                                        <?php if($product['brand_origin'] != ""):?>, có xuất xứ từ <?=$product['brand_origin']?><?php endif?>.</h7>
                                                     <h5><?= $product['price'] ?> VNĐ</h5>
-                                                    <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                    <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Add to Cart</a>
                                                 </div>
                                             </div>
                                         </div>

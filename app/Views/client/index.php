@@ -55,7 +55,7 @@
             <?php foreach($categories as $category):?>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= $category['image']?>" alt="<?= $category['name']?>">
+                        <img class="img-fluid" style="cursor: no-drop;" src="<?= $category['image']?>" alt="<?= $category['name']?>">
                         <a class="btn hvr-hover" href="<?= base_url()?>/Category/<?=$category['meta_title']?>"><?= $category['name']?></a>
                     </div>
                 </div>
@@ -109,7 +109,10 @@
                                     </div>
                                     <div class="why-text">
                                         <h4><a href="<?= base_url()?>/Product/<?= $item['id']?>"><?=$item['product_name']?></a></h4>
-                                        <h5 style="color:red;"><?=$item['price']?> VNĐ</h5>
+                                        <div align="center">
+                                            <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
+                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Add to Cart</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -125,10 +128,10 @@
                                     </a>
                                     </div>
                                     <div class="why-text">
-                                        <h4><a href="<?= base_url()?>/Product/<?= $item['id']?>"><?=$item['product_name']?></a></h4>
+                                        <h4><a style="color: #212121;" href="<?= base_url()?>/Product/<?= $item['id']?>"><?=$item['product_name']?></a></h4>
                                         <div align="center">
-                                            <h5 style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
-                                            <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                            <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
+                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Add to Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -143,6 +146,5 @@
         </div>
     </div>
 </div>
-<!-- End Products  -->
 
 <?= $this->endSection() ?>

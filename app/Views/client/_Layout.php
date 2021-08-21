@@ -187,10 +187,12 @@
                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu"><a href="#">
+                        <li class="side-menu">
+                            <a href="#">
                                 <i class="fa fa-shopping-bag"></i>
-                                <span class="badge">3</span>
-                            </a></li>
+                                <span class="badge">0</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -200,26 +202,12 @@
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <li class="cart-box">
                     <ul class="cart-list">
-                        <li>
-                            <a href="#" class="photo"><img src="<?= base_url() ?>/client/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Delica omtantur </a></h6>
-                            <p>1x - <span class="price">$80.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="<?= base_url() ?>/client/images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Omnes ocurreret</a></h6>
-                            <p>1x - <span class="price">$60.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="<?= base_url() ?>/client/images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Agam facilisis</a></h6>
-                            <p>1x - <span class="price">$40.00</span></p>
-                        </li>
-                        <li class="total">
-                            <a href="<?= base_url() ?>/Cart" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
-                            <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>
+                        
                     </ul>
+                    <li class="total" style="background: white; padding-bottom: 10px !important;">
+                        <a style="margin-left: 10px; color: #ffffff" href="<?= base_url() ?>/Cart" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                        <span class="float-right cart-total" style="margin-right: 15px;"></span>
+                    </li>
                 </li>
             </div>
             <!-- End Side Menu -->
@@ -407,6 +395,9 @@
     <script src="<?= base_url() ?>/client/js/contact-form-script.js"></script>
     <script src="<?= base_url() ?>/client/js/custom.js"></script>
     <script src="<?= base_url() ?>/client/js/dialog.js"></script>
+    <script src="<?= base_url()?>/client/js/addtocart.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
 
 
 </body>

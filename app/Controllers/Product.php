@@ -26,4 +26,15 @@ class Product extends BaseController
         $data['productImage'] = $productImage;
         return view('client/shop-detail',$data);
     }
+    public function getById()
+    {
+        if (isset($_GET['pid'])) {
+            $pid = $_GET['pid'];
+            $productDao = new productModel();
+            $product_info = $productDao->getProductById($pid);
+            header('Content-Type: application/json');
+            return json_encode(['status' => 200, 'data' => $product_info]);
+        }
+        return json_encode(['status' => 400, 'data' => null]);
+    }
 }
