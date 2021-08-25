@@ -6,35 +6,21 @@ console.log(prices)
 addToCart = (event, element) => {
     event.preventDefault();
     var pathArray = window.location.pathname.split('/');
-    const quantity = document.querySelector('input[name="quantity"]') ? +document.querySelector('input[name="quantity"]').value : 0;
+    const quantity = document.querySelector('input[name="quantity"]') ? + document.querySelector('input[name="quantity"]').value : 0;
     let pid = element.dataset.id;
     if (!pid) pid = pathArray[pathArray.length - 1];
-    let check = countProductInCart(pid, quantity); //kiem tra mat hang da ton tai trong cart hay chua, neu ton tai thi quantity++
+    let check = countProductInCart(pid, quantity);
+
     if (check == -1) {
         getProductById(pid, quantity);
     }
-    $.toast({
-        text: '<a href="http://localhost:8080/thewayshop/public/Checkout">Check cart</a>', // Text that is to be shown in the toast
-        heading: 'Add to cart suscess', // Optional heading to be shown on the toast
-        icon: 'success', // Type of toast icon
-        showHideTransition: 'slide', // fade, slide or plain
-        allowToastClose: true, // Boolean value true or false
-        hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
-        stack: false, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-        position: 'mid-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
-        
-        textAlign: 'left',  // Text alignment i.e. left, right or center
-        loader: true,  // Whether to show loader or not. True by default
-        loaderBg: '#9EC600',  // Background color of the toast loader
-        beforeShow: function () {}, // will be triggered before the toast is shown
-        afterShown: function () {}, // will be triggered after the toat has been shown
-        beforeHide: function () {}, // will be triggered before the toast gets hidden
-        afterHidden: function () {}  // will be triggered after the toast has been hidden
-    });
+    
 };
+
 deleteItem = (event, element) => {
     event.preventDefault();
     let pid = element.dataset.id;
+    console.log(pid);
     getCart();
     let allItem = [...cart];
     let affterDelete = allItem.filter(e => e.id != pid);
@@ -44,7 +30,6 @@ deleteItem = (event, element) => {
 };
 
 getProductById = (id, quantity) => {
-    //get product from sv
     $.ajax({
         url: "http://localhost:8080/thewayshop/public/Product/getById",
         type: "GET",
@@ -52,7 +37,6 @@ getProductById = (id, quantity) => {
         data: {
             pid: id,
         },
-
         success: function (result) {
             if (result.status == 200) {
                 let { data } = result;
@@ -74,22 +58,22 @@ getProductById = (id, quantity) => {
 };
 
 countProductInCart = (pid, quantity) => {
-    getCart(); //lay ve cart moi nhat
+    getCart();
     let allItem = [...cart];
-    let itemIndex = allItem.findIndex((i) => i.id == pid); //tim kiem product
+    let itemIndex = allItem.findIndex((i) => i.id == pid);
 
     if (itemIndex === -1) {
         return -1;
     }
-    // console.log(quantity);
-    let newQuantity = quantity ? allItem[itemIndex].quantity + quantity : allItem[itemIndex].quantity + 1; //quantity++
+
+    let newQuantity = quantity ? allItem[itemIndex].quantity + quantity : allItem[itemIndex].quantity + 1;
 
     let newItem = {
         ...cart[itemIndex],
-        quantity: newQuantity, //update quantity vao item moi
+        quantity: newQuantity,
     };
 
-    cart[itemIndex] = newItem; //thya item moi vao item cu
+    cart[itemIndex] = newItem;
 
     setCart();
     getCart();
@@ -107,7 +91,6 @@ function getCart() {
     }
 }
 
-// herehrehrehrhehhr
 function renderCart() {
     getCart();
     let list = document.querySelector(".cart-list");
@@ -121,22 +104,21 @@ function renderCart() {
         .reverse()
         .forEach((i) => {
             html += `<li>
-            <a target="_blank" href="Product/${i.id}" class="photo"><img src="${i.image}" class="cart-thumb" alt="${i.name}" /></a>
-            <h6><a target="_blank" href="Product/${i.id}">${i.name}</a></h6>
+            <a href="#" style="float: right;margin-left: 5px;color: #333 !important;" data-id="${i.id}" onclick="deleteItem(event, this)"><i class="fas fa-times"></i></a>
+            <a class="photo"><img src="${i.image}" class="cart-thumb" alt="${i.name}" /></a>
+            <a target="_blank" href="http://localhost:8080/thewayshop/public/Product/${i.id}">${i.name}</a>
             <p style="margin-left: 60px">${i.quantity} x <span class="price">${i.price} VND</span></p>
         </li> `;
         });
 
     cart.every((i) => {
-        if (i.price == "Liên hệ") {
-            totalPrice = "Liên hệ";
+        if (i.price == "") {
+            totalPrice = "";
             return false;
         } else {
-            // console.log(i)
             let bef = i.price.replaceAll(".", "");
             var t = Number(bef);
-            totalPrice += t * +i.quantity;
-            // console.log(totalPrice);
+            totalPrice += t * + i.quantity;
             return true;
         }
     });
@@ -145,7 +127,7 @@ function renderCart() {
         html = "<li><p>You have no items in your shopping cart.</p></li>";
     }
 
-    let totalPricehtml = `<strong>Total</strong>: ${totalPrice} VND`; //cart_totatl
+    let totalPricehtml = `<strong>Total</strong>: ${totalPrice} VND`;
 
     let cart_count = document.querySelectorAll(".badge");
 
@@ -172,7 +154,7 @@ rendetListProductCheckOut = () => {
         cart.forEach((e) => {
             html += ` <tr>
           <td>${e.name} <span class="product-qty">x ${e.quantity}</span></td>
-          <td>$${e.price}</td>
+          <td>${e.price}</td>
       </tr>`;
         });
         list.innerHTML = html;

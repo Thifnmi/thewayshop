@@ -301,9 +301,5 @@
 </div>
 <!-- End Shop Page -->
 
-<!-- . -->
-
-<!-- . -->
-
 
 <?= $this->endSection() ?>
