@@ -385,6 +385,8 @@
     <script src="<?= base_url() ?>/client/js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="<?= base_url() ?>/client/js/jquery.superslides.min.js"></script>
+    <script src="<?= base_url() ?>/client/js/jquery.nicescroll.min.js"></script>
+    <script src="<?= base_url() ?>/client/js/jquery-ui.js"></script>
     <script src="<?= base_url() ?>/client/js/bootstrap-select.js"></script>
     <script src="<?= base_url() ?>/client/js/inewsticker.js"></script>
     <script src="<?= base_url() ?>/client/js/bootsnav.js."></script>

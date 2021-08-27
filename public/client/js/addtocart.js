@@ -2,7 +2,7 @@ let cart = [];
 const pricesDOM = document.querySelectorAll('.price');
 const prices = Array.from(pricesDOM);
 
-console.log(prices)
+// console.log(prices)
 addToCart = (event, element) => {
     event.preventDefault();
     var pathArray = window.location.pathname.split('/');
