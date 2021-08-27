@@ -5,10 +5,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>ABOUT US</h2>
+                <h2>Về chúng tôi</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
-                    <li class="breadcrumb-item active">About Us</li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Về chúng tôi</li>
                 </ul>
             </div>
         </div>
@@ -21,10 +21,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="noo-sh-title">We are <span>The Way Shop</span></h2>
-                <p>Welcome to The Way Shop, your number one source for all things jewels. We're dedicated to giving you the best of jewels, with a focus on rings, necklace ...
-                    Founded in 2021, The Way Shop has come a long way from its beginnings in HaNoi, VietNam. When we started out, our passion for jewels. We now serve customers all over the world, and are thrilled to be a part of the fashion industry.</p>
-                <p>We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions, please don't hesitate to contact us.</p>
+                <h2 class="noo-sh-title">Chúng tôi là <span>The Way Shop</span></h2>
+                <p>Chào mừng bạn đến với The Way Shop, nơi cung cấp đồ trang sức số một của bạn. Chúng tôi luôn tận tâm mang đến cho bạn những món đồ trang sức tốt nhất, chúng tôi tập trung vào nhẫn, vòng cổ, đồng hồ và rất nhiều món khác. Được thành lập vào 2000, đến nay The Way Shop đã có một chặng đường dài từ những ngày đầuu thành lập tại Hà Nội, Việt Nam. Giờ đây chúng tôi rất vui mừng được phục vụ khách hàng trên Việt Nam và toàn thé giới, rất vui được trở thành người đồng hành của bạn.</p>
+                <p>Chúng tôi hy vọng bạn thích sản phẩm và tin tưởng sản phẩm của chúng tôi. Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại mà liên hệ với chúng tôi qua hotline/địa chỉ email nhé!</p>
             </div>
             <div class="col-lg-6">
                 <div class="banner-frame"> <img class="img-thumbnail img-fluid" src="<?= base_url() ?>/client/images/about-img.jpg" alt="" />
@@ -34,26 +33,26 @@
         <div class="row my-5">
             <div class="col-sm-6 col-lg-4">
                 <div class="service-block-inner">
-                    <h3>We are Trusted</h3>
-                    <p>We served million customer from all of the world and all of them trusted we. Come with me, you will be one of them </p>
+                    <h3>Chúng tôi được tin tưởng</h3>
+                    <p>Chúng tôi đã phục vụ hàng triệu khách hàng từ khắp nơi trên thế giới và tất cả họ đều tin tưởng chúng tôi. Hãy đến với tôi, bạn sẽ là một trong số họ</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="service-block-inner">
-                    <h3>We are Professional</h3>
-                    <p>We had 20 years experience in jewelry. Our staff trained very careful before go to work. Just try and enjoy!</p>
+                    <h3>Chúng tôi chuyên nghiệp</h3>
+                    <p>Chúng tôi đã có 20 năm kinh nghiệm trong lĩnh vực đồ trang sức. Nhân viên của chúng tôi được đào tạo rất cẩn thận trước khi đi làm. Hãy thử và tận hưởng!</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="service-block-inner">
-                    <h3>We are Here</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <h3>Chúng tôi ở đây</h3>
+                    <p>Giờ đây chúng tôi đã và đang đây mạnh việc bán hàng online, vì thế bạn có thể mua hàng ở bất kỳ đâu, bất kỳ khi nào. Chỉ cần bạn muốn, chúng tôi vẫn ở đây. Bạn luôn được chào đón tại The Way Shop </p>
                 </div>
             </div>
         </div>
         <div class="row my-4">
             <div class="col-12">
-                <h2 class="noo-sh-title">Meet Our Team</h2>
+                <h2 class="noo-sh-title">Đội ngũ của chúng tôi</h2>
             </div>
             <div class="col-sm-6 col-lg-2" style="margin-left:20px">
                 <div class="hover-team">
@@ -68,7 +67,7 @@
                             <li>
                                 <a href="#" class="fab fa-twitter"></a>
                             </li>
-                           
+
                             <li>
                                 <a href="#" class="fab fa-youtube"></a>
                             </li>
@@ -77,8 +76,8 @@
                         <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
                     </div>
                     <div class="team-description">
-                        <p>Team Leader</p>
-                        <p>Come from BacGiang, VietNam. Student at the University of Transport Technology</p>
+                        <p>Nhóm trưởng</p>
+                        <p>Đến từ Bắc Giang, Việt Nam. Hiện đang là sinh viên của trường Đại học công nghệ Giao thông vận tải</p>
                     </div>
                     <hr class="my-0">
                 </div>
@@ -96,7 +95,7 @@
                             <li>
                                 <a href="#" class="fab fa-twitter"></a>
                             </li>
-                           
+
                             <li>
                                 <a href="#" class="fab fa-youtube"></a>
                             </li>
@@ -104,8 +103,8 @@
                         <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
                     </div>
                     <div class="team-description">
-                        <p> Front End Developer </p>
-                        <p> Come from HaNoi, Viet Nam. Student at the University of Transport Technology</p>
+                        <p> Lập trình viên Front End </p>
+                        <p> Đến từ Hà Nội, Việt Nam. Hiện đang là sinh viên của trường Đại học công nghệ Giao thông vận tải</p>
                     </div>
                     <hr class="my-0">
                 </div>
@@ -123,7 +122,7 @@
                             <li>
                                 <a href="#" class="fab fa-twitter"></a>
                             </li>
-                           
+
                             <li>
                                 <a href="#" class="fab fa-youtube"></a>
                             </li>
@@ -131,8 +130,8 @@
                         <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
                     </div>
                     <div class="team-description">
-                        <p>Back End Developer</p>
-                        <p>Come from NinhBinh, Viet Nam. Student at the University of Transport Technology</p>
+                        <p>Lập trình viên Back End</p>
+                        <p>Đến từ Ninh Bình, Việt Nam. Hiện đang là sinh viên của trường Đại học công nghệ Giao thông vận tải</p>
                     </div>
                     <hr class="my-0">
                 </div>
@@ -150,7 +149,7 @@
                             <li>
                                 <a href="#" class="fab fa-twitter"></a>
                             </li>
-                           
+
                             <li>
                                 <a href="#" class="fab fa-youtube"></a>
                             </li>
@@ -158,8 +157,8 @@
                         <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
                     </div>
                     <div class="team-description">
-                        <p>Tester</p>
-                        <p>Come from HaNoi, Viet Nam. Student at the University of Transport Technology</p>
+                        <p>Kiểm thử phần mềm</p>
+                        <p>Đến từ Hà Nội, Việt Nam. Hiện đang là sinh viên của trường Đại học công nghệ Giao thông vận tải</p>
                     </div>
                     <hr class="my-0">
                 </div>
@@ -178,7 +177,7 @@
                             <li>
                                 <a href="#" class="fab fa-twitter"></a>
                             </li>
-                           
+
                             <li>
                                 <a href="#" class="fab fa-youtube"></a>
                             </li>
@@ -186,8 +185,8 @@
                         <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
                     </div>
                     <div class="team-description">
-                        <p>Hiring </p>
-                        <p> Come from BacNinh, Viet Nam. Student at the University of Transport Technology</p>
+                        <p>Thiết kế CSDL </p>
+                        <p>Đến từ Bắc Ninh, Việt Nam. Hiện đang là sinh viên của trường Đại học công nghệ Giao thông vận tải</p>
                     </div>
                     <hr class="my-0">
                 </div>

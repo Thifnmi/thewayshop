@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Shop Detail</h2>
+                <h2>Chi tiết sản phẩm</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
-                    <li class="breadcrumb-item active">Shop Detail </li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Chi tiết sản phẩm </li>
                 </ul>
             </div>
         </div>
@@ -101,8 +101,8 @@
                         </li>
 
                         <li>
-                            <div class="form-group quantity-box">
-                                <label class="control-label">Quantity</label>
+                            <div class="form-group quantity-box" >
+                                <label class="control-label" >Số lượng</label>
                                 <input class="form-control" value="1" min="1" max="<?= $product['quantity'] ?>" type="number">
                             </div>
                         </li>
@@ -110,8 +110,8 @@
 
                     <div class="price-box-bar">
                         <div class="cart-and-bay-btn">
-                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Buy New</a>
-                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Add to cart</a>
+                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Tiếp tục mua hàng</a>
+                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Thêm vào giỏ</a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
         </div>
 
         <!-- Description Product -->
-        <h1 class="list-group-item" style="font-style: bold; font-size:25px; align:center; width:60%;font-weight: bold" href="#sub-men1" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men1">DESCRIPTION PRODUCT
+        <h1 class="list-group-item" style="font-style: bold; font-size:25px; align:center; width:60%;font-weight: bold" href="#sub-men1" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men1">MÔ TẢ SẢN PHẨM
             <i style="float:right" class="fal fa-chevron-down"></i>
             <hr width="100%" size="3px" align="center" />
         </h1>
@@ -128,55 +128,55 @@
                 <div data-parent="#list-group-men" style="display:inline-block">
                     <?php foreach($supplier as $supplier):?>
                         <?php if($product['supplier_id'] == $supplier['id']):?>
-                            <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Brand
+                            <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Thương hiệu
                                 <span style="float:right; margin-left: 300px"><?= $supplier['name']?></span>
                                 <hr width="100%" size="3px" align="center" />
                             </span>
                         <?php endif ?>
                     <?php endforeach;?>
                     <?php if($product['collection'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Collection:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Bộ sưu tập:
                             <span style="float:right; margin-left: 300px"><?= $product['collection']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['main_stone_type'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Main Stone Type:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Loại đá:
                             <span style="float:right; margin-left: 300px"><?= $product['main_stone_type']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['main_stone_color'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Main Stone Color:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Màu đá:
                             <span style="float:right; margin-left: 300px"><?= $product['main_stone_color']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?><?php if($product['stone_shape'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Stone Shape:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Hình dạng đá chính:
                             <span style="float:right; margin-left: 300px"><?= $product['stone_shape']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['sub_stone_type'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Sub Stone Type:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Loại đá phụ:
                             <span style="float:right; margin-left: 300px"><?= $product['sub_stone_type']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['secondary_stone_color'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Secondary Stone Color:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Màu đá thứ hai:
                             <span style="float:right; margin-left: 300px"><?= $product['secondary_stone_color']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['gender'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Gender:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Giới tính:
                             <span style="float:right; margin-left: 300px"><?= $product['gender']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['gift_giving_occasions'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Gift Giving Occasions:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Các dịp tặng quà:
                             <span style="float:right; margin-left: 300px"><?=$product['gift_giving_occasions']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
@@ -194,109 +194,109 @@
                         </span>
                     <?php endif?>
                     <?php if($product['gold_age'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Gold Age:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Tuổi vàng:
                             <span style="float:right; margin-left: 300px"><?= $product['gold_age']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['style'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Style:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Phong cách:
                             <span style="float:right; margin-left: 300px"><?= $product['style']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['wire_size'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Wire Size:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Kích cỡ dây:
                             <span style="float:right; margin-left: 300px"><?= $product['wire_size']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['face_size'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Face Size:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Kích cỡ mặt:
                             <span style="float:right; margin-left: 300px"><?= $product['face_size']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['machine_thickness'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Machine Thickness:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Độ dày:
                             <span style="float:right; margin-left: 300px"><?= $product['machine_thickness']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['brand_origin'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Brand Origin:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Thương hiệu :
                             <span style="float:right; margin-left: 300px"><?= $product['brand_origin']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['origin_of_the_apparatus'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Origin Of The Apparatus:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Thương hiệu dụng cụ:
                             <span style="float:right; margin-left: 300px"><?= $product['origin_of_the_apparatus']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['assembled_at'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Assemble At:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Tập hợp tại:
                             <span style="float:right; margin-left: 300px"><?= $product['assembled_at']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['watch_movement_type'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Watch Movement Type:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Đồng hồ loại:
                             <span style="float:right; margin-left: 300px"><?= $product['watch_movement_type']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['glass_type'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Glass Type:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Loại thủy tinh:
                             <span style="float:right; margin-left: 300px"><?= $product['glass_type']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['wire_material'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Wire Material:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Chất liệu dây:
                             <span style="float:right; margin-left: 300px"><?= $product['wire_material']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['shell_material'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Shell Material:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Chất liệu bọc:
                             <span style="float:right; margin-left: 300px"><?= $product['shell_material']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['face_shape'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Face Shape:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Hình mặt:
                             <span style="float:right; margin-left: 300px"><?= $product['face_shape']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['water_resistance'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Water Resistance:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Chống nước:
                             <span style="float:right; margin-left: 300px"><?= $product['water_resistance']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['needle_number'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Needle Number:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Số kim:
                             <span style="float:right; margin-left: 300px"><?= $product['needle_number']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['watch_stones_attached'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Watch Stones Attached:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Đồng hồ đính đá:
                             <span style="float:right; margin-left: 300px"><?= $product['watch_stones_attached']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['chronometer_certification'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Chronometer Certification:
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Chứng nhận:
                             <span style="float:right; margin-left: 300px"><?= $product['chronometer_certification']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
                     <?php endif?>
                     <?php if($product['main_function'] != ''):?>
-                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Main Function
+                        <span class="list-group-item" style="margin-left: 20px; font-size: 16px">Chức năng chính
                             <span style="float:right; margin-left: 300px"><?= $product['main_function']?></span>
                             <hr width="100%" size="10px" align="center" />
                         </span>
@@ -309,7 +309,7 @@
         <!--End Des Product -->
 
         <!-- My Service -->
-        <h1 class="list-group-item list-group-item-action" style="font-style: bold; font-size:25px; align:center; width:60%;font-weight: bold" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">MY SERVICE
+        <h1 class="list-group-item list-group-item-action" style="font-style: bold; font-size:25px; align:center; width:60%;font-weight: bold" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">DỊCH VỤ CỦA CHÚNG TÔI
             <i style="float:right" class="fal fa-chevron-down"></i>
             <hr width="100%" size="3px" align="center" />
         </h1>
@@ -344,7 +344,7 @@
         <div class="row my-5">
             <div class="col-lg-12">
                 <div class="title-all text-center">
-                    <h1>Featured Products</h1>
+                    <h1>Có thể bạn quan tâm</h1>
                 </div>
                 <div class="featured-products-box owl-carousel owl-theme">
                     <?php foreach($featuredProducts as $item):?>

@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="<?= base_url() ?>/client/images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="<?= base_url() ?>/client/images/apple-touch-icon.png">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
 
     <!-- Bootstrap CSS -->
@@ -47,28 +47,28 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/About">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/About">Về chúng tôi</a></li>
                         <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Jewelry <i class="fad fa-chevron-down"></i></a>
+                            <a href="#" class="nav-link" data-toggle="dropdown">Trang sức <i class="fad fa-chevron-down"></i></a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
                                 <li>
                                     <div class="row">
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Types</h6>
+                                            <h6 class="title">Loại</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <?php foreach ($categories as $item) : 
-                                                        if($item['id'] != 4):?>
+                                                    <?php foreach ($categories as $item) :
+                                                        if ($item['id'] != 4) : ?>
                                                             <li><a href="<?= base_url() ?>/Category/<?= $item['meta_title'] ?>"><?= $item['name'] ?></a></li>
-                                                        <?php endif?>
+                                                        <?php endif ?>
                                                     <?php endforeach; ?>
                                                 </ul>
                                             </div>
                                         </div>
                                         <!-- end col-3 -->
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Material</h6>
+                                            <h6 class="title">Chất liệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
                                                     <li><a href="#">Swimwear</a></li>
@@ -80,7 +80,7 @@
                                         </div>
                                         <!-- end col-3 -->
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Collections</h6>
+                                            <h6 class="title">Bộ sưu tập</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
                                                     <li><a href="#">Sun Flower</a></li>
@@ -91,7 +91,7 @@
                                             </div>
                                         </div>
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Brands</h6>
+                                            <h6 class="title">Thương hiệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
                                                     <li><a href="#">Bags</a></li>
@@ -108,35 +108,35 @@
                             </ul>
                         </li>
                         <li class="dropdown megamenu-fw">
-                            <a href="<?=base_url()?>/Category/watch" class="nav-link" data-toggle="dropdown">Watches <i class="fad fa-chevron-down"></i></a>
+                            <a href="<?= base_url() ?>/Category/watch" class="nav-link" data-toggle="dropdown">Đồng hồ <i class="fad fa-chevron-down"></i></a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
                                 <li>
                                     <div class="row">
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Gender</h6>
+                                            <h6 class="title">Giới tính</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Mens</a></li>
-                                                    <li><a href="#">Ladies</a></li>
+                                                    <li><a href="#">Nam</a></li>
+                                                    <li><a href="#">Nữ</a></li>
                                                     <li><a href="#">Unisex</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <!-- end col-3 -->
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Material</h6>
+                                            <h6 class="title">Chất liệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Diamond</a></li>
-                                                    <li><a href="#">Gold</a></li>
-                                                    <li><a href="#">Silver</a></li>
+                                                    <li><a href="#">Kim cương</a></li>
+                                                    <li><a href="#">Vàng</a></li>
+                                                    <li><a href="#">Bạc</a></li>
                                                     <!-- <li><a href="#">Trousers</a></li> -->
                                                 </ul>
                                             </div>
                                         </div>
                                         <!-- end col-3 -->
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Collections</h6>
+                                            <h6 class="title">Bộ sưu tập</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
                                                     <li><a href="#">Sun Flower</a></li>
@@ -147,7 +147,7 @@
                                             </div>
                                         </div>
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Brands</h6>
+                                            <h6 class="title">Thương hiệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
                                                     <li><a href="#">PNJ</a></li>
@@ -163,21 +163,21 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/Contact">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/Contact">Liên hệ </a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">
-                                <?php if(empty($_SESSION['customer'])):?>
-                                    My Account 
-                                <?php else: ?>
-                                    <?=$_SESSION['customer']['fullname']?>
-                                <?php endif?><i class="fad fa-user-circle"></i></a>
+                                <?php if (empty($_SESSION['customer'])) : ?>
+                                    Tài khoản
+                                <?php else : ?>
+                                    <?= $_SESSION['customer']['fullname'] ?>
+                                <?php endif ?><i class="fad fa-user-circle"></i></a>
                             <ul class="dropdown-menu">
-                                <?php if(empty($_SESSION['customer'])):?>
-                                    <li><a href="<?= base_url() ?>/Login">Login</a></li>
-                                <?php else: ?>
-                                    <li><a href="<?= base_url() ?>/Account">My Profile</a></li>
-                                    <li><a href="<?=base_url()?>/Login/logout">Logout</a></li>
-                                <?php endif?>
+                                <?php if (empty($_SESSION['customer'])) : ?>
+                                    <li><a href="<?= base_url() ?>/Login">Đăng nhập</a></li>
+                                <?php else : ?>
+                                    <li><a href="<?= base_url() ?>/Account">Hồ sơ của tôi</a></li>
+                                    <li><a href="<?= base_url() ?>/Login/logout">Đăng xuất</a></li>
+                                <?php endif ?>
                             </ul>
                         </li>
                     </ul>
@@ -202,12 +202,12 @@
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <li class="cart-box">
                     <ul class="cart-list">
-                        
+
                     </ul>
-                    <li class="total" style="background: white; padding-bottom: 10px !important;">
-                        <a style="margin-left: 10px; color: #ffffff" href="<?= base_url() ?>/Cart" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
-                        <span class="float-right cart-total" style="margin-right: 15px;"></span>
-                    </li>
+                <li class="total" style="background: white; padding-bottom: 10px !important;">
+                    <a style="margin-left: 10px; color: #ffffff" href="<?= base_url() ?>/Cart" class="btn btn-default hvr-hover btn-cart">Xem giỏ hàng</a>
+                    <span class="float-right cart-total" style="margin-right: 15px;"></span>
+                </li>
                 </li>
             </div>
             <!-- End Side Menu -->
@@ -325,36 +325,37 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
-                            <h4>HELP</h4>
+                            <h4>Về chúng tôi</h4>
                             <ul>
-                                <li><a href="<?= base_url() ?>">Advise </a></li>
-                                <li><a href="<?= base_url() ?>/About">Shipping and Delivery</a></li>
-                                <li><a href="<?= base_url() ?>/About">Payment</a></li>
-                                <li><a href="<?= base_url() ?>/Contact">Returns</a></li>
+                                <li><a href="<?= base_url() ?>/About"> Thông tin về The Way Shop</a></li>
+                                <li><a href="<?= base_url() ?>/About">Quá trình phát triển</a></li>
+                                <li><a href="<?= base_url() ?>/About">Hệ thống cửa hàng</a></li>
+                                <li><a href="<?= base_url() ?>/Contact">Thành tựu</a></li>
+                                <li><a href="<?= base_url() ?>/About">Câu hỏi thường gặp</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
-                            <h4>Collection</h4>
+                            <h4>Hỗ trợ mua hàng</h4>
                             <ul>
-                                <li><a href="<?= base_url() ?>"> Home </a></li>
-                                <li><a href="<?= base_url() ?>/About">About Us</a></li>
-                                <li><a href="<?= base_url() ?>/About">Product</a></li>
-                                <li><a href="<?= base_url() ?>/Contact">Contact Us</a></li>
-                                <li><a href="<?= base_url() ?>/About">My Account</a></li>
+                            <li><a href="<?= base_url() ?>/Contact">Hướng dẫn mua hàngF</a></li>
+                                <li><a href="<?= base_url() ?>">Lời khuyên </a></li>
+                                <li><a href="<?= base_url() ?>/About">Vận chuyển và giao hàng</a></li>
+                                <li><a href="<?= base_url() ?>/About">Thanh toán</a></li>
+                                <li><a href="<?= base_url() ?>/Contact">Đổi trả</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link-contact">
-                            <h4>Contact Us</h4>
+                            <h4>Liên hệ với chúng tôi</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: University of Transport Technology <br>54 Phố Triều Khúc, Thanh Xuân Nam, Thanh Xuân, Hà Nội<br></p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Địa chỉ: Trường Đại học công nghệ Giao thông vận tải <br>54 Phố Triều Khúc, Thanh Xuân Nam, Thanh Xuân, Hà Nội<br></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel: 024 3854 4264"> 024 3854 4264</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Hotline: <a href="tel: 024 3854 4264"> 024 3854 4264</a></p>
                                 </li>
                                 <li>
                                     <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
@@ -370,7 +371,7 @@
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved &copy; 2021 <a href="#">The Way Shop</a> Design By :
+        <p class="footer-company">Đã được đăng ký bản quyền &copy; 2021 <a href="#">The Way Shop</a> Thiết kế bởi :
             <a href="#">Nhóm 2 69DCTT21</a>
         </p>
     </div>
@@ -395,7 +396,7 @@
     <script src="<?= base_url() ?>/client/js/contact-form-script.js"></script>
     <script src="<?= base_url() ?>/client/js/custom.js"></script>
     <script src="<?= base_url() ?>/client/js/dialog.js"></script>
-    <script src="<?= base_url()?>/client/js/addtocart.js"></script>
+    <script src="<?= base_url() ?>/client/js/addtocart.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
 

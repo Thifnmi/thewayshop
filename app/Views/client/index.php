@@ -9,9 +9,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
-                        <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Thewayshop</strong></h1>
+                        <p class="m-b-40">Tham khảo những món đồ trang sức <br> đang làm mưa làm gió ở thời điểm hiện tại</p>
+                        <p><a class="btn hvr-hover" href="#">Mua ngay</a></p>
                     </div>
                 </div>
             </div>
@@ -21,9 +21,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
-                        <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Thewayshop</strong></h1>
+                        <p class="m-b-40">Chúng tôi cung cấp giá tốt cho khách hàng <br> dù bạn đã từng mua hàng tại cửa hàng hay chưa</p>
+                        <p><a class="btn hvr-hover" href="#">Mua ngay</a></p>
                     </div>
                 </div>
             </div>
@@ -33,9 +33,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
-                        <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Thewayshop</strong></h1>
+                        <p class="m-b-40">Hãy thử và tận hưởng <br> chúng tôi sẽ không làm bạn thất vọng</p>
+                        <p><a class="btn hvr-hover" href="#">Mua ngay</a></p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center">
-                    <h1>Featured Products</h1>
+                    <h1>Một số sản phẩm</h1>
                 </div>
             </div>
         </div>
@@ -101,9 +101,9 @@
                                 <div class="products-single fix">
                                     <div class="box-img-hover">
                                         <a href="<?= base_url()?>/Product/<?= $item['id']?>">
-                                            <div class="type-lb">
+                                            <!-- <div class="type-lb">
                                                 <p class="sale">Sale</p>
-                                            </div>
+                                            </div> -->
                                             <img class="img-fluid dat" src="<?=$item['image']?>" alt="<?=$item['product_name']?>">
                                         </a>
                                     </div>
@@ -111,7 +111,7 @@
                                         <h4><a href="<?= base_url()?>/Product/<?= $item['id']?>"><?=$item['product_name']?></a></h4>
                                         <div align="center">
                                             <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
-                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Add to Cart</a>
+                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                                         <h4><a style="color: #212121;" href="<?= base_url()?>/Product/<?= $item['id']?>"><?=$item['product_name']?></a></h4>
                                         <div align="center">
                                             <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
-                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Add to Cart</a>
+                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>

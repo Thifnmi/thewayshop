@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Cart</h2>
+                <h2>Giỏ hàng</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>/Shop">Shop</a></li>
-                    <li class="breadcrumb-item active">Cart</li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Cửa hàng</a></li>
+                    <li class="breadcrumb-item active">Giỏ hàng</li>
                 </ul>
             </div>
         </div>
@@ -26,16 +26,15 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Images</th>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Remove</th>
+                                <th>Ảnh</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Tổng cộng</th>
+                                <th>Loại bỏ</th>
                             </tr>
                         </thead>
                         <tbody>
-
                         </tbody>
                     </table>
                 </div>
@@ -46,9 +45,9 @@
             <div class="col-lg-6 col-sm-6">
                 <div class="coupon-box">
                     <div class="input-group input-group-sm">
-                        <input class="form-control" id="code" name="code" placeholder="Enter your coupon code" aria-label="Coupon code" type="text">
+                        <input class="form-control" id="code" name="code" placeholder="Nhập mã giảm giá" aria-label="Coupon code" type="text">
                         <div class="input-group-append">
-                            <button id="coupon" name="coupon" class="btn btn-theme" type="button">Apply Coupon</button>
+                            <button id="coupon" name="coupon" class="btn btn-theme" type="button">Nhập mã</button>
                         </div>
                     </div>
                 </div>
@@ -64,37 +63,29 @@
             <div class="col-lg-8 col-sm-12"></div>
             <div class="col-lg-4 col-sm-12">
                 <div class="order-box">
-                    <h3>Order summary</h3>
+                    <h3>Hóa đơn đặt hàng</h3>
                     <div class="d-flex">
-                        <h4>Sub Total</h4>
+                        <h4>Số tiền</h4>
                         <div class="ml-auto font-weight-bold"> $ 130 </div>
-                    </div>
-                    <div class="d-flex">
-                        <h4>Discount</h4>
-                        <div class="ml-auto font-weight-bold"> $ 40 </div>
                     </div>
                     <hr class="my-1">
                     <div class="d-flex">
-                        <h4>Coupon Discount</h4>
+                        <h4>Mã giảm giá</h4>
                         <div class="ml-auto font-weight-bold"> $ 10 </div>
                     </div>
                     <div class="d-flex">
-                        <h4>Tax</h4>
-                        <div class="ml-auto font-weight-bold"> $ 2 </div>
-                    </div>
-                    <div class="d-flex">
-                        <h4>Shipping Cost</h4>
+                        <h4>Phí giao hàng</h4>
                         <div class="ml-auto font-weight-bold"> Free </div>
                     </div>
                     <hr>
                     <div class="d-flex gr-total">
-                        <h5>Grand Total</h5>
+                        <h5>Tổng cộng</h5>
                         <div class="product-subtotal ml-auto h5">0</div>
                     </div>
                     <hr>
                 </div>
             </div>
-            <div class="col-12 d-flex shopping-box"><a href="<?= base_url() ?>/Checkout" class="ml-auto btn hvr-hover">Checkout</a> </div>
+            <div class="col-12 d-flex shopping-box"><a href="<?= base_url() ?>/Checkout" class="ml-auto btn hvr-hover">Thanh toán</a> </div>
         </div>
 
     </div>

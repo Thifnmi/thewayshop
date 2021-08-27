@@ -15,48 +15,48 @@
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="<?=base_url()?>/Register" method="post">
-                <h1>Create Account</h1>
-                <input type="text" name="Rfullname" required="" placeholder="Full Name" />
-                <input type="text" name="Rusername" required="" placeholder="Username" />
-                <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="Rpassword" required="" placeholder="Password" />
-                <input type="text" name="Raddress" required="" placeholder="Address" />
-                <button type="submit" name="signup">Sign Up</button>
+                <h1>Tạo tài khoản</h1>
+                <input type="text" name="Rfullname" required="" placeholder="Tên của bạn" />
+                <input type="text" name="Rusername" required="" placeholder="Tài khoản" />
+                <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="Rpassword" required="" placeholder="Mật khẩu" />
+                <input type="text" name="REmail" required="" placeholder="Địa chỉ email" />
+                <button type="submit" name="signup">Đăng ký</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
             <form action="<?=base_url()?>/Login" method="POST">
-                <h1>Sign in</h1>
+                <h1>Đăng nhập</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <!-- <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                 </div>
-                <span>or use your account</span>
+                <span>Hoặc dùng tài khoản của bạn</span>
                 <input type="text" name="username" required="" placeholder="Username" />
                 <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="password" required="" placeholder="Password" />
-                <a href="#">Forgot your password?</a>
-                <button type="submit" name="login">Sign In</button>
+                <a href="#">Quên mật khẩu?</a>
+                <button type="submit" name="login">Đăng nhập</button>
 
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
-                    <p>Or you can</p>
+                    <h1>Chào mừng trở lại!</h1>
+                    <p>Để tiếp tục kết nối với chúng tôi, làm ơn hãy đăng nhập với thông tin của bạn</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                    <p>Hoặc bạn có thể</p>
                     <button class="ghost">
-                        <a style="color:#fff" href="<?= base_url() ?>">Continue as guest</a>
+                        <a style="color:#fff" href="<?= base_url() ?>">Tiếp tục là khách</a>
                     </button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
-                    <p>Or you can</p>
+                    <h1>Chào bạn</h1>
+                    <p>Đăng ký tài toàn bằng cách điền một số thông tin cá nhân và bắt đầu trở thành chúng tôi</p>
+                    <button class="ghost" id="signUp">Đăng ký</button>
+                    <p>Hoặc bạn có thể</p>
                     <button class="ghost">
-                        <a style="color:#fff" href="<?= base_url() ?>">Continue as guest</a>
+                        <a style="color:#fff" href="<?= base_url() ?>">Tiếp tục là khách</a>
                     </button>
                 </div>
             </div>
