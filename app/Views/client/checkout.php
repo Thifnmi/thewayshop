@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Checkout</h2>
+                <h2>Thanh toán</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
-                    <li class="breadcrumb-item active">Checkout</li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Thanh toán</li>
                 </ul>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col-sm-6 col-lg-6 mb-3">
                 <div class="checkout-address">
                     <div class="title-left">
-                        <h3>Billing address</h3>
+                        <h3>Thông tin liên hệ</h3>
                     </div>
                     <form class="needs-validation" novalidate>
                         <div class="row">
@@ -35,32 +35,32 @@
                                         $name = $name . $ar_name[$i]. " ";
                                     }?>
                             <div class="col-md-6 mb-3">
-                                <label for="firstName">First name *</label>
+                                <label for="firstName">Họ *</label>
                                 <input type="text" class="form-control" id="firstName" placeholder="" value="<?= $ar_name[$length]?>" required>
-                                <div class="invalid-feedback"> Valid first name is required. </div>
+                                <div class="invalid-feedback">Bạn phải điền họ. </div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="lastName">Last name *</label>
+                                <label for="lastName">Tên *</label>
                                 <input type="text" class="form-control" id="lastName" placeholder="" value="<?= $name?>" required>
-                                <div class="invalid-feedback"> Valid last name is required. </div>
+                                <div class="invalid-feedback"> Bạn phải điền tên. </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="username">Username *</label>
+                            <label for="username">Tài khoản *</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="username" placeholder="" required value="<?= $_SESSION['customer']['username']?>">
-                                <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
+                                <input type="text" class="form-control" id="username" placeholder="" readonly="true" required value="<?= $_SESSION['customer']['username']?>">
+                                <div class="invalid-feedback" style="width: 100%;">Bạn phải điền tài khoản. </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="email">Email Address *</label>
+                            <label for="email">Điạ chỉ email *</label>
                             <input type="email" class="form-control" id="email" placeholder="" value="<?= $_SESSION['customer']['email']?>">
-                            <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                            <div class="invalid-feedback"> Hãy nhập địa chỉ email để cập nhập thông tin đơn hàng. </div>
                         </div>
                         <div class="mb-3">
-                            <label for="address">Address *</label>
+                            <label for="address">Địa chỉ *</label>
                             <input type="text" class="form-control" id="address" placeholder="" required value="<?= $_SESSION['customer']['address']?>">
-                            <div class="invalid-feedback"> Please enter your shipping address. </div>
+                            <div class="invalid-feedback"> Hãy nhập địa chỉ nhận hàng! </div>
                         </div>
                         <!-- <div class="mb-3">
                             <label for="address2">Address 2 *</label>
@@ -91,52 +91,43 @@
                         </div>-->
                         <!--  -->
                         <hr class="mb-4">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="same-address">
-                            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="save-info">
-                            <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                        </div>
-                        <hr class="mb-4">
                         <div class="title"> <span>Payment</span> </div>
                         <div class="d-block my-3">
                             <div class="custom-control custom-radio">
                                 <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                                <label class="custom-control-label" for="credit">Credit card</label>
+                                <label class="custom-control-label" for="credit">Thanh toán khi nhận hàng</label>
                             </div>
                             <div class="custom-control custom-radio">
                                 <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                <label class="custom-control-label" for="debit">Debit card</label>
+                                <label class="custom-control-label" for="debit">Thanh toán qua Momo</label>
                             </div>
                             <div class="custom-control custom-radio">
                                 <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                <label class="custom-control-label" for="paypal">Paypal</label>
+                                <label class="custom-control-label" for="paypal">Thanh toán qua tài khoản ngân hàng</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="cc-name">Name on card</label>
-                                <input type="text" class="form-control" id="cc-name" placeholder="" required> <small class="text-muted">Full name as displayed on card</small>
-                                <div class="invalid-feedback"> Name on card is required </div>
+                                <label for="cc-name">Tên trên thẻ</label>
+                                <input type="text" class="form-control" id="cc-name" placeholder="" required> <small class="text-muted">Tên được ghi trên thẻ</small>
+                                <div class="invalid-feedback">Bạn phải điền tên chứ </div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="cc-number">Credit card number</label>
+                                <label for="cc-number">Số thẻ</label>
                                 <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                                <div class="invalid-feedback"> Credit card number is required </div>
+                                <div class="invalid-feedback"> Hãy điền số thẻ </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-3 mb-3">
-                                <label for="cc-expiration">Expiration</label>
+                                <label for="cc-expiration">Hết hạn</label>
                                 <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                                <div class="invalid-feedback"> Expiration date required </div>
+                                <div class="invalid-feedback">Hãy nhập ngày hết hạn </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="cc-expiration">CVV</label>
                                 <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                                <div class="invalid-feedback"> Security code required </div>
+                                <div class="invalid-feedback">Hãy nhập mã CCV </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="payment-icon">
@@ -159,22 +150,22 @@
                     <div class="col-md-12 col-lg-12">
                         <div class="shipping-method-box">
                             <div class="title-left">
-                                <h3>Shipping Method</h3>
+                                <h3>Phương thức giao hàng</h3>
                             </div>
                             <div class="mb-4">
                                 <div class="custom-control custom-radio">
                                     <input id="shippingOption1" name="shipping-option" class="custom-control-input" checked="checked" type="radio">
-                                    <label class="custom-control-label" for="shippingOption1">Standard Delivery</label> <span class="float-right font-weight-bold">FREE</span>
+                                    <label class="custom-control-label" for="shippingOption1">Giao hàng cơ bản</label> <span class="float-right font-weight-bold">Miễn phí</span>
                                 </div>
-                                <div class="ml-4 mb-2 small">(3-7 business days)</div>
+                                <div class="ml-4 mb-2 small">(3-7 ngày làm việc)</div>
                                 <div class="custom-control custom-radio">
                                     <input id="shippingOption2" name="shipping-option" class="custom-control-input" type="radio">
-                                    <label class="custom-control-label" for="shippingOption2">Express Delivery</label> <span class="float-right font-weight-bold">$10.00</span>
+                                    <label class="custom-control-label" for="shippingOption2">Giao hàng nhanh</label> <span class="float-right font-weight-bold">$10.00</span>
                                 </div>
-                                <div class="ml-4 mb-2 small">(2-4 business days)</div>
+                                <div class="ml-4 mb-2 small">(2-4 ngày)</div>
                                 <div class="custom-control custom-radio">
                                     <input id="shippingOption3" name="shipping-option" class="custom-control-input" type="radio">
-                                    <label class="custom-control-label" for="shippingOption3">Next Business day</label> <span class="float-right font-weight-bold">$20.00</span>
+                                    <label class="custom-control-label" for="shippingOption3">Ngày làm việc tiếp theo</label> <span class="float-right font-weight-bold">$20.00</span>
                                 </div>
                             </div>
                         </div>
@@ -182,22 +173,22 @@
                     <div class="col-md-12 col-lg-12">
                         <div class="odr-box">
                             <div class="title-left">
-                                <h3>Shopping cart</h3>
+                                <h3>Giỏ hàng</h3>
                             </div>
                             <div class="rounded p-2 bg-light">
                                 <div class="media mb-2 border-bottom">
                                     <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Price: $80.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $80.00</div>
+                                        <div class="small text-muted">Giá: $80.00 <span class="mx-2">|</span> Số lượng: 1 <span class="mx-2">|</span> Tổng cộng: $80.00</div>
                                     </div>
                                 </div>
                                 <div class="media mb-2 border-bottom">
                                     <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Price: $60.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $60.00</div>
+                                        <div class="small text-muted">Giá: $60.00 <span class="mx-2">|</span> Số lượng: 1 <span class="mx-2">|</span> Tổng cộng: $60.00</div>
                                     </div>
                                 </div>
                                 <div class="media mb-2">
                                     <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Price: $40.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $40.00</div>
+                                        <div class="small text-muted">Giá: $40.00 <span class="mx-2">|</span> Số lượng: 1 <span class="mx-2">|</span> Tổng cộng: $40.00</div>
                                     </div>
                                 </div>
                             </div>
@@ -206,43 +197,32 @@
                     <div class="col-md-12 col-lg-12">
                         <div class="order-box">
                             <div class="title-left">
-                                <h3>Your order</h3>
-                            </div>
-                            <div class="d-flex">
-                                <div class="font-weight-bold">Product</div>
-                                <div class="ml-auto font-weight-bold">Total</div>
+                                <h3>Hóa đơn đặt hàng</h3>
                             </div>
                             <hr class="my-1">
                             <div class="d-flex">
-                                <h4>Sub Total</h4>
+                                <h4>Số tiền</h4>
                                 <div class="ml-auto font-weight-bold"> $ 440 </div>
                             </div>
-                            <div class="d-flex">
-                                <h4>Discount</h4>
-                                <div class="ml-auto font-weight-bold"> $ 40 </div>
-                            </div>
                             <hr class="my-1">
                             <div class="d-flex">
-                                <h4>Coupon Discount</h4>
-                                <div class="ml-auto font-weight-bold"> $ 10 </div>
+                                <h4>Mã giảm giá</h4>
+                                <div class="ml-auto font-weight-bold"> $ 40 </div>
                             </div>
+                           
                             <div class="d-flex">
-                                <h4>Tax</h4>
-                                <div class="ml-auto font-weight-bold"> $ 2 </div>
-                            </div>
-                            <div class="d-flex">
-                                <h4>Shipping Cost</h4>
+                                <h4>Phí giao hàng</h4>
                                 <div class="ml-auto font-weight-bold"> Free </div>
                             </div>
                             <hr>
                             <div class="d-flex gr-total">
-                                <h5>Grand Total</h5>
+                                <h5>Tổng cộng</h5>
                                 <div class="ml-auto h5"> $ 388 </div>
                             </div>
                             <hr>
                         </div>
                     </div>
-                    <div class="col-12 d-flex shopping-box"> <a href="checkout.html" class="ml-auto btn hvr-hover">Place Order</a> </div>
+                    <div class="col-12 d-flex shopping-box"> <a href="checkout.html" class="ml-auto btn hvr-hover">Đặt hàng</a> </div>
                 </div>
             </div>
         </div>
