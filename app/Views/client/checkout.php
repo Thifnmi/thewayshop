@@ -176,25 +176,7 @@
                                 <h3>Giỏ hàng</h3>
                             </div>
                             <div class="rounded p-2 bg-light">
-<<<<<<< HEAD
-
-=======
-                                <div class="media mb-2 border-bottom">
-                                    <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Giá: $80.00 <span class="mx-2">|</span> Số lượng: 1 <span class="mx-2">|</span> Tổng cộng: $80.00</div>
-                                    </div>
-                                </div>
-                                <div class="media mb-2 border-bottom">
-                                    <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Giá: $60.00 <span class="mx-2">|</span> Số lượng: 1 <span class="mx-2">|</span> Tổng cộng: $60.00</div>
-                                    </div>
-                                </div>
-                                <div class="media mb-2">
-                                    <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Giá: $40.00 <span class="mx-2">|</span> Số lượng: 1 <span class="mx-2">|</span> Tổng cộng: $40.00</div>
-                                    </div>
-                                </div>
->>>>>>> 5003623aa2003fb470f187f1978d335c5a89f9e3
+                                
                             </div>
                         </div>
                     </div>
@@ -220,7 +202,7 @@
                             </div>
                             <hr>
                             <div class="d-flex gr-total">
-                                <h5>Grand Total</h5>
+                                <h5>Tổng cộng</h5>
                                 <div class="total-price ml-auto h5">0 </div>
                             </div>
                             <hr>
