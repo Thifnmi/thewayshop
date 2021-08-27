@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>My Profile </h2>
+                <h2>Hồ sơ của tôi </h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
-                    <li class="breadcrumb-item active">My Profile</li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Hồ sơ của tôi</li>
                 </ul>
             </div>
         </div>
@@ -24,28 +24,28 @@
             <div class="card-body" style='margin:20px 100px'>
                 <form class="form-material form-horizontal m-t-30" method="POST" action="#" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="col-md-8" for="example-text">User Name</span>
+                        <label class="col-md-8" for="example-text">Tài khoản</span>
                         </label>
                         <div class="col-md-12">
                             <input type="text" id="username" name="username" readonly="readonly" class="form-control field left editacc" readonly="readonly" value="">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12" for="password">Password</span>
+                        <label class="col-md-12" for="password">Mật khẩu</span>
                         </label>
                         <div class="col-md-12">
                             <input type="password" id="password" name="password" readonly="readonly" class="form-control editacc" placeholder="enter your password" value="">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12" for="fName">Full Name</span>
+                        <label class="col-md-12" for="fName">Họ và tên</span>
                         </label>
                         <div class="col-md-12">
                             <input type="text" id="fName" name="fullname" readonly="readonly" class="form-control editacc" value="" placeholder="enter your full name">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12" for="bdate">Date of Birth</span>
+                        <label class="col-md-12" for="bdate">Ngày sinh</span>
                         </label>
                         <div class="col-md-12">
                             <input type="date" id="bdate" name="birthday" readonly="readonly" class="form-control mydatepicker editacc" value=''>
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12" for="phone">Phone</span>
+                        <label class="col-md-12" for="phone">Số điện thoại</span>
                         </label>
                         <div class="col-md-12">
                             <input type="tel" maxlength="11" id="phone" name="phone" readonly="readonly" value='' class="form-control editacc" placeholder="enter your phone">
@@ -67,16 +67,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-12" for="phone">Address</span>
+                        <label class="col-md-12" for="phone">Địa chỉ</span>
                         </label>
                         <div class="col-md-12">
                             <input type="text" id="address" name="address" value='' readonly="readonly" class="form-control editacc" placeholder="enter your address">
                         </div>
                     </div>
                     <div class="form-group" style="float:right; padding-right: 10px">
-                        <button type="button" id="edit" class="btn btn-warning" style="margin-right:30px">Edit</button>
-                        <button type="submit" class="btn btn-info waves-effect waves-light m-r-10" id='btnacc' name="submit">Submit</button>
-                        <button type="button" onclick="window.history.back();" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                        <button type="button" id="edit" class="btn btn-warning" style="margin-right:30px">Sửa</button>
+                        <button type="submit" class="btn btn-info waves-effect waves-light m-r-10" id='btnacc' name="submit">Lưu</button>
+                        <button type="button" onclick="window.history.back();" class="btn btn-inverse waves-effect waves-light">Hủy</button>
                     </div>
                 </form>
             </div>

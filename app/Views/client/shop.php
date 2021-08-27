@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Shop</h2>
+                <h2> Sản phẩm</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
-                    <li class="breadcrumb-item active">Shop</li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Sản phẩm</li>
                 </ul>
             </div>
         </div>
@@ -31,11 +31,11 @@
                     </div>
                     <div class="filter-sidebar-left">
                         <div class="title-left">
-                            <h3>Categories</h3>
+                            <h3>Danh mục</h3>
                         </div>
                         <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
                             <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Jewelry <small class="text-muted">(100)</small>
+                                <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Trang sức <small class="text-muted">(100)</small>
                                     <i style="margin-left:115px" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
@@ -52,20 +52,20 @@
                                 </div>
                             </div>
                             <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">Watches
+                                <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">Đồng hồ
                                     <small class="text-muted">(50)</small>
                                     <i style="margin-left:115px" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="collapse" id="sub-men2" data-parent="#list-group-men">
                                     <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action">For Mens <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">For Ladies <small class="text-muted">(20)</small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Cho Nam <small class="text-muted">(10)</small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Cho Nữ <small class="text-muted">(20)</small></a>
                                         <a href="#" class="list-group-item list-group-item-action">Unisex <small class="text-muted">(20)</small></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">Colections
+                                <a class="list-group-item list-group-item-action" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">Bộ sưu tập
                                     <small class="text-muted">(100)</small>
                                     <i style="margin-left:100px" class="fas fa-caret-down"></i>
                                 </a>
@@ -78,9 +78,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="list-group-item list-group-item-action"> Diamond <small class="text-muted">(150) </small></a>
-                            <a href="#" class="list-group-item list-group-item-action">Gold <small class="text-muted">(11)</small></a>
-                            <a href="#" class="list-group-item list-group-item-action">Silver <small class="text-muted">(22)</small></a>
+                            <a href="#" class="list-group-item list-group-item-action"> Kim cương <small class="text-muted">(150) </small></a>
+                            <a href="#" class="list-group-item list-group-item-action">Vàng <small class="text-muted">(11)</small></a>
+                            <a href="#" class="list-group-item list-group-item-action">Bạc <small class="text-muted">(22)</small></a>
                         </div>
                     </div>
                     <!-- <div class="filter-price-left">
@@ -97,7 +97,7 @@
                     </div> -->
                     <div class="filter-brand-left">
                         <div class="title-left">
-                            <h3>Brand</h3>
+                            <h3>Thương hiệu</h3>
                         </div>
                         <div class="brand-box">
                             <ul>
@@ -190,13 +190,13 @@
                     <div class="product-item-filter row">
                         <div class="col-12 col-sm-8 text-center text-sm-left">
                             <div class="toolbar-sorter-right">
-                                <span>Sort by </span>
+                                <span>Sắp xếp </span>
                                 <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-                                    <option data-display="Select">Nothing</option>
-                                    <option value="1">Popularity</option>
-                                    <option value="2">High Price → High Price</option>
-                                    <option value="3">Low Price → High Price</option>
-                                    <option value="4">Best Selling</option>
+                                    <option data-display="Select">Mặc định</option>
+                                    <option value="1">Phổ biến</option>
+                                    <option value="2">Giá cao → thấp</option>
+                                    <option value="3">Giá thấp → cao</option>
+                                    <option value="4">Bán chạy nhất</option>
                                 </select>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
                                                         <h4><?= $product['product_name'] ?></h4>
                                                         <div align="center" >
                                                             <h5 style="color:red;"><?= $product['price'] ?> VNĐ</h5>
-                                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Add to Cart</a>
+                                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ</a>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -266,7 +266,7 @@
                                                         <?php if($product['style'] != ""):?>. Là dòng sản phẩm <?=$product['style']?><?php endif?>
                                                         <?php if($product['brand_origin'] != ""):?>, có xuất xứ từ <?=$product['brand_origin']?><?php endif?>.</h7>
                                                     <h5><?= $product['price'] ?> VNĐ</h5>
-                                                    <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Add to Cart</a>
+                                                    <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ</a>
                                                 </div>
                                             </div>
                                         </div>
