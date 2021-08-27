@@ -371,7 +371,7 @@
     <!-- Start copyright  -->
     <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved &copy; 2021 <a href="#">The Way Shop</a> Design By :
-            <a href="#">Nhóm 2 69DCTT21</a>
+            <a href="#">Team 2 69DCTT21</a>
         </p>
     </div>
     <!-- End copyright  -->
@@ -384,6 +384,8 @@
     <script src="<?= base_url() ?>/client/js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="<?= base_url() ?>/client/js/jquery.superslides.min.js"></script>
+    <script src="<?= base_url() ?>/client/js/jquery.nicescroll.min.js"></script>
+    <script src="<?= base_url() ?>/client/js/jquery-ui.js"></script>
     <script src="<?= base_url() ?>/client/js/bootstrap-select.js"></script>
     <script src="<?= base_url() ?>/client/js/inewsticker.js"></script>
     <script src="<?= base_url() ?>/client/js/bootsnav.js."></script>

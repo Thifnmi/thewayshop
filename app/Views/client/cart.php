@@ -104,9 +104,7 @@
     const data = localStorage.getItem('cart');
     const cart = JSON.parse(data);
     console.log('cart :' +cart);
-    if(cart == null){
-        console.log('cart có cl gì đâu mà render cart');
-    }
+    
     let subtotal = 0;
     cart.map(element => {
         subtotal += +(element.price.split('.').join('')) * element.quantity;

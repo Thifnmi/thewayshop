@@ -141,11 +141,11 @@
                             <div class="col-md-6 mb-3">
                                 <div class="payment-icon">
                                     <ul>
-                                        <li><img class="img-fluid" src="images/payment-icon/1.png" alt=""></li>
-                                        <li><img class="img-fluid" src="images/payment-icon/2.png" alt=""></li>
-                                        <li><img class="img-fluid" src="images/payment-icon/3.png" alt=""></li>
-                                        <li><img class="img-fluid" src="images/payment-icon/5.png" alt=""></li>
-                                        <li><img class="img-fluid" src="images/payment-icon/7.png" alt=""></li>
+                                        <li><img class="img-fluid" src="<?= base_url()?>/client/images/payment-icon/1.png" alt=""></li>
+                                        <li><img class="img-fluid" src="<?= base_url()?>/client/images/payment-icon/2.png" alt=""></li>
+                                        <li><img class="img-fluid" src="<?= base_url()?>/client/images/payment-icon/3.png" alt=""></li>
+                                        <li><img class="img-fluid" src="<?= base_url()?>/client/images/payment-icon/5.png" alt=""></li>
+                                        <li><img class="img-fluid" src="<?= base_url()?>/client/images/payment-icon/7.png" alt=""></li>
                                     </ul>
                                 </div>
                             </div>
@@ -185,21 +185,7 @@
                                 <h3>Shopping cart</h3>
                             </div>
                             <div class="rounded p-2 bg-light">
-                                <div class="media mb-2 border-bottom">
-                                    <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Price: $80.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $80.00</div>
-                                    </div>
-                                </div>
-                                <div class="media mb-2 border-bottom">
-                                    <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Price: $60.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $60.00</div>
-                                    </div>
-                                </div>
-                                <div class="media mb-2">
-                                    <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                        <div class="small text-muted">Price: $40.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $40.00</div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -237,7 +223,7 @@
                             <hr>
                             <div class="d-flex gr-total">
                                 <h5>Grand Total</h5>
-                                <div class="ml-auto h5"> $ 388 </div>
+                                <div class="total-price ml-auto h5">0 </div>
                             </div>
                             <hr>
                         </div>
@@ -250,6 +236,36 @@
     </div>
 </div>
 <!-- End Cart -->
-
+<script>
+    const data = localStorage.getItem('cart');
+    const cart = JSON.parse(data);
+    console.log('cart :' +cart);
+    
+    let subtotal = 0;
+    cart.map(element => {
+        subtotal += +(element.price.split('.').join('')) * element.quantity;
+    });
+    subtotalcart = +subtotal;
+    // console.log('subtotal cart:' +subtotalcart);
+    const list = cart.map(element =>
+        `<div class="media mb-2 border-bottom">
+            <div class="media-body"> <a href="detail.html">${element.name}</a>
+                <div class="small text-muted">Price: ${element.price} VND<span class="mx-2">|</span> Qty: ${element.quantity} <span class="mx-2">|</span> Subtotal: ${(element.price.split('.').join('')) * (element.quantity)} VND</div>
+            </div>
+        </div>`
+    );
+    // console.log('list product:' +list);
+    const listProduct = cart.map(element =>
+        `<input type="hidden" name="productIds[]" value="${element.id}"/>
+        <input type="hidden" name="productQuantities[]" value="${element.quantity}" />
+        <input type="hidden" name="productPrices[]" value="${element.price.split('.').join('')}" />`
+    );
+    const listItem = document.querySelector('div > div.rounded.p-2.bg-light');
+    listItem.insertAdjacentHTML('beforeend', list);
+    const subtotalDOM = document.querySelector('.total-price');
+    subtotalDOM.innerHTML = subtotalcart + ' VND';
+    const html = `<input type="hidden" name="subtotal" value=${subtotalcart}/>`;
+    document.querySelector('.breadcrumb').insertAdjacentHTML('afterend', listProduct + html);
+</script>
 
 <?= $this->endSection() ?>
