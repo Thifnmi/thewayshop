@@ -339,8 +339,7 @@
                         <div class="footer-link">
                             <h4>Hỗ trợ mua hàng</h4>
                             <ul>
-                            <li><a href="<?= base_url() ?>/Contact">Hướng dẫn mua hàngF</a></li>
-                                <li><a href="<?= base_url() ?>">Lời khuyên </a></li>
+                                <li><a href="<?= base_url() ?>/Contact">Hướng dẫn mua hàng</a></li>
                                 <li><a href="<?= base_url() ?>/About">Vận chuyển và giao hàng</a></li>
                                 <li><a href="<?= base_url() ?>/About">Thanh toán</a></li>
                                 <li><a href="<?= base_url() ?>/Contact">Đổi trả</a></li>
@@ -404,5 +403,4 @@
 
 
 </body>
-
 </html>

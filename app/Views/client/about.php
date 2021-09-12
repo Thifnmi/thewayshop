@@ -62,16 +62,14 @@
                         </div>
                         <ul class="social">
                             <li>
-                                <a href="#" class="fab fa-facebook"></a>
+                                <a target="_blank" href="https://www.facebook.com/Thifnmi/" class="fab fa-facebook"></a>
                             </li>
                             <li>
-                                <a href="#" class="fab fa-twitter"></a>
+                                <a href="" class="fab fa-twitter"></a>
                             </li>
-
                             <li>
                                 <a href="#" class="fab fa-youtube"></a>
                             </li>
-
                         </ul>
                         <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
                     </div>

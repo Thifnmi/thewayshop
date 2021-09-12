@@ -275,6 +275,8 @@
                             </div>
                         </div>
                     </div>
+
+                    
                     <div class="phanTrang">
                         <a class="lfr-pagination-buttons pager">
                             <?php if ($page > 1) : ?>

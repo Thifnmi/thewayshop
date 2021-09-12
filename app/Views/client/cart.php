@@ -121,13 +121,14 @@
             <td class="total-pr">
                 <p>${(element.price.split('.').join('')) * (element.quantity)}</p>
             </td>
-            <td class="remove-pr">
-                <a href="#" class="item_remove" data-id="${element.id}" onclick="deleteItem(event, this)">
+            <td>
+                <a href="#"  data-id="${element.id}" onclick="deleteItem(event, this)">
                     <i class="fas fa-times"></i>
                 </a>
             </td>
         </tr>`
     );
+    //class="item_remove"
     // console.log('list product:' +list);
     const listProduct = cart.map(element =>
         `<input type="hidden" name="productIds[]" value="${element.id}"/>

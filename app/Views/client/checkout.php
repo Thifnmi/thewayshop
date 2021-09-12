@@ -219,7 +219,7 @@
 <script>
     const data = localStorage.getItem('cart');
     const cart = JSON.parse(data);
-    console.log('cart :' +cart);
+    // console.log('cart :' +cart);
     
     let subtotal = 0;
     cart.map(element => {
@@ -229,19 +229,25 @@
     // console.log('subtotal cart:' +subtotalcart);
     const list = cart.map(element =>
         `<div class="media mb-2 border-bottom">
-            <div class="media-body"> <a href="detail.html">${element.name}</a>
-                <div class="small text-muted">Price: ${element.price} VND<span class="mx-2">|</span> Qty: ${element.quantity} <span class="mx-2">|</span> Subtotal: ${(element.price.split('.').join('')) * (element.quantity)} VND</div>
+            <div class="media-body"> <a target="_blank" href="<?= base_url()?>/Product/${element.id}">${element.name}</a>
+                <div class="small text-muted">Giá: ${element.price} VND<span class="mx-2">|</span> Số lượng: ${element.quantity} <span class="mx-2">|</span> Tổng tiền: ${(element.price.split('.').join('')) * (element.quantity)} VND</div>
             </div>
         </div>`
     );
-    // console.log('list product:' +list);
+    console.log('list: ' +list);
     const listProduct = cart.map(element =>
         `<input type="hidden" name="productIds[]" value="${element.id}"/>
         <input type="hidden" name="productQuantities[]" value="${element.quantity}" />
         <input type="hidden" name="productPrices[]" value="${element.price.split('.').join('')}" />`
     );
+    let list_affter_split = "";
+    let list_a = list.toString().split(',');
+    for (let i = 0; i < list_a.length; i++){
+        list_affter_split += list_a[i];
+    }
+    // console.log('list affter split:' +list_affter_split);
     const listItem = document.querySelector('div > div.rounded.p-2.bg-light');
-    listItem.insertAdjacentHTML('beforeend', list);
+    listItem.insertAdjacentHTML('beforeend', list_affter_split);
     const subtotalDOM = document.querySelector('.total-price');
     subtotalDOM.innerHTML = subtotalcart + ' VND';
     const html = `<input type="hidden" name="subtotal" value=${subtotalcart}/>`;

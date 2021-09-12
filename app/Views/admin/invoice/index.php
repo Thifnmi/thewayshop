@@ -30,7 +30,7 @@
                                     <td><?php if ($row['paid_status'] == 0) echo 'Chưa thanh toán';
                                         else echo 'Đã thanh toán'; ?></td>
                                     <td><?= $row['note'] ?></td>
-                                    <td><?= $row['create_on'] ?></td>
+                                    <td><?= $row['created_on'] ?></td>
                                     <td><?php if ($row['shipping_status'] == 1) echo 'Chưa giao hàng';
                                         elseif ($row['shipping_status'] == 2) echo 'Đang giao hàng';
                                         else echo 'Đã giao hàng' ?></td>

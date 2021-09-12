@@ -1,0 +1,62 @@
+CRITICAL - 2021-08-12 09:55:49 --> Class 'App\Model\categoryModel' not found
+#0 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-12 10:02:08 --> Undefined variable: categories
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 68, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(12): view('client/shop')
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index(1)
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-12 10:16:51 --> Undefined index: name
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop.php(201): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 201, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(18): view('client/shop', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index(1)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-12 10:30:39 --> A non well formed numeric value encountered
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop.php(234): CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well form...', 'F:\\xampp\\htdocs...', 234, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(18): view('client/shop', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index(3)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-12 10:38:36 --> Undefined variable: daylamota
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop.php(237): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 237, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(18): view('client/shop', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index(3)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-12 11:08:55 --> Array to string conversion
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop.php(237): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'F:\\xampp\\htdocs...', 237, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(18): view('client/shop', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index(3)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}

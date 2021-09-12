@@ -1,0 +1,248 @@
+CRITICAL - 2021-08-19 08:35:28 --> Undefined offset: 7
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop-detail.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'F:\\xampp\\htdocs...', 41, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop-det...', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Product.php(22): view('client/shop-det...', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Product->index(588)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-19 08:39:45 --> Undefined offset: 0
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop-detail.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'F:\\xampp\\htdocs...', 58, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop-det...', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Product.php(22): view('client/shop-det...', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Product->index(588)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-19 11:48:39 --> Undefined index: wize_size
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop-detail.php(207): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 207, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop-det...', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Product.php(25): view('client/shop-det...', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Product->index(1)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-19 11:49:42 --> Undefined index: watch_stone_attached
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop-detail.php(285): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 285, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop-det...', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Product.php(25): view('client/shop-det...', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Product->index(1)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-19 12:09:05 --> Undefined index: stone_shpae
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop-detail.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 155, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop-det...', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Product.php(25): view('client/shop-det...', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Product->index(161)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-19 12:44:49 --> Undefined index: customer
+#0 F:\xampp\htdocs\thewayshop\app\Controllers\Login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 11, Array)
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Login->index()
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-19 12:46:59 --> Undefined index: customer
+#0 F:\xampp\htdocs\thewayshop\app\Controllers\Login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 11, Array)
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Login->index()
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-19 12:47:01 --> Undefined index: customer
+#0 F:\xampp\htdocs\thewayshop\app\Controllers\Login.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 11, Array)
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Login->index()
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-19 12:48:19 --> Invalid file: login.php
+#0 F:\xampp\htdocs\thewayshop\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+#1 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('login', Array, true)
+#2 F:\xampp\htdocs\thewayshop\app\Controllers\Login.php(34): view('login')
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Login->index()
+#4 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-08-19 12:54:16 --> Undefined variable: _SESSION
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 169, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/index', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Home.php(19): view('client/index', Array)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-19 12:55:34 --> Undefined variable: _SESSION
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 169, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/index', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Home.php(19): view('client/index', Array)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-19 12:55:47 --> Undefined variable: _SESSION
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 169, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/index', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Home.php(19): view('client/index', Array)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-19 12:57:13 --> Undefined variable: _SESSION
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 169, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/index', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Home.php(19): view('client/index', Array)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-19 12:57:26 --> Undefined variable: _SESSION
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 169, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/index', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Home.php(19): view('client/index', Array)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-19 12:58:13 --> Undefined index: customer
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 169, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/index', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Home.php(20): view('client/index', Array)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-19 13:00:14 --> Undefined index: customer
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 169, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/index', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Home.php(20): view('client/index', Array)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-19 13:00:43 --> Undefined index: customer
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\_Layout.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 169, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\View\View.php(246): CodeIgniter\View\View->render('client/_Layout', Array, true)
+#4 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/index', Array, true)
+#5 F:\xampp\htdocs\thewayshop\app\Controllers\Home.php(21): view('client/index', Array)
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Home->index()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-08-19 13:20:09 --> session_start(): A session had already been started - ignoring
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'session_start()...', 'F:\\xampp\\htdocs...', 12, Array)
+#1 F:\xampp\htdocs\thewayshop\app\Controllers\Register.php(12): session_start()
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Register->index()
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#4 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-08-19 13:42:49 --> Undefined variable: message
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 17, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/login', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Register.php(35): view('client/login')
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Register->index()
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2021-08-19 13:59:29 --> Table 'team2.mailbox' doesn't exist
+CRITICAL - 2021-08-19 13:59:29 --> Table 'team2.mailbox' doesn't exist
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Controllers\Admin\Mailbox.php(25): CodeIgniter\BaseModel->findAll()
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Admin\Mailbox->index()
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mailbox))
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-08-19 13:59:38 --> Undefined index: phone_number
+#0 F:\xampp\htdocs\thewayshop\app\Views\admin\account\index.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 32, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('admin/account/i...', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Admin\Account.php(19): view('admin/account/i...', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Admin\Account->index()
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Account))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-19 14:02:20 --> Undefined index: category_id
+#0 F:\xampp\htdocs\thewayshop\app\Views\admin\supplier\add.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 37, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('admin/supplier/...', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Admin\Supplier.php(15): view('admin/supplier/...')
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Admin\Supplier->add()
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Supplier))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-19 23:21:31 --> Too few arguments to function App\Controllers\Category::index(), 0 passed in F:\xampp\htdocs\thewayshop\system\CodeIgniter.php on line 931 and exactly 1 expected
+#0 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index()
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-19 23:22:07 --> Too few arguments to function App\Controllers\Category::index(), 0 passed in F:\xampp\htdocs\thewayshop\system\CodeIgniter.php on line 931 and exactly 1 expected
+#0 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index()
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}

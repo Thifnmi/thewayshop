@@ -1,0 +1,443 @@
+CRITICAL - 2021-08-20 02:03:45 --> Undefined index: current_page
+#0 F:\xampp\htdocs\thewayshop\app\Controllers\Login.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 29, Array)
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Login->index()
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-20 02:16:15 --> unlink(F:\xampp\htdocs\thewayshop\writable\debugbar/debugbar_1629443008.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(F:\\xampp...', 'F:\\xampp\\htdocs...', 78, Array)
+#1 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar\Collectors\History.php(78): unlink('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(480): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1629443774, 20)
+#3 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(452): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 F:\xampp\htdocs\thewayshop\app\Config\Events.php(52): CodeIgniter\Debug\Toolbar->respond()
+#5 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#6 F:\xampp\htdocs\thewayshop\system\Events\Events.php(166): call_user_func(Object(Closure))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(319): CodeIgniter\Events\Events::trigger('pre_system')
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-20 02:16:44 --> unlink(F:\xampp\htdocs\thewayshop\writable\debugbar/debugbar_1629443242.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(F:\\xampp...', 'F:\\xampp\\htdocs...', 78, Array)
+#1 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar\Collectors\History.php(78): unlink('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(480): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1629443803, 20)
+#3 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(452): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 F:\xampp\htdocs\thewayshop\app\Config\Events.php(52): CodeIgniter\Debug\Toolbar->respond()
+#5 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#6 F:\xampp\htdocs\thewayshop\system\Events\Events.php(166): call_user_func(Object(Closure))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(319): CodeIgniter\Events\Events::trigger('pre_system')
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-20 02:18:25 --> unlink(F:\xampp\htdocs\thewayshop\writable\debugbar/debugbar_1629443374.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(F:\\xampp...', 'F:\\xampp\\htdocs...', 78, Array)
+#1 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar\Collectors\History.php(78): unlink('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(480): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1629443904, 20)
+#3 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(452): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 F:\xampp\htdocs\thewayshop\app\Config\Events.php(52): CodeIgniter\Debug\Toolbar->respond()
+#5 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#6 F:\xampp\htdocs\thewayshop\system\Events\Events.php(166): call_user_func(Object(Closure))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(319): CodeIgniter\Events\Events::trigger('pre_system')
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-20 02:22:36 --> unlink(F:\xampp\htdocs\thewayshop\writable\debugbar/debugbar_1629443785.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(F:\\xampp...', 'F:\\xampp\\htdocs...', 78, Array)
+#1 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar\Collectors\History.php(78): unlink('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(480): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1629444155, 20)
+#3 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(452): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 F:\xampp\htdocs\thewayshop\app\Config\Events.php(52): CodeIgniter\Debug\Toolbar->respond()
+#5 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#6 F:\xampp\htdocs\thewayshop\system\Events\Events.php(166): call_user_func(Object(Closure))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(319): CodeIgniter\Events\Events::trigger('pre_system')
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-20 08:37:24 --> Argument 1 passed to App\Controllers\Category::index() must be of the type int, string given, called in F:\xampp\htdocs\thewayshop\system\CodeIgniter.php on line 931
+#0 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-20 08:39:29 --> Argument 1 passed to App\Models\productModel::getCountProduct() must be of the type int, string given, called in F:\xampp\htdocs\thewayshop\app\Controllers\Category.php on line 22
+#0 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(22): App\Models\productModel->getCountProduct('ring')
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-20 08:47:03 --> Undefined index: id
+#0 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'F:\\xampp\\htdocs...', 23, Array)
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-20 08:47:47 --> syntax error, unexpected '$total_product' (T_VARIABLE)
+#0 F:\xampp\htdocs\thewayshop\system\Autoloader\Autoloader.php(282): CodeIgniter\Autoloader\Autoloader->includeFile('F:\\xampp\\htdocs...')
+#1 F:\xampp\htdocs\thewayshop\system\Autoloader\Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(888): class_exists('\\App\\Controller...', true)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->startController()
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2021-08-20 08:48:21 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:48:21 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:49:46 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:49:46 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:01 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:01 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:02 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:02 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:03 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:03 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:03 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:03 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:04 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:04 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:04 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:04 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:04 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:04 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:04 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:04 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:05 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:05 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:58 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:58 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:51:59 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:51:59 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:52:00 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:52:00 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:52:02 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:52:02 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(27): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:52:48 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:52:48 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(28): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:52:50 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:52:50 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(28): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:52:51 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:52:51 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(28): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:52:51 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:52:51 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(28): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:52:52 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:52:52 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(28): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-20 08:53:22 --> Unknown column 'meta_title' in 'where clause'
+CRITICAL - 2021-08-20 08:53:22 --> Unknown column 'meta_title' in 'where clause'
+#0 F:\xampp\htdocs\thewayshop\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT *\nFROM `...')
+#1 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\thewayshop\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\thewayshop\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\thewayshop\system\Model.php(197): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\thewayshop\system\BaseModel.php(603): CodeIgniter\Model->doFindAll(9, 0)
+#6 F:\xampp\htdocs\thewayshop\app\Models\productModel.php(22): CodeIgniter\BaseModel->findAll(9, 0)
+#7 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(28): App\Models\productModel->getProductByCategory('ring', 0, 9)
+#8 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('ring')
+#9 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#10 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-08-20 11:54:20 --> Undefined offset: 0
+#0 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'F:\\xampp\\htdocs...', 23, Array)
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('4')
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-20 11:55:25 --> unlink(F:\xampp\htdocs\thewayshop\writable\debugbar/debugbar_1629477847.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(F:\\xampp...', 'F:\\xampp\\htdocs...', 78, Array)
+#1 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar\Collectors\History.php(78): unlink('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(480): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1629478524, 20)
+#3 F:\xampp\htdocs\thewayshop\system\Debug\Toolbar.php(452): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 F:\xampp\htdocs\thewayshop\app\Config\Events.php(52): CodeIgniter\Debug\Toolbar->respond()
+#5 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#6 F:\xampp\htdocs\thewayshop\system\Events\Events.php(166): call_user_func(Object(Closure))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(319): CodeIgniter\Events\Events::trigger('pre_system')
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-20 11:59:15 --> Undefined offset: 0
+#0 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'F:\\xampp\\htdocs...', 23, Array)
+#1 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('8')
+#2 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#3 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-20 19:06:40 --> Undefined variable: item
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop.php(233): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\xampp\\htdocs...', 233, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(30): view('client/shop', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('watch')
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-08-20 19:09:57 --> A non well formed numeric value encountered
+#0 F:\xampp\htdocs\thewayshop\app\Views\client\shop.php(262): CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well form...', 'F:\\xampp\\htdocs...', 262, Array)
+#1 F:\xampp\htdocs\thewayshop\system\View\View.php(230): include('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\thewayshop\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 F:\xampp\htdocs\thewayshop\system\Common.php(1250): CodeIgniter\View\View->render('client/shop', Array, true)
+#4 F:\xampp\htdocs\thewayshop\app\Controllers\Category.php(30): view('client/shop', Array)
+#5 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(931): App\Controllers\Category->index('necklace')
+#6 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+#7 F:\xampp\htdocs\thewayshop\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\xampp\htdocs\thewayshop\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}

@@ -9,8 +9,18 @@
                                 <center class="m-t-30"> <img src="<?php if($user['image'][0] =='h') {echo $user['image'];} else echo base_url().$user['image']?>" class="img-circle"
                                         width="150">
                                     <h4 class="card-title m-t-10"><?= $user['fullname'] ?></h4>
-                                    <h6 class="card-subtitle"><?php if ($user['role_id']=='1'){echo 'Admin';} else {echo 'User';}?></h6>
-                                    
+                                    <h6 class="card-subtitle">
+                                        <?php 
+                                            if ($user['role_id']=='0')
+                                                {echo 'Super Admin';}
+                                            elseif($user['role_id']=='1')
+                                                {echo 'Admin';}
+                                            elseif($user['role_id']=='2')
+                                                {echo 'Employee';}
+                                            elseif($user['role_id']=='3')
+                                                {echo 'Client';}
+                                        ?>
+                                    </h6>
                                 </center>
                             </div>
                             <div>
@@ -28,7 +38,7 @@
                                 <button class="btn btn-circle btn-secondary"><i class="fab fa-facebook-f"></i></button>
                                 <button class="btn btn-circle btn-secondary"><i class="fab fa-twitter"></i></button>
                                 <button class="btn btn-circle btn-secondary"><i class="fab fa-youtube"></i></button>
-                                <button class="btn btn-circle btn-secondary btn-edit-profile" data-toggle="tooltip" data-placement="bottom" title="Edit Profile"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-circle btn-secondary btn-edit-profile" data-toggle="tooltip" data-placement="bottom" title="Edit Profile"><a href="<?= base_url()?>/Admin/Account/edit?id=<?= $_SESSION['user']['id']?>"><i class="fas fa-edit"></i></a></button>
                                 
                             </div>
                         </div>

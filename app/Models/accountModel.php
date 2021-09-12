@@ -9,7 +9,7 @@ class accountModel extends Model
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['id', 'username', 'fullname', 'password', 'image', 'gender', 'birthday', 'address', 'email', 'facebook','phone_number'];
+    protected $allowedFields = ['id', 'username', 'fullname', 'password', 'image', 'gender','role_id', 'birthday', 'address', 'email', 'facebook','phone_number'];
 
     public function getAccountById(int $id)
     {

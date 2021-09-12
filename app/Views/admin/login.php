@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/admin/assets/images/favicon.png">
+    <link rel="shortcut icon" href="<?= base_url() ?>/client/images/favicon.ico" type="image/x-icon">
     <title>Admin The Way Shop </title>
     
     <!-- page css -->

@@ -139,7 +139,15 @@ class Account extends BaseController
     }
     public function profile()
     {
-        return view('admin/account/profile');
+        session_start();
+        if (empty($_SESSION['user'])) {
+            return redirect()->to(base_url() . '/admin/login');
+        }
+        $id = $_GET['id'];
+        $adminModel = new accountModel();
+        $data['title'] = 'admin';
+        $data['user'] = $adminModel->find($id);
+        return view('admin/account/profile', $data);
         # code...
     }
     // public function delete()

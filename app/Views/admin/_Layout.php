@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/admin/assets/images/favicon.png">
+    <link rel="shortcut icon" href="<?= base_url() ?>/client/images/favicon.ico" type="image/x-icon">
     <title>Admin The Way Shop</title>
     <!-- This page CSS -->
     <!-- chartist CSS -->
@@ -47,21 +46,22 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="<?=base_url()?>/Admin/Dashboard">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="<?= base_url() ?>/admin/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="<?= base_url() ?>/client/images/logo.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="<?= base_url() ?>/admin/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="<?= base_url() ?>/client/images/logo.png"  alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
-                        <!-- Logo text --><span>
+                        <!-- Logo text -->
+                        <!-- <span> -->
                             <!-- dark Logo text -->
-                            <img src="<?= base_url() ?>/admin/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                            <!-- <img src="<?= base_url() ?>/admin/assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
                             <!-- Light Logo text -->
-                            <img src="<?= base_url() ?>/admin/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
-                        </span>
+                            <!-- <img src="<?= base_url() ?>/admin/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /> -->
+                        <!-- </span> -->
                     </a>
                 </div>
                 <!-- ============================================================== -->
@@ -147,12 +147,18 @@
                 <!-- User Profile-->
                 <div class="user-profile">
                     <div class="user-pro-body">
-                        <div><img src="<?= $_SESSION['user']['image'] ?>" alt="user-img" class="img-circle"></div>
+                        <div>
+                            <img src="<?=$_SESSION['user']['image']?>" alt="user-img" class="img-circle">
+                        </div>
                         <div class="dropdown">
-                            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $_SESSION['user']['fullname'] ?><span class="caret"></span></a>
+                            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <?= $_SESSION['user']['fullname'] ?>
+                                <span class="caret">
+                                </span>
+                            </a>
                             <div class="dropdown-menu animated flipInY">
                                 <!-- text-->
-                                <a href="" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <a href="<?= base_url()?>/Admin/Account/Profile?id=<?=$_SESSION['user']['id']?>" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
                                 <!-- text-->
                                 <a href="<?= base_url() ?>/admin/logout" class="dropdown-item"><i class="fas fa-power-off"></i> Logout</a>
                                 <!-- text-->

@@ -121,9 +121,9 @@
                                 <div class="products-single fix">
                                     <div class="box-img-hover">
                                     <a href="<?= base_url()?>/Product/<?= $item['id']?>">
-                                        <div class="type-lb">
+                                        <!-- <div class="type-lb">
                                             <p class="sale">Sale</p>
-                                        </div>
+                                        </div> -->
                                         <img class="img-fluid dat" src="<?=$item['image']?>" alt="<?=$item['product_name']?>">
                                     </a>
                                     </div>
