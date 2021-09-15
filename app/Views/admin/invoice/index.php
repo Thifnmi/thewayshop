@@ -21,19 +21,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($orders as $row) : ?>
+                            <?php $total = 0; 
+                                foreach ($orders as $row): 
+                                    $total++; ?>
                                 <tr>
-                                    <td><?= $row['id'] ?></td>
+                                    <td><?= $total ?></td>
                                     <td><?= $row['fullname'] ?></td>
                                     <td><?= $row['phone'] ?></td>
                                     <td><?= $row['email'] ?></td>
-                                    <td><?php if ($row['paid_status'] == 0) echo 'Chưa thanh toán';
-                                        else echo 'Đã thanh toán'; ?></td>
+                                    <td>
+                                        <?php if ($row['paid_status'] == 0) echo 'Chưa thanh toán';
+                                                else echo 'Đã thanh toán';
+                                        ?>
+                                    </td>
                                     <td><?= $row['note'] ?></td>
                                     <td><?= $row['created_on'] ?></td>
-                                    <td><?php if ($row['shipping_status'] == 1) echo 'Chưa giao hàng';
-                                        elseif ($row['shipping_status'] == 2) echo 'Đang giao hàng';
-                                        else echo 'Đã giao hàng' ?></td>
+                                    <td>
+                                        <?php if ($row['shipping_status'] == 1) echo 'Chờ lấy hàng';
+                                                elseif ($row['shipping_status'] == 2) echo 'Đang giao hàng';
+                                                else echo 'Đã giao hàng';
+                                        ?>
+                                    </td>
                                     <td><?= $row['bill_address'] ?></td>
                                     <td>
                                         <div class="obj-action">
@@ -46,7 +54,6 @@
                                             <div class="ac">
                                                 <a href="<?= base_url() ?>/admin/Invoices/delete?id=<?= $row['id'] ?>" onclick="return confirm('Are you sure?');" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
                                             </div>
-
                                         </div>
                                     </td>
                                 </tr>

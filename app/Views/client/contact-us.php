@@ -44,7 +44,7 @@
                 <div class="contact-form-right">
                     <h2>Liên hệ</h2>
                     <p>Chúng tôi luôn sẵn lòng được trả lời những câu hỏi của bạn, đừng ngần ngại mà liên hệ với chúng tôi </p>
-                    <form id="contactForm">
+                    <form method="post" action="<?= base_url('Contact/sendMail') ?>">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -60,7 +60,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" id="phone" name="name" placeholder="Số điện thoại của bạn" required data-error="Hãy điền số của bạn">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Số điện thoại của bạn" required data-error="Hãy điền số của bạn">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>

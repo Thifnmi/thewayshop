@@ -13,16 +13,24 @@
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/login.css">
     <title>Member The Way Shop</title>
 </head>
-
+<?php
+    // if(session('message'))
+    // {
+    //     echo session('message');
+    // }
+    $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $path = parse_url($url, PHP_URL_PATH);
+?>
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="<?=base_url()?>/Register" method="post">
                 <h1>Tạo tài khoản</h1>
+                <input type="hidden" name="path" id="path" value="<?= $url?>"/>
                 <input type="text" name="Rfullname" required="" placeholder="Tên của bạn" />
                 <input type="text" name="Rusername" required="" placeholder="Tài khoản" />
                 <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="Rpassword" required="" placeholder="Mật khẩu" />
-                <input type="text" name="REmail" required="" placeholder="Địa chỉ email" />
+                <input type="text" name="Remail" required="" placeholder="Địa chỉ email" />
                 <button type="submit" name="signup">Đăng ký</button>
             </form>
         </div>
@@ -47,7 +55,11 @@
                 <div class="overlay-panel overlay-left">
                     <h1>Chào mừng trở lại!</h1>
                     <p>Để tiếp tục kết nối với chúng tôi, làm ơn hãy đăng nhập với thông tin của bạn</p>
-                    <button class="ghost" id="signIn">Đăng nhập</button>
+                    <button class="ghost" id="signIn">
+                        <a style="color:#fff" href="<?= base_url()?>/Login">
+                            Đăng nhập
+                        </a>
+                    </button>
                     <p>Hoặc bạn có thể</p>
                     <button class="ghost">
                         <a style="color:#fff" href="<?= base_url() ?>">Tiếp tục là khách</a>
@@ -56,7 +68,11 @@
                 <div class="overlay-panel overlay-right">
                     <h1>Chào bạn</h1>
                     <p>Đăng ký tài toàn bằng cách điền một số thông tin cá nhân và bắt đầu trở thành chúng tôi</p>
-                    <button class="ghost" id="signUp">Đăng ký</button>
+                    <button class="ghost" id="signUp">
+                        <a style="color:#fff" href="<?= base_url()?>/Register">
+                            Đăng ký
+                        </a>
+                    </button>
                     <p>Hoặc bạn có thể</p>
                     <button class="ghost">
                         <a style="color:#fff" href="<?= base_url() ?>">Tiếp tục là khách</a>
@@ -64,10 +80,14 @@
                 </div>
             </div>
         </div>
-
-
     </div>
     <script src="<?= base_url() ?>/client/js/login.js"></script>
+    <script>
+        console.log(document.getElementById("path").getAttribute('value'));
+        if((document.getElementById("path").getAttribute('value')) == "http://localhost:8080/thewayshop/public/Register"){
+            document.getElementById('container').classList.toggle("right-panel-active");
+        }
+    </script>
 
 </body>
 

@@ -3,7 +3,8 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use App\Models\accountModel;
+use App\Models\accountsModel;
+use App\Models\usersModel;
 
 class Login extends BaseController
 {
@@ -26,17 +27,19 @@ class Login extends BaseController
                 $data['validation'] = $this->validator;
             } else {
                 session_start();
-                $model = new accountModel();
+                $model = new accountsModel();
                 $username = $this->request->getVar('username');
                 $password = $this->request->getVar('password');
                 $hashed_password = md5($password);
                 $data = [
                     'username' => $username,
-                    "password" => $password
+                    "password" => $hashed_password
                 ];
                 $user = $model->where($data)->first();
                 if ($user) {
-                    $_SESSION['user'] = $user;
+                    $infoModel = new usersModel();
+                    $info = $infoModel->getUserById($user['user_id']) + $user;
+                    $_SESSION['user'] = $info;
                     return redirect()->to(base_url() . '/admin/dashboard');
                 } else {
                     echo '<script>alert("Username/Email or Password don\'t match");</script>';
@@ -46,14 +49,14 @@ class Login extends BaseController
         return view('admin/Login');
     }
 
-    private function setUserSession($user)
+    private function setUserSession($info)
     {
         $data = [
-            'id' => $user['id'],
-            'username' => $user['username'],
-            'fullname' => $user['fullname'],
-            'email' => $user['email'],
-            'image' => $user['image'],
+            'id' => $info['id'],
+            'username' => $info['username'],
+            'fullname' => $info['fullname'],
+            'email' => $info['email'],
+            'image' => $info['image'],
             'isLoggedIn' => true,
         ];
 

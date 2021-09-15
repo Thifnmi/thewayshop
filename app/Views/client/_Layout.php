@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+    // if (($_SESSION['customer']))
+    // var_dump($_SESSION['customer']);
+    // echo ($_SESSION['customer']['fullname']);
+    // die();?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -174,8 +178,10 @@
                             <ul class="dropdown-menu">
                                 <?php if (empty($_SESSION['customer'])) : ?>
                                     <li><a href="<?= base_url() ?>/Login">Đăng nhập</a></li>
+                                    <li><a href="<?= base_url() ?>/Register">Đăng ký tài khoản</a></li>
                                 <?php else : ?>
                                     <li><a href="<?= base_url() ?>/Account">Hồ sơ của tôi</a></li>
+                                    <li><a href="#">Lịch sử mua hàng</a></li>
                                     <li><a href="<?= base_url() ?>/Login/logout">Đăng xuất</a></li>
                                 <?php endif ?>
                             </ul>
@@ -403,4 +409,5 @@
 
 
 </body>
+
 </html>

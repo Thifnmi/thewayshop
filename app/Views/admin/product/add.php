@@ -67,14 +67,12 @@
                         <div class="col-sm-12">
                             <select class="form-control" name='category'>
                                 <?php
-
-                                use App\Models\categoryModel;
-
-                                $model = new categoryModel();
-                                $data = $model->findAll();
-                                foreach ($data as $item) {
-                                    echo '<option value="' . $item['id'] . '">' . $item['name'] . '</option>';
-                                }
+                                    use App\Models\categoryModel;
+                                    $model = new categoryModel();
+                                    $data = $model->findAll();
+                                    foreach ($data as $item) {
+                                        echo '<option value="' . $item['id'] . '">' . $item['name'] . '</option>';
+                                    }
                                 ?>
                             </select>
                         </div>
@@ -84,14 +82,12 @@
                         <div class="col-sm-12">
                             <select class="form-control" name='provider'>
                                 <?php
-
-                                use App\Models\supplierModel;
-
-                                $sup = new supplierModel();
-                                $data = $sup->findAll();
-                                foreach ($data as $item) {
-                                    echo '<option value="' . $item['id'] . '">' . $item['name'] . '</option>';
-                                }
+                                    use App\Models\supplierModel;
+                                    $sup = new supplierModel();
+                                    $data = $sup->findAll();
+                                    foreach ($data as $item) {
+                                        echo '<option value="' . $item['id'] . '">' . $item['name'] . '</option>';
+                                    }
                                 ?>
                             </select>
                         </div>

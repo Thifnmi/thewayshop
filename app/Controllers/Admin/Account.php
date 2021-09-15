@@ -3,7 +3,8 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use App\Models\accountModel;
+use App\Models\accountsModel;
+use App\Models\usersModel;
 
 class Account extends BaseController
 {
@@ -13,9 +14,12 @@ class Account extends BaseController
         if (empty($_SESSION['user'])) {
             return redirect()->to(base_url() . '/admin/login');
         }
-        $adminModel = new accountModel();
+        $db = \Config\Database::connect();
+        $query = "SELECT users.id, users.fullname, users.image, users.phone_number, users.gender, users.role_id, users.birthday, users.address,
+                    users.email, users.facebook, accounts.username, accounts.password FROM users JOIN accounts ON users.id = accounts.user_id";
+        $accountsModel = $db->query($query)->getResultArray();
         $data['title'] = 'admin';
-        $data['user'] = $adminModel->findAll();
+        $data['user'] = $accountsModel;
         echo view('admin/account/index', $data);
     }
     public function add()
@@ -30,7 +34,7 @@ class Account extends BaseController
 
         $data['title'] = 'admin';
         if ($this->request->getMethod() == 'post') {
-            $model = new accountModel();
+            $model = new accountsModel();
             $username = $this->request->getVar('username');
             $password = $this->request->getVar('password');
             $fullname = $this->request->getVar('fullname');
@@ -72,9 +76,6 @@ class Account extends BaseController
                 // 'createdBy' => $_SESSION['user']['fullname']
             ];
             $model->insert($data_insert);
-
-            // $db->table('users')->insert($data_insert);
-            // echo var_dump($data_insert);
             return redirect()->to(base_url() . '/admin/account');
         }
         echo view('admin/account/add', $data);
@@ -88,12 +89,15 @@ class Account extends BaseController
             return redirect()->to(base_url() . '/admin/login');
         }
         $id = $_GET['id'];
-        $model = new accountModel();
-        $data['info'] = $model->where('id', $id)->findAll();
+        $db = \Config\Database::connect();
+        $query = "SELECT users.id, users.fullname, users.image, users.phone_number, users.gender, users.role_id, users.birthday, users.address,
+                    users.email, users.facebook, accounts.username, accounts.password FROM users JOIN accounts ON users.id = accounts.user_id WHERE users.id = $id";
+        $accountsModel = $db->query($query)->getResultArray();
+        $data['info'] = $accountsModel;
         $data['title'] = 'admin';
         if ($this->request->getMethod() == 'post') {
 
-            $model = new accountModel();
+            $model = new accountsModel();
             $username = $this->request->getVar('username');
             $password = $this->request->getVar('password');
             $fullname = $this->request->getVar('fullname');
@@ -135,7 +139,6 @@ class Account extends BaseController
             return redirect()->to(base_url() . '/admin/account');
         }
         echo view('admin/account/edit', $data);
-        //--------------------------------------------------------------------
     }
     public function profile()
     {
@@ -144,15 +147,22 @@ class Account extends BaseController
             return redirect()->to(base_url() . '/admin/login');
         }
         $id = $_GET['id'];
-        $adminModel = new accountModel();
+        $adminModel = new accountsModel();
         $data['title'] = 'admin';
         $data['user'] = $adminModel->find($id);
         return view('admin/account/profile', $data);
-        # code...
     }
-    // public function delete()
-    // {
-    //     return view('admin/account/index');
-    //     # code...
-    // }
+    public function delete()
+    {
+        session_start();
+        if (empty($_SESSION['user'])) {
+            return redirect()->to(base_url() . '/admin/login');
+        }
+        $id = $_GET['id'];
+        $userModel = new usersModel();
+        $userModel->where('id', $id)->delete();
+        $data['title'] = 'id';
+        $data['user'] = $userModel->findAll();
+        return redirect()->to(base_url() . '/admin/account');
+    }
 }

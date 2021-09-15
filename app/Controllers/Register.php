@@ -1,36 +1,40 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\accountModel;
+use App\Models\accountsModel;
+use App\Models\usersModel;
 
 class Register extends BaseController
 {
     public function index()
     {
         if ($this->request->getMethod() == 'post') {
-            session_start();
-            $model = new accountModel();
+            // session_start();
+            $accountsModel = new accountsModel();
+            $userModel = new usersModel();
             $fullname = $this->request->getVar('Rfullname');
             $username = $this->request->getVar('Rusername');
             $password = $this->request->getvar('Rpassword');
-            $address = $this->request->getvar('Raddress');
-            // $hashed_password = md5($password);
-            $account = $model->checkUsername($username);
+            $email = $this->request->getvar('Remail');
+            $hashed_password = md5($password);
+            $account = $accountsModel->checkUsername($username);
             if($account){
                 echo '<script>alert("Username is not available");</script>';
-                // $data['message'] = 'fail';
-                // $data['error'] = 'username is not available';
-                // return view('client/login', $data);
             } else {
-                $data_insert = [
-                    'username' => $username,
+                $userData = [
                     'fullname' => $fullname,
-                    'password' => $password,
+                    'email' => $email,
                     'role_id' => 3,
-                    'address' => $address,
                 ];
-                $model->insert($data_insert);
-                return view('client/login');
+                $id = $userModel->insert($userData);
+                $data_insert = [
+                    'user_id' => $id,
+                    'username' => $username,
+                    'password' => $hashed_password,
+                ];
+                $accountsModel->insert($data_insert);
+                $message = '<script>alert("Register successfully");</script>';
+                return redirect()->to(base_url().'/Login')->with('message', $message);
             }
         }
         return view('client/login');

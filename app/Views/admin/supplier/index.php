@@ -18,9 +18,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($supplier as $row) : ?>
+                            <?php $total = 0;
+                                foreach ($supplier as $row): 
+                                $total++; ?>
                                 <tr class="obj-item">
-                                    <td><?= $row['id'] ?></td>
+                                    <td><?= $total ?></td>
                                     <td><?= $row['name'] ?></td>
                                     <td><?= $row['email'] ?></td>
                                     <td>

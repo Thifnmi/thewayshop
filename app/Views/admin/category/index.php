@@ -19,13 +19,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($category as $item) : ?>
-                                <tr class="obj-item">
-                                    <<td><?= $item['id'] ?></td>
+                            <?php $total = 0; 
+                                foreach ($category as $item):
+                                    $total++; ?>
+                                    <tr class="obj-item">
+                                        <td><?= $total ?></td>
                                         <td><?= $item['name'] ?></td>
                                         <td>
                                             <img src="<?= $item['image'] ?>" alt="" width="50" height="50">
-                                        </td>
                                         </td>
                                         <td><?= $item['meta_title'] ?></td>
                                         <td>
@@ -38,7 +39,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                </tr>
+                                    </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

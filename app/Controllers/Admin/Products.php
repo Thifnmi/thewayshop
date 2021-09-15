@@ -43,11 +43,11 @@ class Products extends BaseController
 
             if ($path != '') {
                 $newName = $path->getRandomName();
-                $path = $path->move("./public/client/assets/product/", $newName);
+                $path = $path->move("./public/admin/assets/images/products/", $newName);
             }
 
 
-            $url = base_url() . "/public/client/assets/product/" . $newName;
+            // $url = base_url() . "/public/admin/assets/images/products/" . $newName;
             // echo $url_thumnail;
             // die();
             // $desc_key = $this->request->getVar('name');
@@ -65,7 +65,7 @@ class Products extends BaseController
                 'gender' => $gender,
                 'collection' => $collection,
                 'main_stone_type' => $main_stone_type,
-                'image' => $url,
+                'image' => $path,
                 'price' => $price,
                 'productCode' => $product_code,
             ];
@@ -79,15 +79,15 @@ class Products extends BaseController
             $model_image = new imageModel();
             $ima = [
                 'product_id' => $id,
-                'url' => $url,
+                'url' => $path,
             ];
             $model_image->save($ima);
             if ($imagefile = $this->request->getFiles()) {
                 foreach ($imagefile['image_more'] as $img) {
                     if ($img->isValid() && !$img->hasMoved()) {
                         $newName = $img->getRandomName();
-                        $img->move("./public/admin/assets/product/", $newName);
-                        $url = base_url() . '/public/admin/assets/product/' . $newName;
+                        $img->move("./public/admin/assets/images/products/", $newName);
+                        $url = base_url() . '/public/admin/assets/images/products/' . $newName;
                         $data_image = [
                             'product_id' => $id,
                             'url' => $url,
