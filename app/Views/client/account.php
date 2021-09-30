@@ -89,12 +89,14 @@
                                         <h3 class="modal-title" style="font-weight:bold">Lịch sử mua hàng</h3>
                                         <a type="button" class="close" data-dismiss="modal">×</a>
                                     </div>
-                                    <div class="modal-body">
-                                        <div> Sản phẩm đã mua:</div>
-                                        <div> Số tiền:</div>
-                                        <div> Ngày đặt hàng:</div>
-                                        <div> Số tiền:</div>
-                                        <div> Trạng thái:</div>
+                                    <div>Đơn hàng:
+                                        <div class="modal-body">
+                                            <div> Sản phẩm đã mua:</div>
+                                            <div> Số tiền:</div>
+                                            <div> Ngày đặt hàng:</div>
+                                            <div> Số tiền:</div>
+                                            <div> Trạng thái:</div>
+                                        </div>
                                     </div>
                                     <hr width="80%" align="center" size="5px" />
                                     <div class=modal-body style="font-weight:bold">Tổng tiền đã mua tại cửa hàng: </div>

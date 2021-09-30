@@ -67,22 +67,35 @@
                             <div class="title"> <span>Thanh toán</span> </div>
                             <div class="d-block my-3">
                                 <div class="custom-control custom-radio">
-                                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                                    <label class="custom-control-label" for="credit">Thanh toán khi nhận hàng</label>
+                                    <input id="home" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                                    <label class="custom-control-label" for="home">Thanh toán khi nhận hàng</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="debit">Thanh toán qua Momo</label>
+                                    <input id="momo" name="paymentMethod" type="radio" class="custom-control-input" data-toggle="modal" data-target="#modal-content" required>
+                                    <label class="custom-control-label" for="momo">Thanh toán qua Momo</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="paypal">Thanh toán qua tài khoản ngân hàng</label>
+                                    <input id="bank" name="paymentMethod" type="radio" class="custom-control-input" data-toggle="modal" data-target="#modal-content"  required>
+                                    <label class="custom-control-label" for="bank">Thanh toán qua tài khoản ngân hàng</label>
                                 </div>
                             </div>
+                            
+                            <div class="modal fade" id="modal-content">
+                                <div class="modal-dialog modal-sm12">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" style="font-weight:bold">Thông báo</h3>
+                                            <a type="button" id="close=modal" onclick="changePaymentMethod()" class="close" data-dismiss="modal">×</a>
+                                        </div>
+                                        <h1>Chức năng đang bảo trì. Vui lòng chọn phương thức thanh toán khác.</h1>
+                                    </div>
+                                </div>
+                            </div>
+
                             <hr class="mb-1">
                             <div class="title"> <span>Ghi chú</span> </div>
                             <div class="input-group">
-                                <textarea type="text" style="margin-top: 12px; margin-bottom: 0px; height: 232px;" class="form-control" id="note" placeholder="Ghi chú"></textarea>
+                                <textarea type="text" style="margin-top: 12px; margin-bottom: 0px; height: 198px;" class="form-control" id="note" placeholder="Ghi chú"></textarea>
                             </div>
                         </div>
                     </div>
@@ -160,6 +173,11 @@
 </div>
 <!-- End Cart -->
 <script>
+    function changePaymentMethod() {
+        // console.log("close");
+        document.getElementById('home').checked = true;
+    }
+
     const data = localStorage.getItem('cart');
     const cart = JSON.parse(data);
     // console.log('cart :' +cart);
@@ -177,7 +195,7 @@
             </div>
         </div>`
     );
-    console.log('list: ' + list);
+    // console.log('list: ' + list);
     const listProduct = cart.map(element =>
         `<input type="hidden" name="productIds[]" value="${element.id}"/>
         <input type="hidden" name="productQuantities[]" value="${element.quantity}" />
