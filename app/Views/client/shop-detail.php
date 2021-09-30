@@ -79,8 +79,7 @@
                     <h2><?= $product['product_name'] ?></h2>
                     <h4>Mã sản phẩm: <?= $product['product_code']?></h4>
                     <h5><?= $product['price'] ?>VNĐ</h5>
-                    <p class="available-stock"><span><?= $product['quantity'] ?> sản phẩm có sẵn</span>
-                    <p>
+                    <p class="available-stock"><span><?= $product['quantity'] ?> sản phẩm có sẵn</span><p>
                         <!-- <h4>Short Description:</h4>
                     <p>Nam sagittis a augue eget scelerisque. Nullam lacinia consectetur sagittis. Nam sed neque id eros fermentum dignissim quis at tortor. Nullam ultricies urna quis sem sagittis pharetra. Nam erat turpis, cursus in ipsum at,
                         tempor imperdiet metus. In interdum id nulla tristique accumsan. Ut semper in quam nec pretium. Donec egestas finibus suscipit. Curabitur tincidunt convallis arcu. </p> -->
