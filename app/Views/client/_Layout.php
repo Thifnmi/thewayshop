@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-    // if (($_SESSION['customer']))
-    // var_dump($_SESSION['customer']);
-    // echo ($_SESSION['customer']['fullname']);
-    // die();?>
+<?php
+// if (($_SESSION['customer']))
+// var_dump($_SESSION['customer']);
+// echo ($_SESSION['customer']['fullname']);
+// die();
+?>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,6 +27,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/style.css">
     <!-- Responsive CSS -->
@@ -75,7 +79,7 @@
                                             <h6 class="title">Chất liệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -84,7 +88,7 @@
                                             <h6 class="title">Bộ sưu tập</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -173,7 +177,9 @@
                                     <li><a href="<?= base_url() ?>/Register">Đăng ký tài khoản</a></li>
                                 <?php else : ?>
                                     <li><a href="<?= base_url() ?>/Account">Hồ sơ của tôi</a></li>
-                                    <li><a href="#">Lịch sử mua hàng</a></li>
+                                    <!-- <li>
+                                        <a href="<?= base_url() ?>/Bought">Lịch sử mua hàng</a>
+                                    </li> -->
                                     <li><a href="<?= base_url() ?>/Login/logout">Đăng xuất</a></li>
                                 <?php endif ?>
                             </ul>
@@ -195,6 +201,7 @@
                 </div>
                 <!-- End Atribute Navigation -->
             </div>
+
             <!-- Start Side Menu -->
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
@@ -325,7 +332,7 @@
                         <div class="footer-link">
                             <h4>Về chúng tôi</h4>
                             <ul>
-                                <li><a href="<?= base_url() ?>/About"> Thông tin về The Way Shop</a></li>
+                                <li><a href="<?= base_url() ?>/About"> Thông tin về Mỹ Hạnh</a></li>
                                 <li><a href="<?= base_url() ?>/About">Quá trình phát triển</a></li>
                                 <li><a href="<?= base_url() ?>/About">Hệ thống cửa hàng</a></li>
                                 <li><a href="<?= base_url() ?>/Contact">Thành tựu</a></li>
@@ -355,7 +362,7 @@
                                     <p><i class="fas fa-phone-square"></i>Hotline: <a href="tel: 024 3854 4264"> 024 3854 4264</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:myhanh@gmail.com">myhanh@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
@@ -368,7 +375,7 @@
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company">Đã được đăng ký bản quyền &copy; 2021 <a href="#">The Way Shop</a> Thiết kế bởi :
+        <p class="footer-company">Đã được đăng ký bản quyền &copy; 2021 <a href="#">Mỹ Hạnh</a> Thiết kế bởi :
             <a href="#">Nhóm 2 69DCTT21</a>
         </p>
     </div>
@@ -398,6 +405,10 @@
     <script src="<?= base_url() ?>/client/js/addtocart.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
 </body>

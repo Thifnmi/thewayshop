@@ -35,7 +35,7 @@
                             <p><i class="fas fa-phone-square"></i>Hotline: <a href="tel:024 3854 4264">024 3854 4264</a></p>
                         </li>
                         <li>
-                            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:myhanh@gmail.com">myhanh@gmail.com</a></p>
                         </li>
                     </ul>
                 </div>

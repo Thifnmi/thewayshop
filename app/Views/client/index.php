@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Thewayshop</strong></h1>
+                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Mỹ Hạnh</strong></h1>
                         <p class="m-b-40">Tham khảo những món đồ trang sức <br> đang làm mưa làm gió ở thời điểm hiện tại</p>
                         <p><a class="btn hvr-hover" href="#category">Mua ngay</a></p>
                     </div>
@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Thewayshop</strong></h1>
+                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Mỹ Hạnh</strong></h1>
                         <p class="m-b-40">Chúng tôi cung cấp giá tốt cho khách hàng <br> dù bạn đã từng mua hàng tại cửa hàng hay chưa</p>
                         <p><a class="btn hvr-hover" href="#product">Mua ngay</a></p>
                     </div>
@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Thewayshop</strong></h1>
+                        <h1 class="m-b-20"><strong>Chào mừng bạn đến với <br> Mỹ Hạnh</strong></h1>
                         <p class="m-b-40">Hãy thử và tận hưởng <br> chúng tôi sẽ không làm bạn thất vọng</p>
                         <p><a class="btn hvr-hover" href="#product">Mua ngay</a></p>
                     </div>

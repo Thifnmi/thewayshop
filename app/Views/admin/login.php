@@ -10,14 +10,14 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="<?= base_url() ?>/client/images/favicon.ico" type="image/x-icon">
-    <title>Admin The Way Shop </title>
-    
+    <title>Admin Mỹ Hạnh </title>
+
     <!-- page css -->
-    <link rel="stylesheet" href="<?= base_url() ?>/admin/crm/dist/css/pages/login-register-lock.css" >
+    <link rel="stylesheet" href="<?= base_url() ?>/admin/crm/dist/css/pages/login-register-lock.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>/admin/crm/dist/css/style.min.css" >
-    
-    
+    <link rel="stylesheet" href="<?= base_url() ?>/admin/crm/dist/css/style.min.css">
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,15 +37,17 @@
         <div class="login-register" style="background-image:url(<?= base_url() ?>/admin/assets/images/background/login-register.jpg);">
             <div class="login-box card">
                 <div class="card-body">
-                    <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url().'/admin/login'?>" method="POST">
+                    <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url() . '/admin/login' ?>" method="POST">
                         <h3 class="text-center m-b-20">Sign In</h3>
                         <div class="form-group ">
                             <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" placeholder="Username" name="username" id="username"> </div>
+                                <input class="form-control" type="text" required="" placeholder="Username" name="username" id="username">
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" type="password" required="" placeholder="Password" name="password" id="password"> </div>
+                                <input class="form-control" type="password" required="" placeholder="Password" name="password" id="password">
+                            </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-12">
@@ -53,8 +55,8 @@
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                                         <label class="custom-control-label" for="customCheck1">Remember me</label>
-                                    </div> 
-                                    
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -63,14 +65,14 @@
                                 <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit">Log In</button>
                             </div>
                         </div>
-                                              
+
                     </form>
-                    
+
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
@@ -82,8 +84,8 @@
     <script src="<?= base_url() ?>/admin/assets/node_modules/popper/popper.min.js"></script>
     <script src="<?= base_url() ?>/admin/assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!--Custom JavaScript -->
-    
-    
+
+
 </body>
 
 </html>
