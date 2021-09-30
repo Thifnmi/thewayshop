@@ -31,7 +31,7 @@ deleteItem = (event, element) => {
 
 getProductById = (id, quantity) => {
     $.ajax({
-        url: "http://localhost:8080/thewayshop/public/Product/getById",
+        url: "http://localhost/thewayshop/public/Product/getById",
         type: "GET",
         dataType: "json",
         data: {
@@ -106,7 +106,7 @@ function renderCart() {
             html += `<li>
             <a href="#" style="float: right;margin-left: 5px;color: #333 !important;" data-id="${i.id}" onclick="deleteItem(event, this)"><i class="fas fa-times"></i></a>
             <a class="photo"><img src="${i.image}" class="cart-thumb" alt="${i.name}" /></a>
-            <a target="_blank" href="http://localhost:8080/thewayshop/public/Product/${i.id}">${i.name}</a>
+            <a target="_blank" href="http://localhost/thewayshop/public/Product/${i.id}">${i.name}</a>
             <p style="margin-left: 60px">${i.quantity} x <span class="price">${i.price} VND</span></p>
         </li> `;
         });
@@ -124,7 +124,7 @@ function renderCart() {
     });
 
     if (html == "") {
-        html = "<li><p>You have no items in your shopping cart.</p></li>";
+        html = "<li><p>Giỏ hàng trống.</p></li>";
     }
 
     let totalPricehtml = `<strong>Total</strong>: ${totalPrice} VND`;

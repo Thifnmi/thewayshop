@@ -103,15 +103,15 @@
                         <li>
                             <div class="form-group quantity-box" >
                                 <label class="control-label" >Số lượng</label>
-                                <input class="form-control" value="1" min="1" max="<?= $product['quantity'] ?>" type="number">
+                                <input class="form-control" data-quantity="1" value="1" min="1" max="<?= $product['quantity'] ?>" type="number">
                             </div>
                         </li>
                     </ul>
 
                     <div class="price-box-bar">
                         <div class="cart-and-bay-btn">
-                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Tiếp tục mua hàng</a>
-                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Thêm vào giỏ</a>
+                            <a class="btn hvr-hover" data-fancybox-close="" href="<?=base_url()?>/">Tiếp tục mua hàng</a>
+                            <a class="btn hvr-hover" style="color: white;" type="buttom" data-fancybox-close="" data-id="<?=$product['id']?>" onclick="addToCart(event, this)">Thêm vào giỏ</a>
                         </div>
                     </div>
                 </div>
@@ -347,19 +347,21 @@
                     <h1>Có thể bạn quan tâm</h1>
                 </div>
                 <div class="featured-products-box owl-carousel owl-theme">
-                    <?php foreach($featuredProducts as $item):?>
+                    <?php foreach($featuredProducts as $item):
+                        if($item['id'] != $product['id']):?>
                         <div class="item">
-                            <div class="products-single fix">
+                            <div class="products-single fix" href="<?= base_url()?>/Product/<?= $item['id']?>">
                                 <div class="box-img-hover">
-                                    <img src="<?= $item['image']?>" class="img-fluid dat" alt="Image">
+                                    <img src="<?= $item['image']?>" class="img-fluid dat" alt="<?= $item['product_name']?>">
                                 </div>
                                 <div class="why-text">
-                                    <h4><?= $item['product_name']?></h4>
-                                    <h5><?= $item['price']?> VND</h5>
+                                    <h4><?= substr($item['product_name'],0,58).((strlen($item['product_name']) > 58) ? '...' : '');?></h4>
+                                    <h5  align="center" class="price" style="color:red;"><?= $item['price']?> VND</h5>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach;?>
+                    <?php  endif;
+                    endforeach;?>
                 </div>
             </div>
         </div>

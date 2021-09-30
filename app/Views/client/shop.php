@@ -220,14 +220,21 @@
                                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                             <div class="products-single fix">
                                                 <div class="box-img-hover dat">
-                                                    <!-- <div class="type-lb">
-                                                        <p class="sale">Sale</p>
-                                                    </div> -->
+                                                <?php
+                                                    $today = date("Y-m-d");
+                                                    $time = date('Y-m-d',strtotime($product['created_on'].' + '.'7 day'));
+                                                    if($time >= $today): ?>
+                                                        <div class="type-lb">
+                                                            <p class="new">New</p>
+                                                        </div>
+                                                <?php endif?>
                                                     <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                 </div>
                                                 <div class="why-text">
                                                     <a href="<?= base_url() ?>/Product/<?= $product['id'] ?>">
-                                                        <h4><?= $product['product_name'] ?></h4>
+                                                        <h4>
+                                                        <?= substr($product['product_name'],0,58).((strlen($product['product_name']) > 58) ? '...' : '');?>
+                                                        </h4>
                                                         <div align="center" >
                                                             <h5 style="color:red;"><?= $product['price'] ?> VNĐ</h5>
                                                             <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ</a>
@@ -246,9 +253,14 @@
                                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                                 <div class="products-single fix">
                                                     <div class="box-img-hover">
-                                                        <!-- <div class="type-lb">
-                                                            <p class="new">New</p>
-                                                        </div> -->
+                                                        <?php
+                                                            $today = date("Y-m-d");
+                                                            $time = date('Y-m-d',strtotime($product['created_on'].' + '.'7 day'));
+                                                            if($time >= $today): ?>
+                                                                <div class="type-lb">
+                                                                    <p class="new">New</p>
+                                                                </div>
+                                                        <?php endif?>
                                                         <img class="dat" src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                     </div>
                                                 </div>
@@ -280,19 +292,41 @@
                     <div class="phanTrang">
                         <a class="lfr-pagination-buttons pager">
                             <?php if ($page > 1) : ?>
-                                <a class="page-item"><a class="page-link" href="<?= "?page=1" ?>">Trang đầu<i class="linearicons-arrow-left"></i></a></a>
+                                <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page - 1) ?>">Trang trước<i class="linearicons-arrow-right"></i></a></a>
+                                <!-- <a class="page-item"><a class="page-link" href="<?= "?page=1" ?>">1<i class="linearicons-arrow-left"></i></a></a> -->
                             <?php endif; ?>
                             <?php
+                            $k = 0;
                             for ($i = 1; $i < $total_pages + 1; $i++) {
-                                if ($page == $i) {
-                                    echo "<a class='page-item active'><a class='page-link' href='#'>" . $i . "</a></a>";
-                                } else {
-                                    echo "<a class='page-item'><a class='page-link' href='?page=" . $i . "'>" . $i . "</a></a>";
-                                }
+                                $j = 0;
+                                    if ($page == $i) {
+                                        echo "<a class='page-item active'><a class='page-link' href=''?page=' . $i ?>'>" . $i . "</a></a>";
+                                    }elseif($page > 3){
+
+                                    } else{
+                                        if($i == ($page - 1)){
+                                            $j++;
+                                            echo "<a class='page-item'><a class='page-link' href=''?page=' . $i ?>'>" . $i . "</a></a>";
+                                        }elseif($i == ($page + 1)){
+                                            $j++;
+                                            echo "<a class='page-item'><a class='page-link' href=''?page=' . $i ?>'>" . $i . "</a></a>";
+                                        } elseif($i < ($total_pages -2)){
+                                            if ($j == 0 & $k == 1) {
+                                                $k++;
+                                                echo "<a class='page-item'><a class='page-link' >...</a></a>";
+                                            }
+                                        } else {
+                                            if ($j == 0 & $k ==0) {
+                                                $k++;
+                                                echo "<a class='page-item'><a class='page-link' >...</a></a>";
+                                            }
+                                        }
+                                    }
                             }
                             ?>
                             <?php if ($page < $total_pages) : ?>
-                                <a class="page-item"><a class="page-link" href="<?= "?page=" . $total_pages ?>"> Trang cuối<i class="linearicons-arrow-right"></i></a></a>
+                                <a class="page-item"><a class="page-link" href="<?= "?page=" . $total_pages ?>"> <?=$total_pages?><i class="linearicons-arrow-right"></i></a></a>
+                                <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page + 1) ?>">Trang tiếp<i class="linearicons-arrow-right"></i></a></a>
                             <?php endif; ?>
                         </a>
                     </div>

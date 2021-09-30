@@ -75,10 +75,7 @@
                                             <h6 class="title">Chất liệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Swimwear</a></li>
-                                                    <li><a href="#">Skirts</a></li>
-                                                    <li><a href="#">Jeans</a></li>
-                                                    <li><a href="#">Trousers</a></li>
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -87,10 +84,7 @@
                                             <h6 class="title">Bộ sưu tập</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Sun Flower</a></li>
-                                                    <li><a href="#">True Love</a></li>
-                                                    <li><a href="#">First Diamond</a></li>
-                                                    <li><a href="#">Mother's Day</a></li>
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -98,10 +92,9 @@
                                             <h6 class="title">Thương hiệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Bags</a></li>
-                                                    <li><a href="#">Sunglasses</a></li>
-                                                    <li><a href="#">Fragrances</a></li>
-                                                    <li><a href="#">Wallets</a></li>
+                                                    <?php foreach ($supplier as $item) : ?>
+                                                        <li><a href="<?= base_url() ?>/Product/<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
+                                                    <?php endforeach; ?>
                                                 </ul>
                                             </div>
                                         </div>
@@ -154,10 +147,9 @@
                                             <h6 class="title">Thương hiệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">PNJ</a></li>
-                                                    <li><a href="#">Silver|PNJ</a></li>
-                                                    <li><a href="#">Michael Kors</a></li>
-                                                    <li><a href="#">Fossil</a></li>
+                                                    <?php foreach ($supplier as $item) : ?>
+                                                        <li><a href="<?= base_url() ?>/Product/<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
+                                                    <?php endforeach; ?>
                                                 </ul>
                                             </div>
                                         </div>

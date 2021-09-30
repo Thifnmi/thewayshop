@@ -18,7 +18,7 @@ class Product extends BaseController
         $data['supplier'] = $supplierModel->getAllSupplier();
         $productModel = new productModel();
         $product = $productModel->getProductById($pid);
-        $featuredProducts = $productModel->getProductByCategory($product['category_id'],0,6);
+        $featuredProducts = $productModel->getProductByCategory($product['category_id'],0,10);
         $data['product'] = $product;
         $data['featuredProducts'] = $featuredProducts;
         $imageModel = new imageModel();

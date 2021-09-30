@@ -29,8 +29,12 @@ class productModel extends Model
     }
     public function getAllProduct()
     {
-        return $this->findAll();
+        return $this->orderby('created_on', 'desc')->findAll();
         # code...
+    }
+    public function getProductRelease(int $cid)
+    {
+        return $this->where('category_id', $cid)->orderby('created_on', 'desc')->findAll(6,0);
     }
     public function getShowProduct(int $cid)
     {

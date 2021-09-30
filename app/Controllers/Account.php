@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\categoryModel;
+use App\Models\supplierModel;
 
 class Account extends BaseController
 {
@@ -13,6 +14,8 @@ class Account extends BaseController
 		{
             return redirect()->to(base_url().'/Login');
         }
+        $supplierModel = new supplierModel();
+        $data['supplier'] = $supplierModel->getAllSupplier();
         $categoryModel = new categoryModel();
 		$categories = $categoryModel->getAllcategory();
 		$data['categories'] = $categories;

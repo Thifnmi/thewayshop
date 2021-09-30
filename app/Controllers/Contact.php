@@ -3,12 +3,16 @@
 namespace App\Controllers;
 
 use App\Models\categoryModel;
+use App\Models\supplierModel;
 
 class Contact extends BaseController
 {
 	public function index()
 	{
 		session_start();
+		
+        $supplierModel = new supplierModel();
+        $data['supplier'] = $supplierModel->getAllSupplier();
 		$categoryModel = new categoryModel();
 		$categories = $categoryModel->getAllcategory();
 		$data['categories'] = $categories;

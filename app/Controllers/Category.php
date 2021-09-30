@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\categoryModel;
 use App\Models\productModel;
+use App\Models\supplierModel;
 
 class Category extends BaseController
 {
@@ -16,6 +17,9 @@ class Category extends BaseController
 			$page = 1;
 		}
         $offset = ($page-1) * 9;
+        
+        $supplierModel = new supplierModel();
+        $data['supplier'] = $supplierModel->getAllSupplier();
         $categoryModel = new categoryModel();
 		$categories = $categoryModel->getAllcategory();
         $productModel = new productModel();
