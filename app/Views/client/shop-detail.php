@@ -77,16 +77,9 @@
             <div class="col-xl-7 col-lg-7 col-md-6">
                 <div class="single-product-details">
                     <h2><?= $product['product_name'] ?></h2>
-<<<<<<< HEAD
                     <h4>Mã sản phẩm: <?= $product['product_code']?></h4>
                     <h5><?= $product['price'] ?>VNĐ</h5>
-                    <p class="available-stock"><span><?= $product['quantity'] ?> sản phẩm có sẵn</span>
-=======
-                    <h4>Product code: <?= $product['product_code'] ?></h4>
-                    <h5><?= $product['price'] ?>VND</h5>
-                    <p class="available-stock"><span>In stock: <?= $product['quantity'] ?></span>
->>>>>>> 0269384feda46b0979e024f26b81767a199810e9
-                    <p>
+                    <p class="available-stock"><span><?= $product['quantity'] ?> sản phẩm có sẵn</span><p>
                         <!-- <h4>Short Description:</h4>
                     <p>Nam sagittis a augue eget scelerisque. Nullam lacinia consectetur sagittis. Nam sed neque id eros fermentum dignissim quis at tortor. Nullam ultricies urna quis sem sagittis pharetra. Nam erat turpis, cursus in ipsum at,
                         tempor imperdiet metus. In interdum id nulla tristique accumsan. Ut semper in quam nec pretium. Donec egestas finibus suscipit. Curabitur tincidunt convallis arcu. </p> -->
@@ -127,7 +120,7 @@
                             <!-- Toast -->
                             <div class="toast" id="toast" style="position: absolute; top: 0; right: 0;">
                                 <div class="toast-header">
-                                    <strong class="mr-auto">Thêm vào giỏ thành công!</strong>
+                                    <strong class="mr-auto">Thêm vào giỏ hàng thành công!</strong>
                                     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
