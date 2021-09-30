@@ -20,6 +20,9 @@ class Checkout extends BaseController
         $categoryModel = new categoryModel();
 		$categories = $categoryModel->getAllcategory();
 		$data['categories'] = $categories;
+        if($this->request->getMethod() == 'post'){
+            
+        }
         return view('client/checkout',$data);
         # code...
     }

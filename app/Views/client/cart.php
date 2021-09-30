@@ -66,21 +66,21 @@
                     <h3>Hóa đơn đặt hàng</h3>
                     <div class="d-flex">
                         <h4>Số tiền</h4>
-                        <div class="ml-auto font-weight-bold"> $ 130 </div>
+                        <div class="product-subtotal ml-auto h5"> 0 </div>
                     </div>
-                    <hr class="my-1">
                     <div class="d-flex">
                         <h4>Mã giảm giá</h4>
-                        <div class="ml-auto font-weight-bold"> $ 10 </div>
+                        <input type="hidden" value="0" id="discount-percent"/>
+                        <div class="ml-auto font-weight-bold discount-percent"> 0 % </div>
                     </div>
-                    <div class="d-flex">
+                    <!-- <div class="d-flex">
                         <h4>Phí giao hàng</h4>
                         <div class="ml-auto font-weight-bold"> Free </div>
-                    </div>
+                    </div> -->
                     <hr>
                     <div class="d-flex gr-total">
                         <h5>Tổng cộng</h5>
-                        <div class="product-subtotal ml-auto h5">0</div>
+                        <div class="total-price-payment ml-auto h5">0</div>
                     </div>
                     <hr>
                 </div>
@@ -91,64 +91,5 @@
     </div>
 </div>
 <!-- End Cart -->
-<script>
-    const data = localStorage.getItem('cart');
-    const cart = JSON.parse(data);
-    console.log('cart :' +cart);
-    
-    let subtotal = 0;
-    cart.map(element => {
-        subtotal += +(element.price.split('.').join('')) * element.quantity;
-    });
-    subtotalcart = +subtotal;
-    // console.log('subtotal cart:' +subtotalcart);
-    const list = cart.map(element =>
-        `<tr>
-            <td class="thumbnail-img">
-                <a href="#">
-                    <img class="img-fluid" src="${element.image}" alt="" />
-                </a>
-            </td>
-            <td class="name-pr">
-                <a href="#">
-                    ${element.name}
-                </a>
-            </td>
-            <td class="price-pr">
-                <p>${element.price}</p>
-            </td>
-            <td class="quantity-box"><input type="number" id="quantity-product-" onchange="change_quantity()" size="4" value="${element.quantity}" min="0" step="1" class="c-input-text qty text"></td>
-            <td class="total-pr">
-                <p>${(element.price.split('.').join('')) * (element.quantity)}</p>
-            </td>
-            <td>
-                <a href="#"  data-id="${element.id}" onclick="deleteItem(event, this)">
-                    <i class="fas fa-times"></i>
-                </a>
-            </td>
-        </tr>`
-    );
-    //class="item_remove"
-    // console.log('list product:' +list);
-    const listProduct = cart.map(element =>
-        `<input type="hidden" name="productIds[]" value="${element.id}"/>
-        <input type="hidden" name="productQuantities[]" value="${element.quantity}" />
-        <input type="hidden" name="productPrices[]" value="${element.price.split('.').join('')}" />`
-    );
-    const listItem = document.querySelector('table > tbody');
-    listItem.insertAdjacentHTML('beforeend', list);
-    const subtotalDOM = document.querySelector('.product-subtotal');
-    subtotalDOM.innerHTML = subtotalcart + ' VND';
-    const html = `<input type="hidden" name="subtotal" value=${subtotalcart}/>`;
-    document.querySelector('.breadcrumb').insertAdjacentHTML('afterend', listProduct + html);
-    // console.log(subtotalDOM)
-    // console.log(subtotalcart)
-</script>
-<script>
-    function change_quantity(){
-        var quantity = document.getElementById('quantity').value;
-        console.log(quantity);
-    }
-</script>
 
 <?= $this->endSection() ?>

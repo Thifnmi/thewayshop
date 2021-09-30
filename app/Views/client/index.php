@@ -121,6 +121,7 @@
                                             <a href="<?= base_url()?>/Product/<?= $item['id']?>" alt="<?=$item['product_name']?>">
                                                 <?= substr($item['product_name'],0,58).((strlen($item['product_name']) > 58) ? '...' : '');?>
                                             </a>
+                                            <input name="maxquantity-<?=$item['id']?>" id="maxquantity-<?=$item['id']?>" type="hidden" value="<?= $item['quantity'] ?>"/>
                                         </h4>
                                         <div align="center">
                                             <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
@@ -151,6 +152,7 @@
                                             <a style="color: #212121;" href="<?= base_url()?>/Product/<?= $item['id']?>" alt="<?=$item['product_name']?>">
                                                 <?= substr($item['product_name'],0,58).((strlen($item['product_name']) > 58) ? '...' : '');?>
                                             </a>
+                                            <input name="maxquantity-<?=$item['id']?>" id="maxquantity-<?=$item['id']?>" type="hidden" value="<?= $item['quantity'] ?>"/>
                                         </h4>
                                         <div align="center">
                                             <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
