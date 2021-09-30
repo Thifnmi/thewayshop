@@ -112,16 +112,10 @@
                         </li>
 
                         <li>
-<<<<<<< HEAD
                             <div class="form-group quantity-box" >
                                 <label class="control-label" >Số lượng</label>
                                 <input name="maxquantity-<?=$product['id']?>" id="maxquantity-<?=$product['id']?>" type="hidden" value="<?= $product['quantity'] ?>"/>
                                 <input class="form-control" name="quantity" onkeyup="if(this.value > <?= $product['quantity'] ?>){this.value='<?= $product['quantity'] ?>'; echo}else if(this.value < 0){this.value = '1';}" value="1" min="1" max="<?= $product['quantity'] ?>" type="number">
-=======
-                            <div class="form-group quantity-box">
-                                <label class="control-label">Số lượng</label>
-                                <input class="form-control" data-quantity="1" value="1" min="1" max="<?= $product['quantity'] ?>" type="number">
->>>>>>> 0269384feda46b0979e024f26b81767a199810e9
                             </div>
                         </li>
                     </ul>
