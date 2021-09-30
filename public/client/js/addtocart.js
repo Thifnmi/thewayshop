@@ -14,7 +14,6 @@ addToCart = (event, element) => {
     if (check == -1) {
         getProductById(pid, quantity);
     }
-    
 };
 
 deleteItem = (event, element) => {
@@ -31,7 +30,7 @@ deleteItem = (event, element) => {
 
 getProductById = (id, quantity) => {
     $.ajax({
-        url: "http://localhost/thewayshop/public/Product/getById",
+        url: "http://localhost:8080/thewayshop/public/Product/getById",
         type: "GET",
         dataType: "json",
         data: {
