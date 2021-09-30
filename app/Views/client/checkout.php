@@ -174,7 +174,6 @@
 <!-- End Cart -->
 <script>
     function changePaymentMethod() {
-        // console.log("close");
         document.getElementById('home').checked = true;
     }
 
