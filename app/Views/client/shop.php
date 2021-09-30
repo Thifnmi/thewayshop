@@ -237,7 +237,7 @@
                                                         </h4>
                                                         <div align="center" >
                                                             <h5 style="color:red;"><?= $product['price'] ?> VNĐ</h5>
-                                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ</a>
+                                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -278,7 +278,7 @@
                                                         <?php if($product['style'] != ""):?>. Là dòng sản phẩm <?=$product['style']?><?php endif?>
                                                         <?php if($product['brand_origin'] != ""):?>, có xuất xứ từ <?=$product['brand_origin']?><?php endif?>.</h7>
                                                     <h5><?= $product['price'] ?> VNĐ</h5>
-                                                    <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ</a>
+                                                    <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                         </div>

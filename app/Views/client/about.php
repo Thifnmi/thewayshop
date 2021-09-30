@@ -21,8 +21,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="noo-sh-title">Chúng tôi là <span>The Way Shop</span></h2>
-                <p>Chào mừng bạn đến với The Way Shop, nơi cung cấp đồ trang sức số một của bạn. Chúng tôi luôn tận tâm mang đến cho bạn những món đồ trang sức tốt nhất, chúng tôi tập trung vào nhẫn, vòng cổ, đồng hồ và rất nhiều món khác. Được thành lập vào 2000, đến nay The Way Shop đã có một chặng đường dài từ những ngày đầuu thành lập tại Hà Nội, Việt Nam. Giờ đây chúng tôi rất vui mừng được phục vụ khách hàng trên Việt Nam và toàn thé giới, rất vui được trở thành người đồng hành của bạn.</p>
+                <h2 class="noo-sh-title">Chúng tôi là <span>Mỹ Hạnh</span></h2>
+                <p>Chào mừng bạn đến với Mỹ Hạnh, nơi cung cấp đồ trang sức số một của bạn. Chúng tôi luôn tận tâm mang đến cho bạn những món đồ trang sức tốt nhất, chúng tôi tập trung vào nhẫn, vòng cổ, đồng hồ và rất nhiều món khác. Được thành lập vào 2000, đến nay Mỹ Hạnh đã có một chặng đường dài từ những ngày đầuu thành lập tại Hà Nội, Việt Nam. Giờ đây chúng tôi rất vui mừng được phục vụ khách hàng trên Việt Nam và toàn thé giới, rất vui được trở thành người đồng hành của bạn.</p>
                 <p>Chúng tôi hy vọng bạn thích sản phẩm và tin tưởng sản phẩm của chúng tôi. Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại mà liên hệ với chúng tôi qua hotline/địa chỉ email nhé!</p>
             </div>
             <div class="col-lg-6">
@@ -46,7 +46,7 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="service-block-inner">
                     <h3>Chúng tôi ở đây</h3>
-                    <p>Giờ đây chúng tôi đã và đang đây mạnh việc bán hàng online, vì thế bạn có thể mua hàng ở bất kỳ đâu, bất kỳ khi nào. Chỉ cần bạn muốn, chúng tôi vẫn ở đây. Bạn luôn được chào đón tại The Way Shop </p>
+                    <p>Giờ đây chúng tôi đã và đang đây mạnh việc bán hàng online, vì thế bạn có thể mua hàng ở bất kỳ đâu, bất kỳ khi nào. Chỉ cần bạn muốn, chúng tôi vẫn ở đây. Bạn luôn được chào đón tại Mỹ Hạnh </p>
                 </div>
             </div>
         </div>

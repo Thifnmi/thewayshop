@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-        // var_dump($_SESSION['user']);
-        // die();
-    ?>
+<?php
+// var_dump($_SESSION['user']);
+// die();
+?>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +14,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="<?= base_url() ?>/client/images/favicon.ico" type="image/x-icon">
-    <title>Admin The Way Shop</title>
+    <title>Admin Mỹ Hạnh</title>
     <!-- This page CSS -->
     <!-- chartist CSS -->
     <link href="<?= base_url() ?>/admin/assets/node_modules/morrisjs/morris.css" rel="stylesheet">
@@ -50,21 +51,21 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="<?=base_url()?>/Admin/Dashboard">
+                    <a class="navbar-brand" href="<?= base_url() ?>/Admin/Dashboard">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
                             <img src="<?= base_url() ?>/client/images/logo.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="<?= base_url() ?>/client/images/logo.png"  alt="homepage" class="light-logo" />
+                            <img src="<?= base_url() ?>/client/images/logo.png" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <!-- <span> -->
-                            <!-- dark Logo text -->
-                            <!-- <img src="<?= base_url() ?>/admin/assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
-                            <!-- Light Logo text -->
-                            <!-- <img src="<?= base_url() ?>/admin/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /> -->
+                        <!-- dark Logo text -->
+                        <!-- <img src="<?= base_url() ?>/admin/assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
+                        <!-- Light Logo text -->
+                        <!-- <img src="<?= base_url() ?>/admin/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /> -->
                         <!-- </span> -->
                     </a>
                 </div>
@@ -152,7 +153,7 @@
                 <div class="user-profile">
                     <div class="user-pro-body">
                         <div>
-                            <img src="<?=$_SESSION['user']['image']?>" alt="user-img" class="img-circle">
+                            <img src="<?= $_SESSION['user']['image'] ?>" alt="user-img" class="img-circle">
                         </div>
                         <div class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -162,7 +163,7 @@
                             </a>
                             <div class="dropdown-menu animated flipInY">
                                 <!-- text-->
-                                <a href="<?= base_url()?>/Admin/Account/Profile?id=<?=$_SESSION['user']['id']?>" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <a href="<?= base_url() ?>/Admin/Account/Profile?id=<?= $_SESSION['user']['id'] ?>" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
                                 <!-- text-->
                                 <a href="<?= base_url() ?>/admin/logout" class="dropdown-item"><i class="fas fa-power-off"></i> Logout</a>
                                 <!-- text-->
@@ -306,7 +307,7 @@
         <!-- footer -->
         <!-- ============================================================== -->
         <footer class="footer">
-            All Rights Reserved © 2021 The Way Shop Design By : Nhóm 2 69DCTT21
+            All Rights Reserved © 2021 Mỹ Hạnh Design By : Nhóm 2 69DCTT21
         </footer>
         <!-- ============================================================== -->
         <!-- End footer -->
