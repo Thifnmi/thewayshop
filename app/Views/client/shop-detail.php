@@ -120,7 +120,7 @@
                             <!-- Toast -->
                             <div class="toast" id="toast" style="position: absolute; top: 0; right: 0;">
                                 <div class="toast-header">
-                                    <strong class="mr-auto">Thêm vào giỏ thành công!</strong>
+                                    <strong class="mr-auto">Thêm vào giỏ hàng thành công!</strong>
                                     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
