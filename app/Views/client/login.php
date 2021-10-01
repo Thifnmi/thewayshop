@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $path = parse_url($url, PHP_URL_PATH);
+    $pa = (explode("/", $path))[3];
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,28 +15,25 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
     <!-- Login CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/login.css">
-    <title>Member Mỹ Hạnh</title>
+    <!-- check url to get title -->
+    <?php if(($pa) == "Login"):?>
+        <title>Đăng nhập | Mỹ Hạnh</title>
+    <?php else:?>
+        <title>Đăng ký tài khoản | Mỹ Hạnh</title>
+    <?php endif?>
+    <!-- end check url -->
 </head>
-<?php
-// if(session('message'))
-// {
-//     echo session('message');
-// }
-$url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$path = parse_url($url, PHP_URL_PATH);
-?>
-
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="<?= base_url() ?>/Register" method="post">
                 <h1>Tạo tài khoản</h1>
                 <input type="hidden" name="path" id="path" value="<?= $url ?>" />
-                <input type="text" name="Rfullname" required="" placeholder="Tên của bạn" />
-                <input type="text" name="Rusername" required="" placeholder="Tài khoản" />
-                <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="Rpassword" required="" placeholder="Mật khẩu" />
-                <input type="text" name="Remail" required="" placeholder="Địa chỉ email" />
-                <button type="submit" name="signup">Đăng ký</button>
+                <input type="text" name="Rfullname" required placeholder="Họ và tên của bạn" />
+                <input type="text" name="Rusername" required placeholder="Tên tài khoản" />
+                <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="Rpassword" required placeholder="Mật khẩu" />
+                <input type="email" name="Remail" required placeholder="Địa chỉ email" />
+                <button type="submit" style="cursor: pointer;" name="signup">Đăng ký</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
@@ -41,14 +42,12 @@ $path = parse_url($url, PHP_URL_PATH);
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <!-- <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                 </div>
                 <span>Hoặc dùng tài khoản của bạn</span>
-                <input type="text" name="username" required="" placeholder="Username" />
-                <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="password" required="" placeholder="Password" />
+                <input type="text" name="username" required placeholder="Tài khoản" />
+                <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="password" required placeholder="Mật khẩu" />
                 <a href="#">Quên mật khẩu?</a>
-                <button type="submit" name="login">Đăng nhập</button>
-
+                <button type="submit" style="cursor: pointer;" name="login">Đăng nhập</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -56,39 +55,42 @@ $path = parse_url($url, PHP_URL_PATH);
                 <div class="overlay-panel overlay-left">
                     <h1>Chào mừng trở lại!</h1>
                     <p>Để tiếp tục kết nối với chúng tôi, làm ơn hãy đăng nhập với thông tin của bạn</p>
-                    <button class="ghost" id="signIn">
-                        <a style="color:#fff" href="<?= base_url() ?>/Login">
-                            Đăng nhập
+                        <a style="color:#fff; cursor: pointer;" href="<?= base_url() ?>/Login">
+                            <button style="cursor: pointer;" class="ghost" id="signIn">
+                                Đăng nhập
+                            </button>
                         </a>
-                    </button>
                     <p>Hoặc bạn có thể</p>
-                    <button class="ghost">
-                        <a style="color:#fff" href="<?= base_url() ?>">Tiếp tục là khách</a>
-                    </button>
+                    <a style="color:#fff; cursor: pointer;" href="<?= base_url() ?>">
+                        <button style="cursor: pointer;" class="ghost">Tiếp tục là khách</button>
+                    </a>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Chào bạn</h1>
-                    <p>Đăng ký tài toàn bằng cách điền một số thông tin cá nhân và bắt đầu trở thành chúng tôi</p>
-                    <button class="ghost" id="signUp">
-                        <a style="color:#fff" href="<?= base_url() ?>/Register">
-                            Đăng ký
+                    <p>Đăng ký tài toàn bằng cách điền một số thông tin cá nhân và bắt đầu là thanh viên của chúng tôi</p>
+                        <a style="color:#fff; cursor: pointer;" href="<?= base_url() ?>/Register">
+                            <button style="cursor: pointer;" class="ghost" id="signUp">
+                                Đăng ký
+                            </button>  
                         </a>
-                    </button>
                     <p>Hoặc bạn có thể</p>
-                    <button class="ghost">
-                        <a style="color:#fff" href="<?= base_url() ?>">Tiếp tục là khách</a>
-                    </button>
+                    <a style="color:#fff; cursor: pointer;" href="<?= base_url() ?>">
+                        <button style="cursor: pointer;" class="ghost">Tiếp tục là khách</button>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
     <script src="<?= base_url() ?>/client/js/login.js"></script>
+    <!-- check url to return view -->
     <script>
-        console.log(document.getElementById("path").getAttribute('value'));
-        if ((document.getElementById("path").getAttribute('value')) == "http://localhost:8080/thewayshop/public/Register") {
+        // console.log((document.getElementById("path").getAttribute('value')).split("/")[5]);
+        let path = (document.getElementById("path").getAttribute('value')).split("/")[5];
+        if (path == "Register") {
             document.getElementById('container').classList.toggle("right-panel-active");
         }
     </script>
+    <!-- end check -->
 
 </body>
 

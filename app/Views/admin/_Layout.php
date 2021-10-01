@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="<?= base_url() ?>/client/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= base_url() ?>/client/images/logo.ico" type="image/x-icon">
     <title>Admin Mỹ Hạnh</title>
     <!-- This page CSS -->
     <!-- chartist CSS -->

@@ -36,46 +36,46 @@
                                     $name = $name . $ar_name[$i] . " ";
                                 } ?>
                                 <div class="col-md-6 mb-3">
-                                    <label for="firstName">Họ *</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value="<?= $ar_name[$length] ?>" required>
+                                    <label for="lastName">Họ *</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="<?= $name ?>" required>
                                     <div class="invalid-feedback">Bạn phải điền họ. </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="lastName">Tên *</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="" value="<?= $name ?>" required>
+                                    <label for="firstName">Tên *</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="<?= $ar_name[$length] ?>" required>
                                     <div class="invalid-feedback"> Bạn phải điền tên. </div>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="username">Tài khoản *</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="username" placeholder="" readonly="true" required value="<?= $_SESSION['customer']['username'] ?>">
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="" readonly="true" required value="<?= $_SESSION['customer']['username'] ?>">
                                     <div class="invalid-feedback" style="width: 100%;">Bạn phải điền tài khoản. </div>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="email">Số điện thoại *</label>
-                                <input type="email" class="form-control" id="email" placeholder="" required value="<?= $_SESSION['customer']['phone_number'] ?>">
+                                <label for="phone">Số điện thoại *</label>
+                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="" required value="<?= $_SESSION['customer']['phone_number'] ?>">
                                 <div class="invalid-feedback"> Hãy nhập số điện thoại để được liên hệ nhận đơn hàng. </div>
                             </div>
                             <div class="mb-3">
                                 <label for="address">Địa chỉ *</label>
-                                <input type="text" class="form-control" id="address" placeholder="" required value="<?= $_SESSION['customer']['address'] ?>">
+                                <input type="text" class="form-control" name="address" id="address" placeholder="" required value="<?= $_SESSION['customer']['address'] ?>">
                                 <div class="invalid-feedback"> Hãy nhập địa chỉ nhận hàng! </div>
                             </div>
                             <hr class="mb-4">
                             <div class="title"> <span>Thanh toán</span> </div>
                             <div class="d-block my-3">
                                 <div class="custom-control custom-radio">
-                                    <input id="home" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                                    <input id="home" name="paymentMethod" value="0" type="radio" class="custom-control-input" checked required>
                                     <label class="custom-control-label" for="home">Thanh toán khi nhận hàng</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input id="momo" name="paymentMethod" type="radio" class="custom-control-input" data-toggle="modal" data-target="#modal-content" required>
+                                    <input id="momo" name="paymentMethod" value="1" type="radio" class="custom-control-input" data-toggle="modal" data-target="#modal-content" required>
                                     <label class="custom-control-label" for="momo">Thanh toán qua Momo</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input id="bank" name="paymentMethod" type="radio" class="custom-control-input" data-toggle="modal" data-target="#modal-content"  required>
+                                    <input id="bank" name="paymentMethod" value="2" type="radio" class="custom-control-input" data-toggle="modal" data-target="#modal-content"  required>
                                     <label class="custom-control-label" for="bank">Thanh toán qua tài khoản ngân hàng</label>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                             <hr class="mb-1">
                             <div class="title"> <span>Ghi chú</span> </div>
                             <div class="input-group">
-                                <textarea type="text" style="margin-top: 12px; margin-bottom: 0px; height: 198px;" class="form-control" id="note" placeholder="Ghi chú"></textarea>
+                                <textarea type="text" style="margin-top: 12px; margin-bottom: 0px; height: 198px;" class="form-control" name="note" id="note" placeholder="Ghi chú"></textarea>
                             </div>
                         </div>
                     </div>
@@ -107,8 +107,8 @@
                                 <div class="title-left">
                                     <h3>Phương thức giao hàng</h3>
                                 </div>
-                                <div class="mb-4">
-                                    <div class="custom-control custom-radio">
+                                <div name="ship-method" class="mb-4 ship-method">
+                                    <!-- <div class="custom-control custom-radio">
                                         <input id="shippingOption1" name="shipping-option" class="custom-control-input" checked="checked" type="radio">
                                         <label class="custom-control-label" for="shippingOption1">Giao hàng cơ bản</label> <span class="float-right font-weight-bold">Miễn phí</span>
                                     </div>
@@ -121,7 +121,7 @@
                                     <div class="custom-control custom-radio">
                                         <input id="shippingOption3" name="shipping-option" class="custom-control-input" type="radio">
                                         <label class="custom-control-label" for="shippingOption3">Ngày làm việc tiếp theo</label> <span class="float-right font-weight-bold">$20.00</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -143,22 +143,23 @@
                                 <hr class="my-1">
                                 <div class="d-flex">
                                     <h4>Số tiền</h4>
-                                    <div class="ml-auto font-weight-bold"> $ 440 </div>
+                                    <div class="total-price ml-auto font-weight-bold"> 0 </div>
                                 </div>
                                 <hr class="my-1">
                                 <div class="d-flex">
                                     <h4>Mã giảm giá</h4>
-                                    <div class="ml-auto font-weight-bold"> $ 40 </div>
+                                    <div class="ml-auto font-weight-bold"> 0 % </div>
                                 </div>
 
                                 <div class="d-flex">
                                     <h4>Phí giao hàng</h4>
-                                    <div class="ml-auto font-weight-bold"> Free </div>
+                                    <div class="feeship ml-auto font-weight-bold"> Miễn phí </div>
                                 </div>
                                 <hr>
                                 <div class="d-flex gr-total">
                                     <h5>Tổng cộng</h5>
-                                    <div class="total-price ml-auto h5">0 </div>
+                                    <div class="total-price-payment ml-auto h5">0 </div>
+                                    <input type="hidden" name="sum-prices" value=""/>
                                 </div>
                                 <hr>
                             </div>
@@ -177,41 +178,6 @@
         document.getElementById('home').checked = true;
     }
 
-    const data = localStorage.getItem('cart');
-    const cart = JSON.parse(data);
-    // console.log('cart :' +cart);
-
-    let subtotal = 0;
-    cart.map(element => {
-        subtotal += +(element.price.split('.').join('')) * element.quantity;
-    });
-    subtotalcart = +subtotal;
-    // console.log('subtotal cart:' +subtotalcart);
-    const list = cart.map(element =>
-        `<div class="media mb-2 border-bottom">
-            <div class="media-body"> <a target="_blank" href="<?= base_url() ?>/Product/${element.id}">${element.name}</a>
-                <div class="small text-muted">Giá: ${element.price} VND<span class="mx-2">|</span> Số lượng: ${element.quantity} <span class="mx-2">|</span> Tổng tiền: ${(element.price.split('.').join('')) * (element.quantity)} VND</div>
-            </div>
-        </div>`
-    );
-    // console.log('list: ' + list);
-    const listProduct = cart.map(element =>
-        `<input type="hidden" name="productIds[]" value="${element.id}"/>
-        <input type="hidden" name="productQuantities[]" value="${element.quantity}" />
-        <input type="hidden" name="productPrices[]" value="${element.price.split('.').join('')}" />`
-    );
-    let list_affter_split = "";
-    let list_a = list.toString().split(',');
-    for (let i = 0; i < list_a.length; i++) {
-        list_affter_split += list_a[i];
-    }
-    // console.log('list affter split:' +list_affter_split);
-    const listItem = document.querySelector('div > div.rounded.p-2.bg-light');
-    listItem.insertAdjacentHTML('beforeend', list_affter_split);
-    const subtotalDOM = document.querySelector('.total-price');
-    subtotalDOM.innerHTML = subtotalcart + ' VND';
-    const html = `<input type="hidden" name="subtotal" value=${subtotalcart}/>`;
-    document.querySelector('.breadcrumb').insertAdjacentHTML('afterend', listProduct + html);
 </script>
 
 <?= $this->endSection() ?>

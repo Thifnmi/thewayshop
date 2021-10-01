@@ -85,7 +85,7 @@
                     <hr>
                 </div>
             </div>
-            <div class="col-12 d-flex shopping-box"><a href="<?= base_url() ?>/Checkout" class="ml-auto btn hvr-hover">Thanh toán</a> </div>
+            <div class="col-12 d-flex shopping-box"><a href="<?= base_url() ?>/Checkout" style="color: #ffffff;" class="ml-auto btn hvr-hover">Thanh toán</a> </div>
         </div>
 
     </div>

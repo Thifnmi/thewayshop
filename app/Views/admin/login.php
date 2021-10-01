@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="<?= base_url() ?>/client/images/favicon.ico" type="image/x-icon">
-    <title>Admin Mỹ Hạnh </title>
+    <link rel="shortcut icon" href="<?= base_url() ?>/client/images/logo.ico" type="image/x-icon">
+    <title>Login Admin Mỹ Hạnh </title>
 
     <!-- page css -->
     <link rel="stylesheet" href="<?= base_url() ?>/admin/crm/dist/css/pages/login-register-lock.css">

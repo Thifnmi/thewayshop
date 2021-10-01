@@ -19,7 +19,7 @@ class Register extends BaseController
             $hashed_password = md5($password);
             $account = $accountsModel->checkUsername($username);
             if($account){
-                echo '<script>alert("Username is not available");</script>';
+                echo '<script>alert("Tên tài khoản không có sẵn");</script>';
             } else {
                 $userData = [
                     'fullname' => $fullname,
@@ -33,8 +33,8 @@ class Register extends BaseController
                     'password' => $hashed_password,
                 ];
                 $accountsModel->insert($data_insert);
-                $message = '<script>alert("Register successfully");</script>';
-                return redirect()->to(base_url().'/Login')->with('message', $message);
+                echo '<script>alert("Đăng ký tài khoản thành công");</script>';
+                header('Refresh: 1; URL=http://localhost/thewayshop/public/Login');
             }
         }
         return view('client/login');

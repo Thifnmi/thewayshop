@@ -1,6 +1,9 @@
 if ( typeof cart !== 'undefined'){
     console.log(cart);
 } else{
+    let feeShip = 0;
+    let totalPricePayments = 0;
+    let inputHidden = document.querySelector('input[name="sum-prices"]');
     let cart = [];
 
     addToCart = (event, element) => {
@@ -137,7 +140,7 @@ if ( typeof cart !== 'undefined'){
             html = "<li><p>Giỏ hàng trống.</p></li>";
         }
 
-        let totalPricehtml = `<strong>Total</strong>: ${totalPrice} VNĐ`;
+        let totalPricehtml = `<strong>Total</strong>: ${formatNumber(totalPrice)} VNĐ`;
 
         let cart_count = document.querySelectorAll(".badge");
 
@@ -173,16 +176,47 @@ if ( typeof cart !== 'undefined'){
         CheckUrl();
         // console.log(allItem);
     };
+    changeShipMethod = (event, element) =>{
+        const sid = element.dataset.idship;
+        const option = document.querySelector('span[name="ship-fee-'+sid+'"]').innerHTML;
+        const total = document.querySelector('.total-price-payment');
+        if(option == "Miễn phí"){
+            feeShip = 0;
+        } else{
+            feeShip = ((option.split(" ")[0]).split(".")).join("");
+        }
+        let ship = document.querySelector('.feeship');
+        ship.innerHTML = option;
+        let sum = Number(totalPricePayments) + Number(feeShip);
+        total.innerHTML = formatNumber(sum) + " VNĐ";
+        inputHidden.value = formatNumber(sum);
+        // console.log(formatNumber(sum));
+        // console.log(new Intl.NumberFormat('vi-VN',{style:'currency',currency:'VND'}).format(sum));
+    };
+
+    // function to convert numbers into Vietnamese currency
+    function formatNumber(number) {
+        return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+    }
+
+    // To convert the number of mandarins into Vietnamese currency, you can use:
+    // console.log(new Intl.NumberFormat('vi-VN',{style:'currency',currency:'VND'}).format(sum));
+    // or function formatNumber()
+    
     function CheckUrl() {
         if(((window.location.href).split('/'))[5] == "Cart"){
             CartBeforCheckout();
+        }
+        if(((window.location.href).split('/'))[5] == "Checkout"){
+            // console.log("checkout");
+            CartCheckout();
         }
     }
 
     function CartBeforCheckout() {
         getCart();
         const CartView = document.querySelector('.cart-box-main');
-        const CartTable = ``;
+        // console.log(CartView);
         const listItem = document.querySelector('table > tbody');
         const totalPricePayment= document.querySelector('.total-price-payment');
         const discountPercent = document.getElementById('discount-percent').value;
@@ -200,19 +234,19 @@ if ( typeof cart !== 'undefined'){
                     </a>
                 </td>
                 <td class="name-pr">
-                    <a href="http://localhost/thewayshop/public/Product/${i.id}">
+                    <a href="Product/${i.id}">
                         ${i.name}
                     </a>
                 </td>
                 <td class="price-pr">
                     <input type="hidden" id="price-one" value="${(i.price.split('.').join(''))}">
-                    <p>${i.price}</p>
+                    <p>${i.price} VNĐ</p>
                 </td>
                 <td class="quantity-box">
                     <input type="number" data-id="${i.id}" id="quantity-product-${i.id}" onchange="change_quantity(event, this)"  value="${i.quantity}" min="1" max="" class="c-input-text qty text">
                 </td>
                 <td class="total-pr">
-                    <p id="total-price-${i.id}">${(i.price.split('.').join('')) * (i.quantity)}</p>
+                    <p id="total-price-${i.id}">${formatNumber((i.price.split('.').join('')) * (i.quantity))} VNĐ</p>
                 </td>
                 <td>
                     <a href="#"  data-id="${i.id}" onclick="deleteItem(event, this)">
@@ -226,14 +260,13 @@ if ( typeof cart !== 'undefined'){
             subtotal += +(element.price.split('.').join('')) * element.quantity;
         });
         subtotalcart = +subtotal;
-        // console.log('subtotal cart:' +subtotalcart);
         
         if(html != ""){
             listItem.innerHTML = html;
-            subtotalDOM.innerHTML = subtotalcart + " VNĐ";
+            subtotalDOM.innerHTML = formatNumber(subtotalcart) + " VNĐ";
             var pricepayment = (subtotalcart - ((subtotalcart/100)*discountPercent));
             console.log(pricepayment);
-            totalPricePayment.innerHTML = pricepayment+ " VNĐ";
+            totalPricePayment.innerHTML = formatNumber(pricepayment) + " VNĐ";
             console.log("discount "+discountPercent+" %");
         }else{
             CartView.innerHTML = "";
@@ -246,7 +279,46 @@ if ( typeof cart !== 'undefined'){
     }
     // console.log(((window.location.href).split('/'))[5]);
     CheckUrl();
-
+    function CartCheckout() {
+        getCart();
+        let shipMethod = document.querySelector(".ship-method");
+        let totalPrice = document.querySelector('.total-price');
+        // console.log(ship);
+        let html_shipMethod = `<div class="custom-control custom-radio">
+        <input id="shippingOption1" name="shipping-option" class="custom-control-input" value="1" checked="checked" type="radio" data-idship="1" onclick="changeShipMethod(event, this)">
+        <label class="custom-control-label" for="shippingOption1">Giao hàng cơ bản</label> <span name="ship-fee-1" class="float-right font-weight-bold">Miễn phí</span>
+    </div>
+    <div class="ml-4 mb-2 small">(3-7 ngày làm việc)</div>
+    <div class="custom-control custom-radio">
+        <input id="shippingOption2" name="shipping-option" class="custom-control-input" value="2" type="radio" data-idship="2" onclick="changeShipMethod(event, this)">
+        <label class="custom-control-label" for="shippingOption2">Giao hàng nhanh</label> <span name="ship-fee-2" class="float-right font-weight-bold">40.000 VNĐ</span>
+    </div>
+    <div class="ml-4 mb-2 small">(2-4 ngày)</div>`;
+        shipMethod.innerHTML = html_shipMethod;
+        let ViewList = document.querySelector('div > div.rounded.p-2.bg-light');
+        let totalPricePay = document.querySelector('.total-price-payment');
+        let html_listProduct = "";
+        cart.slice().reverse().forEach((e) => {
+            html_listProduct += `<div class="media mb-2 border-bottom">
+            <div class="media-body"><input type="hidden" name="productname[]" value="${e.id}"/> <a target="_blank" href="Product/${e.id}">${e.name}</a>
+            <div class="small text-muted" value=""> <input type="hidden" name="prices[]" value="${e.price}"/>Giá: ${(e.price)} VNĐ<span class="mx-2">|</span><input type="hidden" name="quantity[]" value="${e.quantity}"/> Số lượng: ${e.quantity} <span class="mx-2">|</span><input type="hidden" name="total-prices[]" value="${formatNumber((e.price.split('.').join('')) * (e.quantity))}"/> Tổng tiền: ${formatNumber((e.price.split('.').join('')) * (e.quantity))} VNĐ</div>
+            </div>
+        </div>`;
+        });
+        
+        // console.log(ViewList, html_listProduct);
+        let subtotal = 0;
+        cart.map(element => {
+            subtotal += +(element.price.split('.').join('')) * element.quantity;
+        });
+        subtotalcart = +subtotal;
+        totalPricePayments = subtotalcart;
+        ViewList.innerHTML = html_listProduct;
+        totalPrice.innerHTML = formatNumber(subtotalcart) + " VNĐ";
+        totalPricePay.innerHTML = formatNumber(subtotalcart) + " VNĐ";
+        inputHidden.value = formatNumber(subtotalcart);
+    }
+    // CartCheckout();
     rendetListProductCheckOut = () => {
         let list = document.querySelector(".checkout-cart");
         if (list != null) {

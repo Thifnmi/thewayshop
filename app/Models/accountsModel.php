@@ -13,7 +13,7 @@ class accountsModel extends Model
 
     public function checkUsername(string $username)
     {
-        return $this->find($username);
+        return $this->where('username', $username)->findAll();
         # code...
     }
 }
