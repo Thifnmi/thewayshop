@@ -40,7 +40,7 @@ if ( typeof cart !== 'undefined'){
 
     getProductById = (id, quantity) => {
         $.ajax({
-            url: "http://localhost/thewayshop/public/Product/getById",
+            url: "http://localhost:8080/thewayshop/public/Product/getById",
             type: "GET",
             dataType: "json",
             data: {
@@ -272,7 +272,7 @@ if ( typeof cart !== 'undefined'){
             CartView.innerHTML = "";
             CartView.innerHTML = `<div style="text-align: center;" class="container">
             <h1>Giỏ hàng rỗng</h1>
-            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" href="http://localhost/thewayshop/public/" >Tiếp tục mua hàng</a>
+            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" href="http://localhost:8080/thewayshop/public/" >Tiếp tục mua hàng</a>
             </div>`;
         }
         

@@ -70,7 +70,7 @@
                     </div>
                     <div class="d-flex">
                         <h4>Mã giảm giá</h4>
-                        <input type="hidden" value="0" id="discount-percent"/>
+                        <input type="hidden" value="0" id="discount-percent" />
                         <div class="ml-auto font-weight-bold discount-percent"> 0 % </div>
                     </div>
                     <!-- <div class="d-flex">

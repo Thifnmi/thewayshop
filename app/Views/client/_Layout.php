@@ -27,7 +27,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/bootstrap.min.css">
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/client/css/style.css">
@@ -177,9 +177,9 @@
                                     <li><a href="<?= base_url() ?>/Register">Đăng ký tài khoản</a></li>
                                 <?php else : ?>
                                     <li><a href="<?= base_url() ?>/Account">Hồ sơ của tôi</a></li>
-                                    <!-- <li>
+                                    <li>
                                         <a href="<?= base_url() ?>/Bought">Lịch sử mua hàng</a>
-                                    </li> -->
+                                    </li>
                                     <li><a href="<?= base_url() ?>/Login/logout">Đăng xuất</a></li>
                                 <?php endif ?>
                             </ul>
