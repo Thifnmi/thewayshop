@@ -79,7 +79,7 @@
                         <button type="button" style="display: none;" id="cancel" class="btn btn-inverse waves-effect waves-light">Hủy</button>
                     </div>
 
-                    <div class="container mt-4">
+                    <!-- <div class="container mt-4">
                         <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#Noi_Dung_Modal">Lịch sử mua hàng</button>
 
                         <div class="modal fade" id="Noi_Dung_Modal">
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </form>
             </div>

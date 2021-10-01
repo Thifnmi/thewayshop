@@ -20,4 +20,8 @@ class invoiceModel extends Model
         return $this->find($Oid);
         # code...
     }
+    public function getInvoiceByUserId(int $UserId)
+    {
+        return $this->where('user_id', $UserId)->findAll();
+    }
 }
