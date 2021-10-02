@@ -23,26 +23,26 @@ class Bought extends BaseController
         $data['categories'] = $categories;
         $boughtModel = new invoiceModel();
         $bought = $boughtModel->getInvoiceByUserId($_SESSION['customer']['user_id']);
-        $data['bought'] = $bought;
+        $data['bought'] = array_reverse($bought, true);
         $invoiceDetailModel = new invoiceDetailModel();
         $details = [];
         $productModel = new productModel();
-        $products = [];
+        $products_raw = [];
+        $invoiceDetail['product'] = [];
         foreach ($bought as $item) {
             $invoiceDetail = $invoiceDetailModel->getInvoiceDetailByID($item['id']);
             foreach ($invoiceDetail as $sp) {
-                $product = $productModel->getProductById($sp['product_id']);
-                $products = array_merge($products, $product);
+                $product = $productModel->getProductsById($sp['product_id']);
+                $products_raw = array_merge($products_raw, $product);
             }
-
             $details = array_merge($details, $invoiceDetail);
         }
-        $data['invoiceDetails'] = $details;
-        $data['products'] = $products;
-        var_dump($products, $details);
-        die;
+        $products = array_unique($products_raw,SORT_REGULAR);
+        // var_dump(array_reverse($products, true));
+        $data['invoiceDetails'] = array_reverse($details, true);
+        $data['products'] = array_reverse($products, true);
+        // die;
 
         return view('client/bought', $data);
-        # code...
     }
 }

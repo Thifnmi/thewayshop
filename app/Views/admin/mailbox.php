@@ -6,9 +6,11 @@
             <div class="row">
                 <div class="col-lg-12  bg-light border-left">
                     <div class="card-body">
+                    <h5 class="card-title">Mailbox</h5>
+                    <h6 class="card-subtitle"></h6>
                         <form action="<?php echo base_url() . '/admin/mailbox' ?>" method='POST'>
                             <div class="btn-group m-b-10 m-r-10" role="group" aria-label="Button group with nested dropdown">
-                                <button type="submit" class="btn btn-secondary font-18"><i class="mdi mdi-delete"></i></button>
+                                <!-- <button type="submit" class="btn btn-secondary font-18"><i class="mdi mdi-delete"></i></button> -->
                             </div>
                     </div>
                     <div class="card-body p-t-0">

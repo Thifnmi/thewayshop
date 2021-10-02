@@ -239,20 +239,20 @@
                 <!-- ============================================================== -->
                 <!-- Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
-                <div class="row page-titles">
+                <!-- <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
                         <h4 class="text-themecolor">Dashboard</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
-                        <div class="d-flex justify-content-end align-items-center">
-                            <ol class="breadcrumb">
+                        <div class="d-flex justify-content-end align-items-center"> -->
+                            <!-- <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?= base_url() ?>/Admin/Dashboard">Home</a></li>
                                 <li class="breadcrumb-item active"></li>
-                            </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
-                        </div>
+                            </ol> -->
+                            <!-- <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button> -->
+                        <!-- </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- start  main content -->
 
                 <!-- import code hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->

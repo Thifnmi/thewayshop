@@ -1,5 +1,5 @@
 if ( typeof cart !== 'undefined'){
-    console.log(cart);
+    // console.log(cart);
 } else{
     let feeShip = 0;
     let totalPricePayments = 0;
@@ -21,10 +21,6 @@ if ( typeof cart !== 'undefined'){
         }
     };
 
-    addToCartFromDetail = (event, element)=>{
-
-    };
-
     deleteItem = (event, element) => {
         event.preventDefault();
         let pid = element.dataset.id;
@@ -38,9 +34,9 @@ if ( typeof cart !== 'undefined'){
         CheckUrl();
     };
 
-    getProductById = (id, quantity) => {
+    checkQuantity = () =>{
         $.ajax({
-            url: "http://localhost:8080/thewayshop/public/Product/getById",
+            url: "http://localhost/thewayshop/public/Product/getById",
             type: "GET",
             dataType: "json",
             data: {
@@ -54,6 +50,37 @@ if ( typeof cart !== 'undefined'){
                         name: data.product_name,
                         image: data.image,
                         price: data.price,
+                        maxquantity: data.quantity,
+                        quantity: quantity ? quantity : 1,
+                    };
+
+                    getCart();
+                    cart.push(product);
+                    setCart();
+                    renderCart();
+                    CheckUrl();
+                }
+            },
+        });
+    };
+
+    getProductById = (id, quantity) => {
+        $.ajax({
+            url: "http://localhost/thewayshop/public/Product/getById",
+            type: "GET",
+            dataType: "json",
+            data: {
+                pid: id,
+            },
+            success: function (result) {
+                if (result.status == 200) {
+                    let { data } = result;
+                    const product = {
+                        id: data.id,
+                        name: data.product_name,
+                        image: data.image,
+                        price: data.price,
+                        maxquantity: data.quantity,
                         quantity: quantity ? quantity : 1,
                     };
 
@@ -83,6 +110,7 @@ if ( typeof cart !== 'undefined'){
         let newItem = {
             ...cart[itemIndex],
             quantity: newQuantity,
+            maxquantity: maxquantity,
         };
 
         cart[itemIndex] = newItem;
@@ -141,7 +169,6 @@ if ( typeof cart !== 'undefined'){
         }
 
         let totalPricehtml = `<strong>Total</strong>: ${formatNumber(totalPrice)} VNĐ`;
-
         let cart_count = document.querySelectorAll(".badge");
 
         cart_count.forEach((e) => {
@@ -153,7 +180,6 @@ if ( typeof cart !== 'undefined'){
         });
 
         cartTotal.innerHTML = totalPricehtml;
-
         list.innerHTML = html;
     }
 
@@ -162,7 +188,7 @@ if ( typeof cart !== 'undefined'){
         event.preventDefault();
         let pid = element.dataset.id;
         let chqty = document.getElementById('quantity-product-'+pid).value;
-
+        // getProductById(pid,chqty);
         // console.log(pid,chqty);
         getCart();
         let allItem = [...cart];
@@ -189,7 +215,7 @@ if ( typeof cart !== 'undefined'){
         ship.innerHTML = option;
         let sum = Number(totalPricePayments) + Number(feeShip);
         total.innerHTML = formatNumber(sum) + " VNĐ";
-        inputHidden.value = formatNumber(sum);
+        inputHidden.value = sum;
         // console.log(formatNumber(sum));
         // console.log(new Intl.NumberFormat('vi-VN',{style:'currency',currency:'VND'}).format(sum));
     };
@@ -211,10 +237,19 @@ if ( typeof cart !== 'undefined'){
             // console.log("checkout");
             CartCheckout();
         }
+        if(((window.location.href).split('/'))[5] == "Bought"){
+            // console.log("Bought");
+            let total = document.getElementById('total-bought').value;
+            // console.log(formatNumber(total));
+            let totalBought = document.querySelector('.total-bought');
+            // console.log(totalBought);
+            totalBought.innerHTML = formatNumber(total);
+        }
     }
 
     function CartBeforCheckout() {
         getCart();
+        
         const CartView = document.querySelector('.cart-box-main');
         // console.log(CartView);
         const listItem = document.querySelector('table > tbody');
@@ -243,7 +278,7 @@ if ( typeof cart !== 'undefined'){
                     <p>${i.price} VNĐ</p>
                 </td>
                 <td class="quantity-box">
-                    <input type="number" data-id="${i.id}" id="quantity-product-${i.id}" onchange="change_quantity(event, this)"  value="${i.quantity}" min="1" max="" class="c-input-text qty text">
+                    <input type="number" data-id="${i.id}" id="quantity-product-${i.id}" onchange="change_quantity(event, this)" onkeyup="if(this.value >= ${i.quantity}){this.value='${i.quantity}'; }else if(this.value <= 1){this.value = '1';}else if(${i.maxquantity} <= 0){this.value = '0';}" value="${i.quantity}" min="1" max="${i.maxquantity}" class="c-input-text qty text">
                 </td>
                 <td class="total-pr">
                     <p id="total-price-${i.id}">${formatNumber((i.price.split('.').join('')) * (i.quantity))} VNĐ</p>
@@ -265,9 +300,9 @@ if ( typeof cart !== 'undefined'){
             listItem.innerHTML = html;
             subtotalDOM.innerHTML = formatNumber(subtotalcart) + " VNĐ";
             var pricepayment = (subtotalcart - ((subtotalcart/100)*discountPercent));
-            console.log(pricepayment);
+            // console.log(pricepayment);
             totalPricePayment.innerHTML = formatNumber(pricepayment) + " VNĐ";
-            console.log("discount "+discountPercent+" %");
+            // console.log("discount "+discountPercent+" %");
         }else{
             CartView.innerHTML = "";
             CartView.innerHTML = `<div style="text-align: center;" class="container">
@@ -278,6 +313,7 @@ if ( typeof cart !== 'undefined'){
         
     }
     // console.log(((window.location.href).split('/'))[5]);
+
     CheckUrl();
     function CartCheckout() {
         getCart();
@@ -301,7 +337,7 @@ if ( typeof cart !== 'undefined'){
         cart.slice().reverse().forEach((e) => {
             html_listProduct += `<div class="media mb-2 border-bottom">
             <div class="media-body"><input type="hidden" name="productname[]" value="${e.id}"/> <a target="_blank" href="Product/${e.id}">${e.name}</a>
-            <div class="small text-muted" value=""> <input type="hidden" name="prices[]" value="${e.price}"/>Giá: ${(e.price)} VNĐ<span class="mx-2">|</span><input type="hidden" name="quantity[]" value="${e.quantity}"/> Số lượng: ${e.quantity} <span class="mx-2">|</span><input type="hidden" name="total-prices[]" value="${formatNumber((e.price.split('.').join('')) * (e.quantity))}"/> Tổng tiền: ${formatNumber((e.price.split('.').join('')) * (e.quantity))} VNĐ</div>
+            <div class="small text-muted" value=""> <input type="hidden" name="prices[]" value="${e.price.split('.').join('')}"/>Giá: ${(e.price)} VNĐ<span class="mx-2">|</span><input type="hidden" name="quantity[]" value="${e.quantity}"/> Số lượng: ${e.quantity} <span class="mx-2">|</span><input type="hidden" name="total-prices[]" value="${((e.price.split('.').join('')) * (e.quantity))}"/> Tổng tiền: ${formatNumber((e.price.split('.').join('')) * (e.quantity))} VNĐ</div>
             </div>
         </div>`;
         });
@@ -316,7 +352,7 @@ if ( typeof cart !== 'undefined'){
         ViewList.innerHTML = html_listProduct;
         totalPrice.innerHTML = formatNumber(subtotalcart) + " VNĐ";
         totalPricePay.innerHTML = formatNumber(subtotalcart) + " VNĐ";
-        inputHidden.value = formatNumber(subtotalcart);
+        inputHidden.value = subtotalcart;
     }
     // CartCheckout();
     rendetListProductCheckOut = () => {

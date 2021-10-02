@@ -1,6 +1,22 @@
 <?= $this->extend('client/_Layout') ?>
 <?= $this->section('content_Shop') ?>
 
+<?php if (($message == "success")) : ?>
+    <script>
+        localStorage.removeItem('cart');
+    </script>
+    <?php 
+        echo '<script>alert("Đặt hàng thành công");</script>';
+        header('Refresh: 1; URL=http://localhost/thewayshop/public/Bought');
+    ?>
+    <?php elseif ($message == "not enough") :
+        echo '<script>alert("'.$notify.'");</script>';
+        // echo $newUrl = "http://localhost/thewayshop/public/Product/".$pid;
+        header('Refresh: 0; URL='.$newUrl); ?>
+    <?php elseif ($message == "fail") :
+        echo '<script>alert("Đặt hàng không thành công");</script>'; ?>
+    <?php endif; ?>
+
 <!-- Start All Title Box -->
 <div class="all-title-box">
     <div class="container">

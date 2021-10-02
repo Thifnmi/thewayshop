@@ -18,7 +18,7 @@ class Invoices extends BaseController
         }
         $model = new invoiceModel();
         $all_orders = $model->findAll();
-        $data['orders'] = $all_orders;
+        $data['orders'] = array_reverse($all_orders);
         echo view('admin/invoice/index', $data);
         //--------------------------------------------------------------------
     }
@@ -91,9 +91,10 @@ class Invoices extends BaseController
             $fullname = $this->request->getVar('fullname');
             $phone = $this->request->getVar('phone');
             $email = $this->request->getVar('email');
-            $bill_address = $this->request->getVar('bill_address');
+            $bill_address = $this->request->getVar('bill-address');
             $note = $this->request->getVar('note');
-            $paid_status = $this->request->getVar('paid_status');
+            $shipping_status = $this->request->getVar('shipping-status');
+            $paid_status = $this->request->getVar('payment-status');
             $data_insert = [
                 'fullname' => $fullname,
                 'phone' => $phone,
@@ -102,10 +103,10 @@ class Invoices extends BaseController
                 'note' => $note,
                 'paid_status' => (int)$paid_status,
                 'create_on' => date("Y-m-d"),
-                'shipping_status' => 0,
+                'shipping_status' => $shipping_status,
 
             ];
-            $check = $model->save($data_insert);
+            $check = $model->update($id,$data_insert);
             $model_detail->where('invoice_id', $id)->delete();
             $product_var = $this->request->getVar('name');
             $product_amount = $this->request->getVar('value');
@@ -114,15 +115,16 @@ class Invoices extends BaseController
                 $total = (int)$price * (int) $product_amount[$i];
                 // echo $total;
                 $data_order_insert = [
-                    'order_id' => $id,
+                    'invoice_id' => $id,
                     'product_id' => (int) $product_var[$i],
                     'total_price' => (int) $total,
                     'product_amount' => (int) $product_amount[$i]
                 ];
-                var_dump($data_order_insert);
+                // var_dump($data_order_insert);
+                // die();
                 $model_detail->insert($data_order_insert);
             }
-            return redirect()->to(base_url() . '/admin/invoice');
+            return redirect()->to(base_url() . '/admin/Invoices');
         }
 
         $data['info'] = $test;
@@ -142,9 +144,9 @@ class Invoices extends BaseController
         $model = new invoiceModel();
         $user = $model->find($id);
         $data['user_detail'] = $user;
-        $sql = 'select product.name, product.price, invoice_detail.total_price, invoice_detail.product_amount 
-                from product, invoice_detail
-                where product.product_id = invoice_detail.product_id and invoice_id=' . $id;
+        $sql = 'select products.product_name, products.price, invoice_detail.total_price, invoice_detail.product_amount 
+                from products, invoice_detail
+                where products.id = invoice_detail.product_id and invoice_id=' . $id;
         $detail = $db->query($sql)->getResult('array');
         $data['detail'] = $detail;
         return view('admin/invoice/detail', $data);

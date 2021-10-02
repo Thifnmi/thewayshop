@@ -4,8 +4,8 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Admin</h5>
-                <h6 class="card-subtitle">All projects Admin</h6>
+                <h5 class="card-title">Accounts</h5>
+                <h6 class="card-subtitle">All account</h6>
                 <div class="table-responsive">
                     <table id="example23" class="table table-striped">
                         

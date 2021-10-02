@@ -8,6 +8,8 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
+                <h5 class="card-title">Products</h5>
+                <h6 class="card-subtitle"></h6>
                 <div class="table-responsive m-t-40">
                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>

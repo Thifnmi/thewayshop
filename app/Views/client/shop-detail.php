@@ -87,8 +87,8 @@
                         <li>
                             <div class="form-group size-st">
                                 <label class="size-label">Size</label>
-                                <select id="size" name="size" class="selectpicker show-tick form-control" required>
-                                    <option value="">Size</option>
+                                <select id="size" name="size" class="selectpicker show-tick form-control">
+                                    <option >Size</option>
                                     <option value="5">5</option>
                                     <option value="6">6</option>
                                     <option value="7">7</option>
@@ -108,7 +108,7 @@
                             <div class="form-group quantity-box" >
                                 <label class="control-label" >Số lượng</label>
                                 <input name="maxquantity-<?=$product['id']?>" id="maxquantity-<?=$product['id']?>" type="hidden" value="<?= $product['quantity'] ?>"/>
-                                <input class="form-control" name="quantity" onkeyup="if(this.value > <?= $product['quantity'] ?>){this.value='<?= $product['quantity'] ?>'; echo}else if(this.value < 0){this.value = '1';}" value="1" min="1" max="<?= $product['quantity'] ?>" type="number">
+                                <input class="form-control" name="quantity" onkeyup="if(this.value >= <?= $product['quantity'] ?>){this.value='<?= $product['quantity'] ?>';}else if(this.value < 0){this.value = '1';}else if(<?= $product['quantity'] ?> <= 0){this.value = '0';}" value="<?php if($product['quantity']<=0){echo 0;}else{echo 1;}?>" min="1" max="<?= $product['quantity'] ?>" type="number">
                             </div>
                         </li>
                     </ul>

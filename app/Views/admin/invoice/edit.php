@@ -33,18 +33,34 @@
                         <label class="col-md-12" for="example-text3">Address</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text3" name="address" class="form-control" placeholder="" value="<?= $info['bill_address'] ?>">
+                            <input type="text" id="example-text3" name="bill-address" class="form-control" placeholder="" value="<?= $info['bill_address'] ?>">
                         </div>
                     </div>
-
                     <div class="form-group">
-                        <label class="col-sm-12">Status</label>
+                        <label class="col-sm-12">Trạng thái giao hàng</label>
                         <div class="col-sm-12">
-                            <select class="form-control" name="status">
+                            <select class="form-control" name="shipping-status">
+                                <option value="0" <?php if ($info['shipping_status'] == 0) : echo "selected";
+                                                    endif; ?>>Chờ xác nhận</option>
+                                <option value="1" <?php if ($info['shipping_status'] == 1) : echo "selected";
+                                                    endif; ?>>Chờ giao cho đơn vị vận chuyển</option>
+                                <option value="2" <?php if ($info['shipping_status'] == 2) : echo "selected";
+                                                    endif; ?>>Đang giao</option>
+                                <option value="3" <?php if ($info['shipping_status'] == 3) : echo "selected";
+                                                    endif; ?>>Giao hàng thành công</option>
+                                <option value="4" <?php if ($info['shipping_status'] == 4) : echo "selected";
+                                                    endif; ?>>Đơn bị hủy</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-12">Trạng thái thanh toán</label>
+                        <div class="col-sm-12">
+                            <select class="form-control" name="payment-status">
                                 <option value="0" <?php if ($info['paid_status'] == 0) : echo "selected";
-                                                    endif; ?>>Have Not Paid</option>
+                                                    endif; ?>>Chưa thanh toán</option>
                                 <option value="1" <?php if ($info['paid_status'] == 1) : echo "selected";
-                                                    endif; ?>>Have Paid</option>
+                                                    endif; ?>>Đã thanh toán</option>
                             </select>
                         </div>
                     </div>
@@ -64,7 +80,7 @@
                                                         <div class="form-group">
                                                             <select name="name[]" class='form-control'>
                                                                 <?php foreach ($product as $row) : ?>
-                                                                    <option value="<?= $row['id'] ?>" <?php if ($test['id'] == $product_order[$i]['id']) : echo "selected";
+                                                                    <option value="<?= $row['id'] ?>" <?php if ($info['id'] == $product_order[$i]['id']) : echo "selected";
                                                                                                         endif; ?>><?= $row['product_name'] ?></option>
                                                                 <?php endforeach; ?>
                                                             </select>

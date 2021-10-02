@@ -4,6 +4,8 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
+                <h5 class="card-title">All invoice</h5>
+                <h6 class="card-subtitle"></h6>
                 <div class="table-responsive m-t-40">
                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
@@ -11,7 +13,7 @@
                                 <th>No</th>
                                 <th>Fullname</th>
                                 <th>Phone</th>
-                                <th>Email</th>
+                                <!-- <th>Email</th> -->
                                 <th>Paid Status</th>
                                 <th>Note</th>
                                 <th>Created On</th>
@@ -28,7 +30,7 @@
                                     <td><?= $total ?></td>
                                     <td><?= $row['fullname'] ?></td>
                                     <td><?= $row['phone'] ?></td>
-                                    <td><?= $row['email'] ?></td>
+                                    <!-- <td><?= $row['email'] ?></td> -->
                                     <td>
                                         <?php if ($row['paid_status'] == 0) echo 'Chưa thanh toán';
                                                 else echo 'Đã thanh toán';
@@ -37,9 +39,11 @@
                                     <td><?= $row['note'] ?></td>
                                     <td><?= $row['created_on'] ?></td>
                                     <td>
-                                        <?php if ($row['shipping_status'] == 1) echo 'Chờ lấy hàng';
+                                        <?php if ($row['shipping_status'] == 0) echo 'Chờ xác nhận';
+                                                elseif ($row['shipping_status'] == 1) echo 'Chờ giao cho đơn vị vận chuyển';
                                                 elseif ($row['shipping_status'] == 2) echo 'Đang giao hàng';
-                                                else echo 'Đã giao hàng';
+                                                elseif ($row['shipping_status'] == 3) echo 'Giao hàng thành công';
+                                                elseif ($row['shipping_status'] == 4) echo 'Đơn bị hủy';
                                         ?>
                                     </td>
                                     <td><?= $row['bill_address'] ?></td>

@@ -7,7 +7,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Basic Information</h5>
+                                <h5 class="card-title">Add Account</h5>
                                 <form action="<?php echo base_url().'/admin/account/add'?>" class="form-material form-horizontal m-t-30" enctype="multipart/form-data" method='POST' >
                                     <div class="form-group">
                                         <label class="col-md-12" for="example-text">User Name</span>

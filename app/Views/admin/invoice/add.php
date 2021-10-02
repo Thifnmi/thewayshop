@@ -40,8 +40,8 @@
                         <label class="col-sm-12">Status</label>
                         <div class="col-sm-12">
                             <select class="form-control" name="paid_status">
-                                <option value="0">Have Not Paid</option>
-                                <option value="1">Have Paid</option>
+                                <option value="0">Chưa thanh toán</option>
+                                <option value="1">Đã thanh toán</option>
                             </select>
                         </div>
                     </div>
@@ -75,37 +75,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="form-group">
-                        <label class="col-md-12" for="example-text4">Amount</span>
-                        </label>
-                        <div class="col-md-12">
-                            <input type="number" id="example-text4" name="example-text" class="form-control" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-12" for="example-text4">Guarantee (Month)</span>
-                        </label>
-                        <div class="col-md-12">
-                            <input type="number" id="example-text4" name="example-text" class="form-control" placeholder="">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-12" for="example-text4">Discount (%)</span>
-                        </label>
-                        <div class="col-md-12">
-                            <input type="number" id="example-text4" name="example-text" class="form-control" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-12" for="example-text4">Total</span>
-                        </label>
-                        <div class="col-md-12">
-                            <input type="number" id="example-text4" name="example-text" class="form-control" placeholder="">
-                        </div>
-                    </div> -->
-
                     <div class="form-group">
                         <label class="col-md-12">Note</label>
                         <div class="col-md-12">

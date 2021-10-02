@@ -7,7 +7,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Basic Information</h5>
+                <h5 class="card-title">Add Product</h5>
                 <form class="form-material form-horizontal m-t-30" action="<?= base_url() . '/admin/products/add' ?>" method='POST' enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="col-md-12" for="example-text">Product Name</span>

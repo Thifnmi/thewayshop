@@ -6,7 +6,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Basic Information</h5>
+                <h5 class="card-title">Add Category</h5>
                 <?= \Config\Services::validation()->listErrors(); ?>
                 <form action="#" method="post" class="form-material form-horizontal m-t-30">
                     <div class="form-group">
