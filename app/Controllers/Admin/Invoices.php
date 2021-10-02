@@ -117,6 +117,7 @@ class Invoices extends BaseController
                 $data_order_insert = [
                     'invoice_id' => $id,
                     'product_id' => (int) $product_var[$i],
+                    'product_price' => $price,
                     'total_price' => (int) $total,
                     'product_amount' => (int) $product_amount[$i]
                 ];
