@@ -20,7 +20,6 @@ class Invoices extends BaseController
         $all_orders = $model->findAll();
         $data['orders'] = array_reverse($all_orders);
         echo view('admin/invoice/index', $data);
-        //--------------------------------------------------------------------
     }
     public function add()
     {
@@ -131,7 +130,6 @@ class Invoices extends BaseController
         $data['info'] = $test;
         $data['title'] = 'invoice';
         return view('admin/invoice/edit', $data);
-        //--------------------------------------------------------------------
     }
 
     public function detail()

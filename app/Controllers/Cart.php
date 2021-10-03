@@ -21,6 +21,5 @@ class Cart extends BaseController
 		$categories = $categoryModel->getAllcategory();
 		$data['categories'] = $categories;
         return view('client/cart',$data);
-        # code...
     }
 }

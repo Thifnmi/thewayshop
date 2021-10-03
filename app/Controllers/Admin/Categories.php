@@ -68,7 +68,6 @@ class Categories extends BaseController
             return redirect()->to(base_url() . '/admin/categories');
         }
         echo view('admin/category/edit', $data);
-        //--------------------------------------------------------------------
     }
     public function delete()
     {

@@ -42,6 +42,5 @@ class Category extends BaseController
 		}
         $offset = ($page-1) * 9;
         return view('client/shop',);
-        # code...
     }
 }

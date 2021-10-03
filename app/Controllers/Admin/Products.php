@@ -43,20 +43,9 @@ class Products extends BaseController
 
             if ($path != '') {
                 $newName = $path->getRandomName();
-                $path = $path->move("./public/admin/assets/images/products/", $newName);
+                $path = $path->move("./admin/assets/images/products/", $newName);
+                $url = base_url()."/admin/assets/images/products/". $newName;
             }
-
-
-            // $url = base_url() . "/public/admin/assets/images/products/" . $newName;
-            // echo $url_thumnail;
-            // die();
-            // $desc_key = $this->request->getVar('name');
-            // $desc_value = $this->request->getVar('value');
-            // $description = [];
-            // for ($i = 0; $i < count($desc_key); $i++) {
-            //     array_push($description, $desc_key[$i] . ':' . $desc_value[$i]);
-            // }
-            // $description = join('|', $description);
             $insert_product = [
                 'category_id' => $category,
                 'supplier_id' => $supplier_id,
@@ -65,9 +54,10 @@ class Products extends BaseController
                 'gender' => $gender,
                 'collection' => $collection,
                 'main_stone_type' => $main_stone_type,
-                'image' => $path,
+                'image' => $url,
                 'price' => $price,
-                'productCode' => $product_code,
+                'product_code' => $product_code,
+                'created_on'=> date('Y-m-d'),
             ];
             $model->save($insert_product);
 
@@ -79,15 +69,15 @@ class Products extends BaseController
             $model_image = new imageModel();
             $ima = [
                 'product_id' => $id,
-                'url' => $path,
+                'url' => $url,
             ];
             $model_image->save($ima);
             if ($imagefile = $this->request->getFiles()) {
                 foreach ($imagefile['image_more'] as $img) {
                     if ($img->isValid() && !$img->hasMoved()) {
                         $newName = $img->getRandomName();
-                        $img->move("./public/admin/assets/images/products/", $newName);
-                        $url = base_url() . '/public/admin/assets/images/products/' . $newName;
+                        $img->move("./admin/assets/images/products/", $newName);
+                        $url = base_url() . '/admin/assets/images/products/' . $newName;
                         $data_image = [
                             'product_id' => $id,
                             'url' => $url,
@@ -125,9 +115,9 @@ class Products extends BaseController
 
             if ($path != '') {
                 $newName = $path->getRandomName();
-                $path = $path->move("./public/client/assets/product/", $newName);
+                $path = $path->move("./admin/assets/images/products/", $newName);
             }
-            $url = base_url() . "/public/client/assets/product/" . $newName;
+            $url = base_url() . "/admin/assets/images/products/" . $newName;
             
             $insert_product = [
                 'category_id' => $category,
@@ -155,8 +145,8 @@ class Products extends BaseController
                 foreach ($imagefile['image_more'] as $img) {
                     if ($img->isValid() && !$img->hasMoved()) {
                         $newName = $img->getRandomName();
-                        $img->move("./public/admin/assets/product/", $newName);
-                        $url = base_url() . '/public/admin/assets/product/' . $newName;
+                        $img->move("./admin/assets/images/products/", $newName);
+                        $url = base_url() . '/admin/assets/images/products/' . $newName;
                         $data_image = [
                             'product_id' => $id,
                             'url' => $url,

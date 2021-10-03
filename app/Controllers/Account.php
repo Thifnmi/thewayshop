@@ -20,6 +20,5 @@ class Account extends BaseController
 		$categories = $categoryModel->getAllcategory();
 		$data['categories'] = $categories;
         return view('client/account', $data);
-        # code...
     }
 }

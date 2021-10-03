@@ -10,7 +10,7 @@ class productModel extends Model
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
-    protected $allowedFields = ['id', 'category_id', 'supplier_id', 'product_name', 'price', 'product_code', 'image', 'quantity', 'collection', 'main_stone_type', 'gender'];
+    protected $allowedFields = ['id', 'product_code', 'image', 'product_name', 'price', 'category_id', 'supplier_id', 'quantity', 'collection', 'main_stone_type', 'main_stone_color', 'stone_shape', 'sub_stone_type', 'secondary_stone_color', 'gender', 'gift_giving_occasions', 'gift_for', 'weight_of_gold', 'gold_age', 'style', 'wire_size', 'face_size', 'machine_thickness', 'brand_origin', 'origin_of_the_apparatus', 'assembled_at', 'watch_movement_type', 'glass_type', 'wire_material', 'shell_material', 'face_shape', 'water_resistance', 'needle_number', 'watch_stones_attached', 'chronometer_certification', 'main_function', 'created_on', 'created_by', 'total_view'];
 
     public function getProductById(int $id)
     {

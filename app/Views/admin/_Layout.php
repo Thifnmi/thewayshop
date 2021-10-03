@@ -96,7 +96,7 @@
                         <!-- ============================================================== -->
                         <!-- Comment -->
                         <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
                                 <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                             </a>
@@ -107,7 +107,6 @@
                                     </li>
                                     <li>
                                         <div class="message-center">
-                                            <!-- Message -->
                                             <a href="#">
                                                 <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
                                                 <div class="mail-contnet">
@@ -126,15 +125,12 @@
                                                     <h5>Đơn hàng</h5> <span class="mail-desc">Đơn hàng mới</span> <span class="time">9:30 AM</span>
                                                 </div>
                                             </a>
-
-                                            <!-- Message -->
-
                                         </div>
                                     </li>
 
                                 </ul>
                             </div>
-                        </li>
+                        </li> -->
 
                         <!-- ============================================================== -->
                         <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
@@ -156,7 +152,7 @@
                             <img src="<?= $_SESSION['user']['image'] ?>" alt="user-img" class="img-circle">
                         </div>
                         <div class="dropdown">
-                            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" name="fullname-page-admin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <?= $_SESSION['user']['fullname'] ?>
                                 <span class="caret">
                                 </span>

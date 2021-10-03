@@ -12,6 +12,5 @@ class Dashboard extends BaseController
             return redirect()->to(base_url() . '/admin/login');
         }
         return view('admin/dashboard');
-        # code...
     }
 }

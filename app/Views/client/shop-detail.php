@@ -87,7 +87,7 @@
                         <li>
                             <div class="form-group size-st">
                                 <label class="size-label">Size</label>
-                                <select id="size" name="size" class="selectpicker show-tick form-control">
+                                <select id="size" class="selectpicker show-tick form-control">
                                     <option >Size</option>
                                     <option value="5">5</option>
                                     <option value="6">6</option>
@@ -118,7 +118,7 @@
                             <button class="btn hvr-hover" style="color: white;" data-fancybox-close="" href="<?= base_url() ?>/">Tiếp tục mua hàng</button>
                             <button class="btn hvr-hover hien_toast" style="color: white;" type="button" data-fancybox-close="" data-id="<?= $product['id'] ?>" onclick="addToCart(event, this)">Thêm vào giỏ</button>
                             <!-- Toast -->
-                            <div class="toast" id="toast" style="position: absolute; top: 0; right: 0;">
+                            <!-- <div class="toast" id="toast" style="position: absolute; top: 0; right: 0;">
                                 <div class="toast-header">
                                     <strong class="mr-auto">Thêm vào giỏ hàng thành công!</strong>
                                     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
@@ -128,7 +128,7 @@
                                 <div class="toast-body">
                                     <div>Hãy xem nó ở giỏ hàng</a></div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- End Toast -->
                         </div>
                     </div>

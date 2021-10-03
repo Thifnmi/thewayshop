@@ -165,7 +165,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>/Contact">Liên hệ </a></li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">
+                            <a href="#" class="nav-link" name="fullname" data-toggle="dropdown">
                                 <?php if (empty($_SESSION['customer'])) : ?>
                                     Tài khoản
                                 <?php else : ?>
