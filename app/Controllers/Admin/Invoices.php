@@ -94,6 +94,8 @@ class Invoices extends BaseController
             $note = $this->request->getVar('note');
             $shipping_status = $this->request->getVar('shipping-status');
             $paid_status = $this->request->getVar('payment-status');
+            $arr_product = $this->request->getVar('name');
+            $product_amount = $this->request->getVar('value');
             $data_insert = [
                 'fullname' => $fullname,
                 'phone' => $phone,
@@ -105,23 +107,27 @@ class Invoices extends BaseController
                 'shipping_status' => $shipping_status,
 
             ];
+            $total_bill = 0;
+            for ($i = 0; $i < count($arr_product); $i++) {
+                $price = str_replace(".", "", $product_model->find($arr_product[$i])['price']);
+                $total = (int)$price * (int) $product_amount[$i];
+                $total_bill = $total_bill + $total;
+            }
+            $data_insert = [
+                'total_bill' => $total_bill,
+            ];
             $check = $model->update($id,$data_insert);
             $model_detail->where('invoice_id', $id)->delete();
-            $product_var = $this->request->getVar('name');
-            $product_amount = $this->request->getVar('value');
-            for ($i = 0; $i < count($product_var); $i++) {
-                $price = str_replace(".", "", $product_model->find($product_var[$i])['price']);
+            for ($i = 0; $i < count($arr_product); $i++) {
+                $price = str_replace(".", "", $product_model->find($arr_product[$i])['price']);
                 $total = (int)$price * (int) $product_amount[$i];
-                // echo $total;
                 $data_order_insert = [
                     'invoice_id' => $id,
-                    'product_id' => (int) $product_var[$i],
+                    'product_id' => (int) $arr_product[$i],
                     'product_price' => $price,
                     'total_price' => (int) $total,
                     'product_amount' => (int) $product_amount[$i]
                 ];
-                // var_dump($data_order_insert);
-                // die();
                 $model_detail->insert($data_order_insert);
             }
             return redirect()->to(base_url() . '/admin/Invoices');
