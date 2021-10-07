@@ -2592,3 +2592,31 @@ dat {
     text-decoration: none;
     cursor: pointer;
 }
+.page-link{
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #010101;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+.page-link:hover{
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #e20f0f;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+.page-link-cus{
+    background: black;
+    color: white;
+}
+.page-link-cus:hover{
+    background: black;
+    color: rgb(226, 1, 1);
+}

@@ -182,7 +182,6 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
@@ -191,12 +190,23 @@
                         <div class="col-12 col-sm-8 text-center text-sm-left">
                             <div class="toolbar-sorter-right">
                                 <span>Sắp xếp </span>
-                                <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-                                    <option data-display="Select">Mặc định</option>
-                                    <option value="1">Phổ biến</option>
-                                    <option value="2">Giá cao → thấp</option>
-                                    <option value="3">Giá thấp → cao</option>
-                                    <option value="4">Bán chạy nhất</option>
+                                <select id="basic" class="selectpicker show-tick form-control" onchange="location = this.value;">
+                                    <?php $keys = str_replace(" ","+",$key);
+                                    if($keys==""):{?>
+                                        <option data-display="Select">Mặc định</option>
+                                        <!-- <option value="1">Phổ biến</option> -->
+                                        <option value="?page=<?= $page ?>&price=desc">Giá cao → thấp</option>
+                                        <option value="?page=<?= $page ?>&price=asc">Giá thấp → cao</option>
+                                        <option value="?key=<?= $keys ?>&page=<?= $page ?>">Bán chạy nhất</option>
+                                    <?php }
+                                    else:{ ?>
+                                        <option data-display="Select">Mặc định</option>
+                                        <!-- <option value="1">Phổ biến</option> -->
+                                        <option value="?key=<?= $keys ?>&page=<?= $page ?>&price=desc">Giá cao → thấp</option>
+                                        <option value="?key=<?= $keys ?>&page=<?= $page ?>&price=asc">Giá thấp → cao</option>
+                                        <option value="?key=<?= $keys ?>&page=<?= $page ?>">Bán chạy nhất</option>
+                                    <?php }
+                                    endif;?>
                                 </select>
                             </div>
                         </div>
@@ -287,47 +297,59 @@
                             </div>
                         </div>
                     </div>
-
                     
                     <div class="phanTrang">
                         <a class="lfr-pagination-buttons pager">
-                            <?php if ($page > 1) : ?>
-                                <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page - 1) ?>">Trang trước<i class="linearicons-arrow-right"></i></a></a>
-                                <!-- <a class="page-item"><a class="page-link" href="<?= "?page=1" ?>">1<i class="linearicons-arrow-left"></i></a></a> -->
-                            <?php endif; ?>
-                            <?php
-                            $k = 0;
-                            for ($i = 1; $i < $total_pages + 1; $i++) {
-                                $j = 0;
-                                    if ($page == $i) {
-                                        echo "<a class='page-item active'><a class='page-link' href=''?page=' . $i ?>'>" . $i . "</a></a>";
-                                    }elseif($page > 3){
+                            <?php if($key ==""):{?>
+                                <?php if ($page > 1) : ?>
+                                    <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page - 1) ?>"><i class="fas fa-chevron-left"></i></a></a>
+                                <?php endif;
+                                for ($i = 1; $i < $total_pages + 1; $i++) {
+                                    for($j = 1; $j<4;$j++){
+                                        if($i == ($page-$j)){
+                                            echo "<a class='page-item'><a class='page-link' href='?page=$i'>" . $i . " </a></a>";
+                                        }
+                                    }
+                                    if($i == $page){
+                                        echo "<a class='page-item active'><a class='page-link page-link-cus' href='?page=$i'>" . $i . " </a></a>";
+                                    }
+                                    for($j = 1; $j<4;$j++){
+                                        if($i == ($page+$j)){
+                                            echo "<a class='page-item'><a class='page-link' href='?page=$i'>" . $i . " </a></a>";
+                                        }
+                                    }
+                                }
+                                if ($page < $total_pages) : ?>
+                                    <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page + 1) ?>"><i class="fas fa-chevron-right"></i></a></a>
+                                <?php endif; }
+                            else:{
+                                if($total_pages < 2):{
 
-                                    } else{
-                                        if($i == ($page - 1)){
-                                            $j++;
-                                            echo "<a class='page-item'><a class='page-link' href=''?page=' . $i ?>'>" . $i . "</a></a>";
-                                        }elseif($i == ($page + 1)){
-                                            $j++;
-                                            echo "<a class='page-item'><a class='page-link' href=''?page=' . $i ?>'>" . $i . "</a></a>";
-                                        } elseif($i < ($total_pages -2)){
-                                            if ($j == 0 & $k == 1) {
-                                                $k++;
-                                                echo "<a class='page-item'><a class='page-link' >...</a></a>";
+                                }
+                                else:{
+                                    if ($page > 1) : ?>
+                                        <a class="page-item"><a class="page-link" href="<?= "?key=$keys&page=" . ($page - 1) ?>"><i class="fas fa-chevron-left"></i></a></a>
+                                    <?php endif;
+                                    for ($i = 1; $i < $total_pages + 1; $i++) {
+                                        for($j = 1; $j<4;$j++){
+                                            if($i == ($page-$j)){
+                                                echo "<a class='page-item'><a class='page-link' href='?key=$keys&page=$i'>" . $i . " </a></a>";
                                             }
-                                        } else {
-                                            if ($j == 0 & $k ==0) {
-                                                $k++;
-                                                echo "<a class='page-item'><a class='page-link' >...</a></a>";
+                                        }
+                                        if($i == $page){
+                                            echo "<a class='page-item active'><a class='page-link page-link-cus' href='?key=$keys&page=$i'>" . $i . " </a></a>";
+                                        }
+                                        for($j = 1; $j<4;$j++){
+                                            if($i == ($page+$j)){
+                                                echo "<a class='page-item'><a class='page-link' href='?key=$keys&page=$i'>" . $i . " </a></a>";
                                             }
                                         }
                                     }
-                            }
-                            ?>
-                            <?php if ($page < $total_pages) : ?>
-                                <a class="page-item"><a class="page-link" href="<?= "?page=" . $total_pages ?>"> <?=$total_pages?><i class="linearicons-arrow-right"></i></a></a>
-                                <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page + 1) ?>">Trang tiếp<i class="linearicons-arrow-right"></i></a></a>
-                            <?php endif; ?>
+                                    if ($page < $total_pages) : ?>
+                                        <a class="page-item"><a class="page-link" href="<?= "?key=$keys&page=" . ($page + 1) ?>"><i class="fas fa-chevron-right"></i></a></a>
+                                    <?php endif; }
+                                endif; }
+                            endif; ?>
                         </a>
                     </div>
                 </div>

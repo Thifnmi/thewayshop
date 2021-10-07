@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-// if (($_SESSION['customer']))
-// var_dump($_SESSION['customer']);
-// echo ($_SESSION['customer']['fullname']);
-// die();
-?>
 
 <head>
     <meta charset="utf-8">
@@ -222,12 +216,16 @@
     <!-- End Main Top -->
 
     <!-- Start Top Search -->
+
     <div class="top-search">
         <div class="container">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
+                <form action="<?= base_url() ?>/Search">
+                    <input type="text" class="form-control" placeholder="Search" name="key" id="input-search">
+                </form>
                 <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+
             </div>
         </div>
     </div>

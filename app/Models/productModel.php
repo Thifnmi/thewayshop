@@ -24,17 +24,14 @@ class productModel extends Model
     public function getProductByCategory(int $cid, int $offset, int $recors_per_page)
     {
         return $this->where('category_id', $cid)->orderby('created_on', 'desc')->findAll($recors_per_page, $offset);
-        # code...
     }
     public function getCountProduct(int $cid)
     {
         return $this->where('category_id', $cid)->countAllResults();
-        # code...
     }
     public function getAllProduct()
     {
         return $this->orderby('created_on', 'desc')->findAll();
-        # code...
     }
     public function getProductRelease(int $cid)
     {
@@ -43,10 +40,17 @@ class productModel extends Model
     public function getShowProduct(int $cid)
     {
         return $this->where('category_id', $cid)->findAll();
-        # code...
     }
     public function getMaxId()
     {
         return $this->selectMax('id')->find();
+    }
+    public function getProductByKey(string $key, int $offset, int $recors_per_page)
+    {
+        return $this->like('product_name', $key)->findAll($recors_per_page, $offset);
+    }
+    public function countProductGetByKey(string $key)
+    {
+        return $this->like('product_name', $key)->findAll();
     }
 }
