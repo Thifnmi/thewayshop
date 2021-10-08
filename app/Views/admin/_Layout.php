@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-// var_dump($_SESSION['user']);
-// die();
-?>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -250,9 +245,8 @@
                     </div>
                 </div> -->
                 <!-- start  main content -->
-
-                <!-- import code hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
                 <?= $this->renderSection('content_Admin') ?>
+                <!-- and  main content -->
 
                 <!-- ============================================================== -->
                 <!-- End Page Content -->
@@ -390,11 +384,9 @@
         });
     </script>
 
-
     <!-- Js phan trang  -->
     <script src="<?= base_url() ?>/admin/assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="<?= base_url() ?>/admin/assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
-
 
     <script>
         $(function() {
@@ -451,11 +443,8 @@
     <script src="<?= base_url() ?>/admin/assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="<?= base_url() ?>/admin/assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
 
-
     <!-- js-toast -->
     <script src="<?= base_url() ?>/admin/assets/node_modules/toast-master/js/jquery.toast.js"></script>
     <script src="<?= base_url() ?>/admin/crm/dist/js/pages/toastr.js"></script>
-
 </body>
-
 </html>

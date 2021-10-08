@@ -216,23 +216,23 @@
     <!-- End Main Top -->
 
     <!-- Start Top Search -->
-
-    <div class="top-search">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <form action="<?= base_url() ?>/Search">
+    <form action="<?= base_url() ?>/Search">
+        <div class="top-search">
+            <div class="container">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
                     <input type="text" class="form-control" placeholder="Search" name="key" id="input-search">
-                </form>
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-
+                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
     <!-- End Top Search -->
 
-
+    <!-- Start Content -->
     <?= $this->renderSection('content_Shop') ?>
+    <!-- End Content -->
+
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
@@ -320,7 +320,10 @@
     </div>
     <!-- End Instagram Feed  -->
 
+    <!-- Start Back To Top -->
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    <!-- End Back To Top -->
+
     <!-- Start Footer  -->
     <footer>
         <div class="footer-main">
@@ -379,8 +382,6 @@
     </div>
     <!-- End copyright  -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
-
     <!-- ALL JS FILES -->
     <script src="<?= base_url() ?>/client/js/jquery-3.2.1.min.js"></script>
     <script src="<?= base_url() ?>/client/js/popper.min.js"></script>
@@ -403,12 +404,8 @@
     <script src="<?= base_url() ?>/client/js/addtocart.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
 </body>
-
 </html>

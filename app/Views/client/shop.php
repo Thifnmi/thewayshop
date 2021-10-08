@@ -24,19 +24,20 @@
             <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
                 <div class="product-categori">
                     <div class="search-product">
-                        <form action="#">
+                        <!-- <form action="#">
                             <input class="form-control" placeholder="Search here..." type="text">
                             <button type="submit"> <i class="fa fa-search"></i> </button>
-                        </form>
+                        </form> -->
                     </div>
                     <div class="filter-sidebar-left">
                         <div class="title-left">
-                            <h3>Danh mục</h3>
+                            <h3 align="center" style="margin-top: 0px; font-size: 36px;">Danh mục</h3>
                         </div>
                         <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
                             <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Trang sức <small class="text-muted">(100)</small>
-                                    <i style="margin-left:115px" class="fas fa-caret-down"></i>
+                                <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Trang sức
+                                    <small class="text-muted">(<?=count($total_trangsuc)?>)</small>
+                                    <i style="position: relative;" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
                                     <div class="list-group">
@@ -47,14 +48,13 @@
                                         <a href="#" class="list-group-item list-group-item-action">Mặt dây chuyền <small class="text-muted">(20)</small></a>
                                         <a href="#" class="list-group-item list-group-item-action">Dây cổ <small class="text-muted">(20)</small></a>
                                         <a href="#" class="list-group-item list-group-item-action">Phụ kiện <small class="text-muted">(20)</small></a>
-
                                     </div>
                                 </div>
                             </div>
                             <div class="list-group-collapse sub-men">
                                 <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">Đồng hồ
-                                    <small class="text-muted">(50)</small>
-                                    <i style="margin-left:115px" class="fas fa-caret-down"></i>
+                                    <small class="text-muted">(<?=count($total_trangsuc)?>)</small>
+                                    <i style="position: relative;" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="collapse" id="sub-men2" data-parent="#list-group-men">
                                     <div class="list-group">
@@ -67,7 +67,7 @@
                             <div class="list-group-collapse sub-men">
                                 <a class="list-group-item list-group-item-action" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">Bộ sưu tập
                                     <small class="text-muted">(100)</small>
-                                    <i style="margin-left:100px" class="fas fa-caret-down"></i>
+                                    <i style="position: relative;" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="collapse" id="sub-men3" data-parent="#list-group-men">
                                     <div class="list-group">
@@ -188,25 +188,26 @@
                 <div class="right-product-box">
                     <div class="product-item-filter row">
                         <div class="col-12 col-sm-8 text-center text-sm-left">
-                            <div class="toolbar-sorter-right">
-                                <span>Sắp xếp </span>
-                                <select id="basic" class="selectpicker show-tick form-control" onchange="location = this.value;">
-                                    <?php $keys = str_replace(" ","+",$key);
-                                    if($keys==""):{?>
-                                        <option data-display="Select">Mặc định</option>
-                                        <!-- <option value="1">Phổ biến</option> -->
-                                        <option value="?page=<?= $page ?>&price=desc">Giá cao → thấp</option>
-                                        <option value="?page=<?= $page ?>&price=asc">Giá thấp → cao</option>
-                                        <option value="?key=<?= $keys ?>&page=<?= $page ?>">Bán chạy nhất</option>
+                            <div class="toolbar-sorter-right" style=" display: flex;align-items: flex-start;">
+                                <span style="width:100px; font-weight:500">Sắp xếp </span>
+                                <select select="as" style="background-color:#fff" id="basic" class="select picker show-tick form-control" onchange="location = this.value;">
+                                    <?php $keys = str_replace(" ", "+", $key);
+                                    if ($keys == "") : { ?>
+                                            <option value="?page=<?= $page ?>" <?php if ($sortKey == "") echo "selected"; ?>>Mặc định</option>
+                                            <!-- <option value="1">Phổ biến</option> -->
+                                            <option value="?page=<?= $page ?>&price=desc" <?php if ($sortKey == "desc") echo "selected"; ?>>Giá cao → thấp</option>
+                                            <option value="?page=<?= $page ?>&price=asc" <?php if ($sortKey == "asc") echo "selected"; ?>>Giá thấp → cao</option>
+                                            <!-- <option value="?key=<?= $keys ?>&page=<?= $page ?>">Bán chạy nhất</option> -->
+                                        <?php }
+                                    else : {
+                                            echo $keys ?>
+                                            <option value="?key=<?= $keys ?>&page=<?= $page ?>" <?php if ($sortKey == "") echo "selected"; ?>>Mặc định</option>
+                                            <!-- <option value="1">Phổ biến</option> -->
+                                            <option value="?key=<?= $keys ?>&page=<?= $page ?>&price=desc" <?php if ($sortKey == "desc") echo "selected"; ?>>Giá cao → thấp</option>
+                                            <option value="?key=<?= $keys ?>&page=<?= $page ?>&price=asc" <?php if ($sortKey == "asc") echo "selected"; ?>>Giá thấp → cao</option>
+                                            <!-- <option value="?key=<?= $keys ?>&page=<?= $page ?>">Bán chạy nhất</option> -->
                                     <?php }
-                                    else:{ ?>
-                                        <option data-display="Select">Mặc định</option>
-                                        <!-- <option value="1">Phổ biến</option> -->
-                                        <option value="?key=<?= $keys ?>&page=<?= $page ?>&price=desc">Giá cao → thấp</option>
-                                        <option value="?key=<?= $keys ?>&page=<?= $page ?>&price=asc">Giá thấp → cao</option>
-                                        <option value="?key=<?= $keys ?>&page=<?= $page ?>">Bán chạy nhất</option>
-                                    <?php }
-                                    endif;?>
+                                    endif; ?>
                                 </select>
                             </div>
                         </div>
@@ -230,24 +231,24 @@
                                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                             <div class="products-single fix">
                                                 <div class="box-img-hover dat">
-                                                <?php
+                                                    <?php
                                                     $today = date("Y-m-d");
-                                                    $time = date('Y-m-d',strtotime($product['created_on'].' + '.'7 day'));
-                                                    if($time >= $today): ?>
+                                                    $time = date('Y-m-d', strtotime($product['created_on'] . ' + ' . '7 day'));
+                                                    if ($time >= $today) : ?>
                                                         <div class="type-lb">
                                                             <p class="new">New</p>
                                                         </div>
-                                                <?php endif?>
+                                                    <?php endif ?>
                                                     <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                 </div>
                                                 <div class="why-text">
                                                     <a href="<?= base_url() ?>/Product/<?= $product['id'] ?>">
                                                         <h4>
-                                                        <?= substr($product['product_name'],0,58).((strlen($product['product_name']) > 58) ? '...' : '');?>
+                                                            <?= substr($product['product_name'], 0, 58) . ((strlen($product['product_name']) > 58) ? '...' : ''); ?>
                                                         </h4>
-                                                        <div align="center" >
+                                                        <div align="center">
                                                             <h5 style="color:red;"><?= $product['price'] ?> VNĐ</h5>
-                                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
+                                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?= $product['id'] ?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -264,13 +265,13 @@
                                                 <div class="products-single fix">
                                                     <div class="box-img-hover">
                                                         <?php
-                                                            $today = date("Y-m-d");
-                                                            $time = date('Y-m-d',strtotime($product['created_on'].' + '.'7 day'));
-                                                            if($time >= $today): ?>
-                                                                <div class="type-lb">
-                                                                    <p class="new">New</p>
-                                                                </div>
-                                                        <?php endif?>
+                                                        $today = date("Y-m-d");
+                                                        $time = date('Y-m-d', strtotime($product['created_on'] . ' + ' . '7 day'));
+                                                        if ($time >= $today) : ?>
+                                                            <div class="type-lb">
+                                                                <p class="new">New</p>
+                                                            </div>
+                                                        <?php endif ?>
                                                         <img class="dat" src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                     </div>
                                                 </div>
@@ -281,14 +282,14 @@
                                                         <h4><?= $product['product_name'] ?></h4>
                                                     </a>
                                                     <h7><?= $product['product_name'] ?> là sản phẩm chính hãng tại ThewayShop
-                                                        <?php if($product['collection'] != ""):?>, nằm trong bộ sưu tập <?=$product['collection']?><?php endif?>
-                                                        <?php if($product['gender'] != ""):?>. Sản phẩm phù hợp để tặng cho <?=$product['gender']?><?php endif?>
-                                                        <?php if($product['gift_for'] != ""):?>, đặc biệt là <?=$product['gift_for']?><?php endif?>
-                                                        <?php if($product['gift_giving_occasions'] != ""):?>, vào các dịp như: <?=$product['gift_giving_occasions']?><?php endif?>
-                                                        <?php if($product['style'] != ""):?>. Là dòng sản phẩm <?=$product['style']?><?php endif?>
-                                                        <?php if($product['brand_origin'] != ""):?>, có xuất xứ từ <?=$product['brand_origin']?><?php endif?>.</h7>
+                                                        <?php if ($product['collection'] != "") : ?>, nằm trong bộ sưu tập <?= $product['collection'] ?><?php endif ?>
+                                                        <?php if ($product['gender'] != "") : ?>. Sản phẩm phù hợp để tặng cho <?= $product['gender'] ?><?php endif ?>
+                                                        <?php if ($product['gift_for'] != "") : ?>, đặc biệt là <?= $product['gift_for'] ?><?php endif ?>
+                                                        <?php if ($product['gift_giving_occasions'] != "") : ?>, vào các dịp như: <?= $product['gift_giving_occasions'] ?><?php endif ?>
+                                                        <?php if ($product['style'] != "") : ?>. Là dòng sản phẩm <?= $product['style'] ?><?php endif ?>
+                                                        <?php if ($product['brand_origin'] != "") : ?>, có xuất xứ từ <?= $product['brand_origin'] ?><?php endif ?>.</h7>
                                                     <h5><?= $product['price'] ?> VNĐ</h5>
-                                                    <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$product['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
+                                                    <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?= $product['id'] ?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -297,58 +298,60 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="phanTrang">
                         <a class="lfr-pagination-buttons pager">
-                            <?php if($key ==""):{?>
-                                <?php if ($page > 1) : ?>
-                                    <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page - 1) ?>"><i class="fas fa-chevron-left"></i></a></a>
-                                <?php endif;
-                                for ($i = 1; $i < $total_pages + 1; $i++) {
-                                    for($j = 1; $j<4;$j++){
-                                        if($i == ($page-$j)){
-                                            echo "<a class='page-item'><a class='page-link' href='?page=$i'>" . $i . " </a></a>";
-                                        }
-                                    }
-                                    if($i == $page){
-                                        echo "<a class='page-item active'><a class='page-link page-link-cus' href='?page=$i'>" . $i . " </a></a>";
-                                    }
-                                    for($j = 1; $j<4;$j++){
-                                        if($i == ($page+$j)){
-                                            echo "<a class='page-item'><a class='page-link' href='?page=$i'>" . $i . " </a></a>";
-                                        }
-                                    }
-                                }
-                                if ($page < $total_pages) : ?>
-                                    <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page + 1) ?>"><i class="fas fa-chevron-right"></i></a></a>
-                                <?php endif; }
-                            else:{
-                                if($total_pages < 2):{
-
-                                }
-                                else:{
-                                    if ($page > 1) : ?>
-                                        <a class="page-item"><a class="page-link" href="<?= "?key=$keys&page=" . ($page - 1) ?>"><i class="fas fa-chevron-left"></i></a></a>
+                            <?php if ($key == "") : { ?>
+                                    <?php if ($page > 1) : ?>
+                                        <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page - 1) ?>"><i class="fas fa-chevron-left"></i></a></a>
                                     <?php endif;
                                     for ($i = 1; $i < $total_pages + 1; $i++) {
-                                        for($j = 1; $j<4;$j++){
-                                            if($i == ($page-$j)){
-                                                echo "<a class='page-item'><a class='page-link' href='?key=$keys&page=$i'>" . $i . " </a></a>";
+                                        for ($j = 1; $j < 4; $j++) {
+                                            if ($i == ($page - $j)) {
+                                                echo "<a class='page-item'><a class='page-link' href='?page=$i'>" . $i . " </a></a>";
                                             }
                                         }
-                                        if($i == $page){
-                                            echo "<a class='page-item active'><a class='page-link page-link-cus' href='?key=$keys&page=$i'>" . $i . " </a></a>";
+                                        if ($i == $page) {
+                                            echo "<a class='page-item active'><a class='page-link page-link-cus' href='?page=$i'>" . $i . " </a></a>";
                                         }
-                                        for($j = 1; $j<4;$j++){
-                                            if($i == ($page+$j)){
-                                                echo "<a class='page-item'><a class='page-link' href='?key=$keys&page=$i'>" . $i . " </a></a>";
+                                        for ($j = 1; $j < 4; $j++) {
+                                            if ($i == ($page + $j)) {
+                                                echo "<a class='page-item'><a class='page-link' href='?page=$i'>" . $i . " </a></a>";
                                             }
                                         }
                                     }
                                     if ($page < $total_pages) : ?>
-                                        <a class="page-item"><a class="page-link" href="<?= "?key=$keys&page=" . ($page + 1) ?>"><i class="fas fa-chevron-right"></i></a></a>
-                                    <?php endif; }
-                                endif; }
+                                        <a class="page-item"><a class="page-link" href="<?= "?page=" . ($page + 1) ?>"><i class="fas fa-chevron-right"></i></a></a>
+                                        <?php endif;
+                                }
+                            else : {
+                                    if ($total_pages < 2) : {
+                                        }
+                                    else : {
+                                            if ($page > 1) : ?>
+                                                <a class="page-item"><a class="page-link" href="<?= "?key=$keys&page=" . ($page - 1) ?>"><i class="fas fa-chevron-left"></i></a></a>
+                                            <?php endif;
+                                            for ($i = 1; $i < $total_pages + 1; $i++) {
+                                                for ($j = 1; $j < 4; $j++) {
+                                                    if ($i == ($page - $j)) {
+                                                        echo "<a class='page-item'><a class='page-link' href='?key=$keys&page=$i'>" . $i . " </a></a>";
+                                                    }
+                                                }
+                                                if ($i == $page) {
+                                                    echo "<a class='page-item active'><a class='page-link page-link-cus' href='?key=$keys&page=$i'>" . $i . " </a></a>";
+                                                }
+                                                for ($j = 1; $j < 4; $j++) {
+                                                    if ($i == ($page + $j)) {
+                                                        echo "<a class='page-item'><a class='page-link' href='?key=$keys&page=$i'>" . $i . " </a></a>";
+                                                    }
+                                                }
+                                            }
+                                            if ($page < $total_pages) : ?>
+                                                <a class="page-item"><a class="page-link" href="<?= "?key=$keys&page=" . ($page + 1) ?>"><i class="fas fa-chevron-right"></i></a></a>
+                            <?php endif;
+                                        }
+                                    endif;
+                                }
                             endif; ?>
                         </a>
                     </div>
@@ -357,7 +360,4 @@
         </div>
     </div>
 </div>
-<!-- End Shop Page -->
-
-
 <?= $this->endSection() ?>

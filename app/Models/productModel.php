@@ -53,4 +53,8 @@ class productModel extends Model
     {
         return $this->like('product_name', $key)->findAll();
     }
+    public function getAllWithoutWathch()
+    {
+        return $this->where('category_id !=', 4)->findAll();
+    }
 }

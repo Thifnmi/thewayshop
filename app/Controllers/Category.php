@@ -18,6 +18,7 @@ class Category extends BaseController
 		}
         $offset = ($page-1) * 9;
         $key = "";
+        $sortKey = '';
         $supplierModel = new supplierModel();
         $data['supplier'] = $supplierModel->getAllSupplier();
         $categoryModel = new categoryModel();
@@ -47,11 +48,17 @@ class Category extends BaseController
                 array_multisort($prices, SORT_DESC, SORT_NUMERIC,$products);
             }
         }
+        // var_dump($products);
+        // var_dump(array_count_values(array_column($products, 'id')));
+        // die();
+        $total_trangsuc = $productModel->getAllWithoutWathch();
         $data['page'] = $page;
 		$data['total_pages'] = $total_pages;
 		$data['categories'] = $categories;
         $data['products'] = $products;
         $data['key'] = $key;
+        $data['sortKey'] = $sortKey;
+        $data['total_trangsuc'] = $total_trangsuc;
         return view('client/shop',$data);
     }
 }

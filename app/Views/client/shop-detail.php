@@ -87,7 +87,7 @@
                         <li>
                             <div class="form-group size-st">
                                 <label class="size-label">Size</label>
-                                <select id="size" class="selectpicker show-tick form-control">
+                                <select id="size" class="select picker show-tick form-control">
                                     <option >Size</option>
                                     <option value="5">5</option>
                                     <option value="6">6</option>
