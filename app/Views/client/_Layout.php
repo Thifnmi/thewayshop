@@ -73,7 +73,9 @@
                                             <h6 class="title">Chất liệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-
+                                                    <li><a href="<?= base_url() ?>/Product/material?key=Vàng">Vàng</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/material?key=Bạc">Bạc</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/material?key=Kim Cương">Kim Cương</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -82,7 +84,13 @@
                                             <h6 class="title">Bộ sưu tập</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-
+                                                    <li><a href="<?= base_url() ?>/Product/collection?key=Beauty+&+The+Beast">Beauty & The Beast</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/collection?key=Friendzone+Breaker">Friendzone Breaker</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/collection?key=Xmas+Collection">Xmas Collection</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/collection?key=Fantasia">Fantasia</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/collection?key=Gem+Melting">Gem Melting</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/collection?key=Nhẫn+cặp">Nhẫn cặp</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/collection?key=My+man">My man</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -90,9 +98,10 @@
                                             <h6 class="title">Thương hiệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <?php foreach ($supplier as $item) : ?>
-                                                        <li><a href="<?= base_url() ?>/Product/<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
-                                                    <?php endforeach; ?>
+                                                    <?php foreach ($supplier as $item) : {
+                                                        if($item['id'] < 5 ):{?>
+                                                            <li><a href="<?= base_url() ?>/Product/brands?key=<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
+                                                    <?php } endif; } endforeach; ?>
                                                 </ul>
                                             </div>
                                         </div>
@@ -111,33 +120,34 @@
                                             <h6 class="title">Giới tính</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Nam</a></li>
-                                                    <li><a href="#">Nữ</a></li>
-                                                    <li><a href="#">Unisex</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/gender?key=Nam">Nam</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/gender?key=Nữ">Nữ</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/gender?key=Unisex">Unisex</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <!-- end col-3 -->
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Chất liệu</h6>
+                                            <h6 class="title">Loại dây</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Kim cương</a></li>
-                                                    <li><a href="#">Vàng</a></li>
-                                                    <li><a href="#">Bạc</a></li>
-                                                    <!-- <li><a href="#">Trousers</a></li> -->
+                                                    <li><a href="<?= base_url() ?>/Product/wire_material?key=Dây+Kim+Loại">Dây Kim Loại</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/wire_material?key=Dây+Da">Dây Da</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/wire_material?key=Dây+Nhựa">Dây Nhựa</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/wire_material?key=Thép+không+gỉ">Thép không gỉ</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/wire_material?key=Khác">Khác</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <!-- end col-3 -->
                                         <div class="col-menu col-md-3">
-                                            <h6 class="title">Bộ sưu tập</h6>
+                                            <h6 class="title">Phong cách</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="#">Sun Flower</a></li>
-                                                    <li><a href="#">True Love</a></li>
-                                                    <li><a href="#">First Diamond</a></li>
-                                                    <li><a href="#">Mother's Day</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/style?key=Thời+Trang">Thời trang</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/style?key=Cổ+điển">Cổ điển</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/style?key=Tinh+tế">Tinh tế</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/style?key=Thể+thao">Thể thao</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -145,9 +155,10 @@
                                             <h6 class="title">Thương hiệu</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <?php foreach ($supplier as $item) : ?>
-                                                        <li><a href="<?= base_url() ?>/Product/<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
-                                                    <?php endforeach; ?>
+                                                    <?php foreach ($supplier as $item) : {
+                                                        if($item['id'] > 5 ):{?>
+                                                            <li><a href="<?= base_url() ?>/Product/brandsForWatch?key=<?= $item['id'] ?>"><?= $item['name'] ?></a></li>
+                                                    <?php } endif; } endforeach; ?>
                                                 </ul>
                                             </div>
                                         </div>

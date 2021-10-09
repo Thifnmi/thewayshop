@@ -45,6 +45,7 @@ class productModel extends Model
     {
         return $this->selectMax('id')->find();
     }
+
     public function getProductByKey(string $key, int $offset, int $recors_per_page)
     {
         return $this->like('product_name', $key)->findAll($recors_per_page, $offset);
@@ -53,8 +54,67 @@ class productModel extends Model
     {
         return $this->like('product_name', $key)->findAll();
     }
-    public function getAllWithoutWathch()
+
+    public function getProductbyMaterial(string $key, int $offset, int $recors_per_page)
     {
-        return $this->where('category_id !=', 4)->findAll();
+        return $this->like('product_name', $key)->where('category_id !=',4)->findAll($recors_per_page, $offset);
+    }
+    public function countProductGetByMaterial(string $key)
+    {
+        return $this->like('product_name', $key)->where('category_id !=',4)->findAll();
+    }
+
+    public function getProductbyCollection(string $key, int $offset, int $recors_per_page)
+    {
+        return $this->like('collection', $key)->where('category_id !=',4)->findAll($recors_per_page, $offset);
+    }
+    public function countProductGetByCollection(string $key)
+    {
+        return $this->like('product_name', $key)->where('category_id !=',4)->findAll();
+    }
+
+    public function getProductbyBrands(string $key, int $offset, int $recors_per_page)
+    {
+        return $this->like('supplier_id', $key)->where('category_id !=',4)->findAll($recors_per_page, $offset);
+    }
+    public function countProductGetByBrands(string $key)
+    {
+        return $this->like('supplier_id', $key)->where('category_id !=',4)->findAll();
+    }
+    
+    public function getProductbyGender(string $key, int $offset, int $recors_per_page)
+    {
+        return $this->like('gender', $key)->where('category_id',4)->findAll($recors_per_page, $offset);
+    }
+    public function countProductGetByGender(string $key)
+    {
+        return $this->like('gender', $key)->where('category_id',4)->findAll();
+    }
+
+    public function getProductbyWireMaterial(string $key, int $offset, int $recors_per_page)
+    {
+        return $this->like('wire_material', $key)->where('category_id',4)->findAll($recors_per_page, $offset);
+    }
+    public function countProductGetByWireMaterial(string $key)
+    {
+        return $this->like('wire_material', $key)->where('category_id',4)->findAll();
+    }
+
+    public function getProductbyStyle(string $key, int $offset, int $recors_per_page)
+    {
+        return $this->like('style', $key)->where('category_id',4)->findAll($recors_per_page, $offset);
+    }
+    public function countProductGetByStyle(string $key)
+    {
+        return $this->like('style', $key)->where('category_id',4)->findAll();
+    }
+
+    public function getProductbyBrandsForWatch(string $key, int $offset, int $recors_per_page)
+    {
+        return $this->like('supplier_id', $key)->where('category_id',4)->findAll($recors_per_page, $offset);
+    }
+    public function countProductGetByBrandsForWatch(string $key)
+    {
+        return $this->like('supplier_id', $key)->where('category_id',4)->findAll();
     }
 }

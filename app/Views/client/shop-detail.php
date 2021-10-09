@@ -84,7 +84,8 @@
                     <p>Nam sagittis a augue eget scelerisque. Nullam lacinia consectetur sagittis. Nam sed neque id eros fermentum dignissim quis at tortor. Nullam ultricies urna quis sem sagittis pharetra. Nam erat turpis, cursus in ipsum at,
                         tempor imperdiet metus. In interdum id nulla tristique accumsan. Ut semper in quam nec pretium. Donec egestas finibus suscipit. Curabitur tincidunt convallis arcu. </p> -->
                     <ul>
-                        <li>
+                        <!-- <?php if($product['category_id'] == 1 || $product['category_id'] == 3):{?> -->
+                        <!-- <li>
                             <div class="form-group size-st">
                                 <label class="size-label">Size</label>
                                 <select id="size" class="select picker show-tick form-control">
@@ -102,8 +103,8 @@
                             <div class="sizing">
                                 <a>Hướng dẫn chọn size <span><img src="<?= base_url() ?>/client/images/sizing.png" alt="image" height="300" /></span></a>
                             </div>
-                        </li>
-
+                        </li> -->
+                        <!-- <?php } endif;?> -->
                         <li>
                             <div class="form-group quantity-box" >
                                 <label class="control-label" >Số lượng</label>
@@ -115,7 +116,7 @@
 
                     <div class="price-box-bar">
                         <div class="cart-and-bay-btn">
-                            <button class="btn hvr-hover" style="color: white;" data-fancybox-close="" href="<?= base_url() ?>/">Tiếp tục mua hàng</button>
+                            <a href="<?= base_url() ?>/"><button class="btn hvr-hover" style="color: white;" data-fancybox-close="">Tiếp tục mua hàng</button></a>
                             <button class="btn hvr-hover hien_toast" style="color: white;" type="button" data-fancybox-close="" data-id="<?= $product['id'] ?>" onclick="addToCart(event, this)">Thêm vào giỏ</button>
                             <!-- Toast -->
                             <!-- <div class="toast" id="toast" style="position: absolute; top: 0; right: 0;">

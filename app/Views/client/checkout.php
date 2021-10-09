@@ -11,7 +11,7 @@
     ?>
     <?php elseif ($message == "not enough") :
         echo '<script>alert("'.$notify.'");</script>';
-        // echo $newUrl = "http://localhost/thewayshop/public/Product/".$pid;
+        $newUrl = "http://localhost/thewayshop/public/Product/".$pid;
         header('Refresh: 0; URL='.$newUrl); ?>
     <?php elseif ($message == "fail") :
         echo '<script>alert("Đặt hàng không thành công");</script>'; ?>

@@ -24,6 +24,9 @@
     <!-- end check url -->
 </head>
 <body>
+    <div>
+        <h3>Tài khoản hoặc mật khẩu không chính xác</h3>
+    </div>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="<?= base_url() ?>/Register" method="post">
@@ -31,7 +34,7 @@
                 <input type="hidden" name="path" id="path" value="<?= $url ?>" />
                 <input type="text" name="Rfullname" required placeholder="Họ và tên của bạn" />
                 <input type="text" name="Rusername" required placeholder="Tên tài khoản" />
-                <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="Rpassword" required placeholder="Mật khẩu" />
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Phải bao gồm ít nhất 01 chữ số, 01 chữ cái viết thường, 01 chữ cái viết hoa, 01 ký tự đặc biệt và ít nhất 08 ký tự" style="font-family: Verdana; letter-spacing: 0.125em;" name="Rpassword" required placeholder="Mật khẩu" />
                 <input type="email" name="Remail" required placeholder="Địa chỉ email" />
                 <button type="submit" style="cursor: pointer;" name="signup">Đăng ký</button>
             </form>
@@ -45,7 +48,7 @@
                 </div>
                 <span>Hoặc dùng tài khoản của bạn</span>
                 <input type="text" name="username" required placeholder="Tài khoản" />
-                <input type="password" style="font-family: Verdana; letter-spacing: 0.125em;" name="password" required placeholder="Mật khẩu" />
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Phải bao gồm ít nhất 01 chữ số, 01 chữ cái viết thường, 01 chữ cái viết hoa, 01 ký tự đặc biệt và ít nhất 08 ký tự" style="font-family: Verdana; letter-spacing: 0.125em;" name="password" required placeholder="Mật khẩu" />
                 <a href="#">Quên mật khẩu?</a>
                 <button type="submit" style="cursor: pointer;" name="login">Đăng nhập</button>
             </form>

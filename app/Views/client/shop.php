@@ -36,37 +36,37 @@
                         <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
                             <div class="list-group-collapse sub-men">
                                 <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Trang sức
-                                    <small class="text-muted">(<?=count($total_trangsuc)?>)</small>
+                                    <small class="text-muted"></small>
                                     <i style="position: relative;" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
                                     <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action active">Nhẫn <small class="text-muted">(50)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Bông tai <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Lắc & Vòng tay <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Dây chuyền <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Mặt dây chuyền <small class="text-muted">(20)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Dây cổ <small class="text-muted">(20)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Phụ kiện <small class="text-muted">(20)</small></a>
+                                        <a href="#" class="list-group-item list-group-item-action active">Nhẫn <small class="text-muted"></small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Bông tai <small class="text-muted"></small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Lắc & Vòng tay <small class="text-muted"></small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Dây chuyền <small class="text-muted"></small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Mặt dây chuyền <small class="text-muted"></small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Dây cổ <small class="text-muted"></small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Phụ kiện <small class="text-muted"></small></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="list-group-collapse sub-men">
                                 <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">Đồng hồ
-                                    <small class="text-muted">(<?=count($total_trangsuc)?>)</small>
+                                    <small class="text-muted"></small>
                                     <i style="position: relative;" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="collapse" id="sub-men2" data-parent="#list-group-men">
                                     <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action">Cho Nam <small class="text-muted">(10)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Cho Nữ <small class="text-muted">(20)</small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Unisex <small class="text-muted">(20)</small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Cho Nam <small class="text-muted"></small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Cho Nữ <small class="text-muted"></small></a>
+                                        <a href="#" class="list-group-item list-group-item-action">Unisex <small class="text-muted"></small></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="list-group-collapse sub-men">
                                 <a class="list-group-item list-group-item-action" href="#sub-men3" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men3">Bộ sưu tập
-                                    <small class="text-muted">(100)</small>
+                                    <small class="text-muted"></small>
                                     <i style="position: relative;" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="collapse" id="sub-men3" data-parent="#list-group-men">
@@ -78,9 +78,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="list-group-item list-group-item-action"> Kim cương <small class="text-muted">(150) </small></a>
-                            <a href="#" class="list-group-item list-group-item-action">Vàng <small class="text-muted">(11)</small></a>
-                            <a href="#" class="list-group-item list-group-item-action">Bạc <small class="text-muted">(22)</small></a>
+                            <a href="#" class="list-group-item list-group-item-action"> Kim cương <small class="text-muted"></small></a>
+                            <a href="#" class="list-group-item list-group-item-action">Vàng <small class="text-muted"></small></a>
+                            <a href="#" class="list-group-item list-group-item-action">Bạc <small class="text-muted"></small></a>
                         </div>
                     </div>
                     <!-- <div class="filter-price-left">
@@ -95,7 +95,7 @@
                             </p>
                         </div>
                     </div> -->
-                    <div class="filter-brand-left">
+                    <!-- <div class="filter-brand-left">
                         <div class="title-left">
                             <h3>Thương hiệu</h3>
                         </div>
@@ -181,7 +181,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
@@ -244,7 +244,7 @@
                                                 <div class="why-text">
                                                     <a href="<?= base_url() ?>/Product/<?= $product['id'] ?>">
                                                         <h4>
-                                                            <?= substr($product['product_name'], 0, 58) . ((strlen($product['product_name']) > 58) ? '...' : ''); ?>
+                                                            <?= substr($product['product_name'], 0, 50) . ((strlen($product['product_name']) > 50) ? '...' : ''); ?>
                                                         </h4>
                                                         <div align="center">
                                                             <h5 style="color:red;"><?= $product['price'] ?> VNĐ</h5>

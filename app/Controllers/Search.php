@@ -10,6 +10,7 @@ class Search extends BaseController
 {
     public function index()
     {
+        session_start();
         $key = '';
         $sortKey = '';
         if (isset($_GET['key'])) {
