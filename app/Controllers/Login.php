@@ -26,7 +26,9 @@ class Login extends BaseController
                 return redirect()->to(base_url());
                 // echo "<script language=javascript> javascript:history.go(-2);</script>";
             } else {
-                echo '<script>alert("Tài khoản hoặc mật khẩu không chính xác");</script>';
+                $data["messLogin"] = "fail";
+                return view('client/login',$data);
+                // echo '<script>alert("Tài khoản hoặc mật khẩu không chính xác");</script>';
             }
         }
         return view('client/login');

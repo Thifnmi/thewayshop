@@ -106,13 +106,16 @@
                                             <?php
                                                 $today = date("Y-m-d");
                                                 $time = date('Y-m-d',strtotime($item['created_on'].' + '.'7 day'));
-                                                if($time >= $today):
-                                            ?>
-                                                <div class="type-lb">
-                                                    <p class="new">New</p>
-                                                </div>
-                                            
-                                            <?php endif?>
+                                                if($time >= $today){ ?>
+                                                    <div class="type-lb">
+                                                        <p class="new">New</p>
+                                                    </div>
+                                            <?php }
+                                                if((int)$item['quantity'] == 0){?>
+                                                    <div class="type-lb">
+                                                        <p class="outOfStock">Hết hàng</p>
+                                                    </div>
+                                            <?php } ?>
                                             <img class="img-fluid dat" src="<?=$item['image']?>" alt="<?=$item['product_name']?>">
                                         </a>
                                     </div>
@@ -125,7 +128,7 @@
                                         </h4>
                                         <div align="center">
                                             <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
-                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
+                                            <a class="btn hvr-hover <?php if((int)$item['quantity'] == 0){ echo "isDisabled";} ?>" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)" >Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>
@@ -138,12 +141,16 @@
                                         <?php
                                             $today = date("Y-m-d");
                                             $time = date('Y-m-d',strtotime($item['created_on'].' + '.'7 day'));
-                                            if($time >= $today):
-                                        ?>
-                                            <div class="type-lb">
-                                                <p class="new">New</p>
-                                            </div>
-                                        <?php endif?>
+                                            if($time >= $today){ ?>
+                                                <div class="type-lb">
+                                                    <p class="new">New</p>
+                                                </div>
+                                        <?php }
+                                            if((int)$item['quantity'] == 0){?>
+                                                <div class="type-lb">
+                                                    <p class="outOfStock">Hết hàng</p>
+                                                </div>
+                                        <?php } ?>
                                         <img class="img-fluid dat" src="<?=$item['image']?>" alt="<?=$item['product_name']?>">
                                     </a>
                                     </div>
@@ -156,7 +163,7 @@
                                         </h4>
                                         <div align="center">
                                             <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
-                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
+                                            <a class="btn hvr-hover <?php if((int)$item['quantity'] == 0){ echo "disabled";} ?>" style="color: #ffffff;"  data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>

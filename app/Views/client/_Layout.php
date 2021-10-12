@@ -75,7 +75,7 @@
                                                 <ul class="menu-col">
                                                     <li><a href="<?= base_url() ?>/Product/material?key=Vàng">Vàng</a></li>
                                                     <li><a href="<?= base_url() ?>/Product/material?key=Bạc">Bạc</a></li>
-                                                    <li><a href="<?= base_url() ?>/Product/material?key=Kim Cương">Kim Cương</a></li>
+                                                    <li><a href="<?= base_url() ?>/Product/material?key=Kim+Cương">Kim Cương</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -120,6 +120,7 @@
                                             <h6 class="title">Giới tính</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
+                                                    <li><a href="<?= base_url() ?>/Category/watch">Tất cả</a></li>
                                                     <li><a href="<?= base_url() ?>/Product/gender?key=Nam">Nam</a></li>
                                                     <li><a href="<?= base_url() ?>/Product/gender?key=Nữ">Nữ</a></li>
                                                     <li><a href="<?= base_url() ?>/Product/gender?key=Unisex">Unisex</a></li>

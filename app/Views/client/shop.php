@@ -41,13 +41,13 @@
                                 </a>
                                 <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
                                     <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action active">Nhẫn <small class="text-muted"></small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Bông tai <small class="text-muted"></small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Lắc & Vòng tay <small class="text-muted"></small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Dây chuyền <small class="text-muted"></small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Mặt dây chuyền <small class="text-muted"></small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Dây cổ <small class="text-muted"></small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Phụ kiện <small class="text-muted"></small></a>
+                                        <a href="<?=base_url()?>/Category/ring" class="list-group-item list-group-item-action active">Nhẫn <small class="text-muted"></small></a>
+                                        <a href="<?=base_url()?>/Category/earring" class="list-group-item list-group-item-action">Bông tai <small class="text-muted"></small></a>
+                                        <a href="<?=base_url()?>/Category/shake_bracelet" class="list-group-item list-group-item-action">Lắc & Vòng tay <small class="text-muted"></small></a>
+                                        <a href="<?=base_url()?>/Category/necklace" class="list-group-item list-group-item-action">Dây chuyền <small class="text-muted"></small></a>
+                                        <a href="<?=base_url()?>/Category/pendant" class="list-group-item list-group-item-action">Mặt dây chuyền <small class="text-muted"></small></a>
+                                        <a href="<?=base_url()?>/Category/dayco" class="list-group-item list-group-item-action">Dây cổ <small class="text-muted"></small></a>
+                                        <a href="<?=base_url()?>/Category/accessory" class="list-group-item list-group-item-action">Phụ kiện <small class="text-muted"></small></a>
                                     </div>
                                 </div>
                             </div>
@@ -58,9 +58,9 @@
                                 </a>
                                 <div class="collapse" id="sub-men2" data-parent="#list-group-men">
                                     <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action">Cho Nam <small class="text-muted"></small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Cho Nữ <small class="text-muted"></small></a>
-                                        <a href="#" class="list-group-item list-group-item-action">Unisex <small class="text-muted"></small></a>
+                                        <a href="<?= base_url() ?>/Product/gender?key=Nam" class="list-group-item list-group-item-action">Cho Nam <small class="text-muted"></small></a>
+                                        <a href="<?= base_url() ?>/Product/gender?key=Nữ" class="list-group-item list-group-item-action">Cho Nữ <small class="text-muted"></small></a>
+                                        <a href="<?= base_url() ?>/Product/gender?key=Unisex" class="list-group-item list-group-item-action">Unisex <small class="text-muted"></small></a>
                                     </div>
                                 </div>
                             </div>
@@ -71,16 +71,16 @@
                                 </a>
                                 <div class="collapse" id="sub-men3" data-parent="#list-group-men">
                                     <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action active">Sun Flower </a>
-                                        <a href="#" class="list-group-item list-group-item-action">True Love </a>
-                                        <a href="#" class="list-group-item list-group-item-action">First Diamond </a>
-                                        <a href="#" class="list-group-item list-group-item-action">Mother's Day </a>
+                                        <a href="<?= base_url() ?>/Product/collection?key=Beauty+&+The+Beast" class="list-group-item list-group-item-action active">Beauty & The Beast</a>
+                                        <a href="<?= base_url() ?>/Product/collection?key=Friendzone+Breaker" class="list-group-item list-group-item-action">Friendzone Breaker</a>
+                                        <a href="<?= base_url() ?>/Product/collection?key=Xmas+Collection" class="list-group-item list-group-item-action">Xmas Collection</a>
+                                        <a href="<?= base_url() ?>/Product/collection?key=Nhẫn+cặp" class="list-group-item list-group-item-action">Nhẫn cặp</a>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="list-group-item list-group-item-action"> Kim cương <small class="text-muted"></small></a>
-                            <a href="#" class="list-group-item list-group-item-action">Vàng <small class="text-muted"></small></a>
-                            <a href="#" class="list-group-item list-group-item-action">Bạc <small class="text-muted"></small></a>
+                            <a href="<?= base_url() ?>/Product/material?key=Kim+Cương" class="list-group-item list-group-item-action">Kim cương <small class="text-muted"></small></a>
+                            <a href="<?= base_url() ?>/Product/material?key=Vàng" class="list-group-item list-group-item-action">Vàng <small class="text-muted"></small></a>
+                            <a href="<?= base_url() ?>/Product/material?key=Bạc" class="list-group-item list-group-item-action">Bạc <small class="text-muted"></small></a>
                         </div>
                     </div>
                     <!-- <div class="filter-price-left">
@@ -234,11 +234,16 @@
                                                     <?php
                                                     $today = date("Y-m-d");
                                                     $time = date('Y-m-d', strtotime($product['created_on'] . ' + ' . '7 day'));
-                                                    if ($time >= $today) : ?>
+                                                    if ($time >= $today) { ?>
                                                         <div class="type-lb">
                                                             <p class="new">New</p>
                                                         </div>
-                                                    <?php endif ?>
+                                                    <?php }
+                                                    if ((int)$product['quantity'] == 0) { ?>
+                                                        <div class="type-lb">
+                                                            <p class="outOfStock">Hết hàng</p>
+                                                        </div>
+                                                    <?php } ?>
                                                     <img src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                 </div>
                                                 <div class="why-text">
@@ -248,7 +253,7 @@
                                                         </h4>
                                                         <div align="center">
                                                             <h5 style="color:red;"><?= $product['price'] ?> VNĐ</h5>
-                                                            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?= $product['id'] ?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
+                                                            <a class="btn hvr-hover <?php if((int)$product['quantity'] == 0){ echo "disabled";}?>" style="color: #ffffff;" data-id="<?= $product['id'] ?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -267,11 +272,16 @@
                                                         <?php
                                                         $today = date("Y-m-d");
                                                         $time = date('Y-m-d', strtotime($product['created_on'] . ' + ' . '7 day'));
-                                                        if ($time >= $today) : ?>
+                                                        if ($time >= $today) { ?>
                                                             <div class="type-lb">
                                                                 <p class="new">New</p>
                                                             </div>
-                                                        <?php endif ?>
+                                                        <?php }
+                                                        if ((int)$product['quantity'] == 0) { ?>
+                                                            <div class="type-lb">
+                                                                <p class="outOfStock">Hết hàng</p>
+                                                            </div>
+                                                        <?php } ?>
                                                         <img class="dat" src="<?= $product['image'] ?>" style="height: 100%;width: 100%;" class="img-fluid" alt="Image">
                                                     </div>
                                                 </div>
@@ -289,7 +299,7 @@
                                                         <?php if ($product['style'] != "") : ?>. Là dòng sản phẩm <?= $product['style'] ?><?php endif ?>
                                                         <?php if ($product['brand_origin'] != "") : ?>, có xuất xứ từ <?= $product['brand_origin'] ?><?php endif ?>.</h7>
                                                     <h5><?= $product['price'] ?> VNĐ</h5>
-                                                    <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?= $product['id'] ?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
+                                                    <a class="btn hvr-hover <?php if((int)$product['quantity'] == 0){ echo "disabled";}?>" style="color: #ffffff;" data-id="<?= $product['id'] ?>" type="button" onclick="addToCart(event, this)">Thêm vào giỏ hàng</a>
                                                 </div>
                                             </div>
                                         </div>

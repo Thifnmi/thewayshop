@@ -117,7 +117,7 @@
                     <div class="price-box-bar">
                         <div class="cart-and-bay-btn">
                             <a href="<?= base_url() ?>/"><button class="btn hvr-hover" style="color: white;" data-fancybox-close="">Tiếp tục mua hàng</button></a>
-                            <button class="btn hvr-hover hien_toast" style="color: white;" type="button" data-fancybox-close="" data-id="<?= $product['id'] ?>" onclick="addToCart(event, this)">Thêm vào giỏ</button>
+                            <button class="btn hvr-hover hien_toast <?php if((int)$product['quantity'] == 0){ echo "disabled";}?>" style="color: white;" type="button" data-fancybox-close="" data-id="<?= $product['id'] ?>" onclick="addToCart(event, this)">Thêm vào giỏ</button>
                             <!-- Toast -->
                             <!-- <div class="toast" id="toast" style="position: absolute; top: 0; right: 0;">
                                 <div class="toast-header">

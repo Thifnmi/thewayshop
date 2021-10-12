@@ -5,17 +5,50 @@
     <script>
         localStorage.removeItem('cart');
     </script>
-    <?php 
-        echo '<script>alert("Đặt hàng thành công");</script>';
-        header('Refresh: 1; URL=http://localhost/thewayshop/public/Bought');
+    <div class="modal fade bd-example-modal-sm show" id="showmess" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: block;padding-right: 17px;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="width: 500px;">
+                <!-- <div class="modal-header">
+                        <h3 align="center" class="modal-title" style="font-weight:bold;width: 450px;">Thông báo</h3>
+                        <a type="button" id="close=modal" onclick="hiddenNoti()" class="close" data-dismiss="modal">×</a>
+                    </div> -->
+                <h5 align="center">Đặt hàng thành công.</h1>
+            </div>
+        </div>
+    </div>
+    <?php
+    // echo '<script>alert("Đặt hàng thành công");</script>';
+    header('Refresh: 1; URL=http://localhost/thewayshop/public/Bought');
     ?>
-    <?php elseif ($message == "not enough") :
-        echo '<script>alert("'.$notify.'");</script>';
-        $newUrl = "http://localhost/thewayshop/public/Product/".$pid;
-        header('Refresh: 0; URL='.$newUrl); ?>
-    <?php elseif ($message == "fail") :
-        echo '<script>alert("Đặt hàng không thành công");</script>'; ?>
-    <?php endif; ?>
+<?php elseif ($message == "not enough") :?>
+    <div class="modal fade bd-example-modal-sm show" id="showmess" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: block;padding-right: 17px;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="width: 500px;">
+                <!-- <div class="modal-header">
+                        <h3 align="center" class="modal-title" style="font-weight:bold;width: 450px;">Thông báo</h3>
+                        <a type="button" id="close=modal" onclick="hiddenNoti()" class="close" data-dismiss="modal">×</a>
+                    </div> -->
+                <h5 align="center"><?=$notify?></h1>
+            </div>
+        </div>
+    </div>
+<?php
+    // echo '<script>alert("' . $notify . '");</script>';
+    $newUrl = "http://localhost/thewayshop/public/Product/" . $pid;
+    header('Refresh: 0; URL=' . $newUrl); ?>
+<?php elseif ($message == "fail"): ?>
+    <div class="modal fade bd-example-modal-sm show" id="showmess" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: block;padding-right: 17px;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="width: 500px;">
+                <!-- <div class="modal-header">
+                        <h3 align="center" class="modal-title" style="font-weight:bold;width: 450px;">Thông báo</h3>
+                        <a type="button" id="close=modal" onclick="hiddenNoti()" class="close" data-dismiss="modal">×</a>
+                    </div> -->
+                <h5 align="center"><?=$notify?></h1>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
 
 <!-- Start All Title Box -->
 <div class="all-title-box">
@@ -91,11 +124,11 @@
                                     <label class="custom-control-label" for="momo">Thanh toán qua Momo</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input id="bank" name="paymentMethod" value="2" type="radio" class="custom-control-input" data-toggle="modal" data-target="#modal-content"  required>
+                                    <input id="bank" name="paymentMethod" value="2" type="radio" class="custom-control-input" data-toggle="modal" data-target="#modal-content" required>
                                     <label class="custom-control-label" for="bank">Thanh toán qua tài khoản ngân hàng</label>
                                 </div>
                             </div>
-                            
+
                             <div class="modal fade" id="modal-content">
                                 <div class="modal-dialog modal-sm12">
                                     <div class="modal-content">
@@ -175,7 +208,7 @@
                                 <div class="d-flex gr-total">
                                     <h5>Tổng cộng</h5>
                                     <div class="total-price-payment ml-auto h5">0 </div>
-                                    <input type="hidden" name="sum-prices" value=""/>
+                                    <input type="hidden" name="sum-prices" value="" />
                                 </div>
                                 <hr>
                             </div>
@@ -193,7 +226,12 @@
     function changePaymentMethod() {
         document.getElementById('home').checked = true;
     }
-
 </script>
-
+<script>
+    var x = function hiddenNoti() {
+        document.getElementById('showmess').classList.remove('show');
+        document.getElementById('showmess').style.display = 'none';
+    }
+    setTimeout(x, 2000);
+</script>
 <?= $this->endSection() ?>

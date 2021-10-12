@@ -27,7 +27,7 @@
                         <label class="col-md-8" for="example-text">Tài khoản</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" minlength="4" id="username" name="username" readonly="readonly" class="form-control field left editacc" readonly="readonly" value="<?= $_SESSION['customer']['username'] ?>">
+                            <input type="text" minlength="4" id="username" name="username" readonly="readonly" class="form-control field left editacc" readonly="readonly" value="<?= $info['username'] ?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -41,7 +41,7 @@
                         <label class="col-md-12" for="fName">Họ và tên</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" required id="fName" name="fullname" readonly="readonly" class="form-control editacc" placeholder="enter your full name" value="<?= $_SESSION['customer']['fullname'] ?>">
+                            <input type="text" required id="fName" name="fullname" readonly="readonly" class="form-control editacc" placeholder="enter your full name" value="<?= $info['fullname'] ?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -50,26 +50,26 @@
                             <label class="col-md-4" for="bdate">Ngày sinh</span></label>
                         </div>
                         <div class="col-md-6" style="display:inline-block;">
-                            <select class="form-control" id="gender" disabled="true">
-                                <option value="0" <?php if($_SESSION['customer']['gender'] == 0){ echo "selected";}?>>Nam</option>
-                                <option value="1" <?php if($_SESSION['customer']['gender'] == 1){ echo "selected";}?>>Nữ</option>
+                            <select class="form-control" id="gender" name="gender" disabled="true">
+                                <option value="0" <?php if($info['gender'] == 0){ echo "selected";}?>>Nam</option>
+                                <option value="1" <?php if($info['gender'] == 1){ echo "selected";}?>>Nữ</option>
                             </select>
                         </div>
-                        <div class="col-md-5" style="display:inline-block;float:right">
-                            <input type="date" required id="bdate" name="birthday" readonly="readonly" class="form-control mydatepicker editacc" value='<?= $_SESSION['customer']['birthday'] ?>'>
+                        <div class="col-md-5" style="display:inline-block;">
+                            <input type="date" required id="bdate" name="birthday" readonly="readonly" class="form-control mydatepicker editacc" value='<?= $info['birthday'] ?>'>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="email">Email</span></label>
                         <div class="col-md-12">
-                            <input type="email" required id="email" name="email" class="form-control field left editacc" readonly="readonly" placeholder="enter your email" value="<?= $_SESSION['customer']['email'] ?>">
+                            <input type="email" required id="email" name="email" class="form-control field left editacc" readonly="readonly" placeholder="enter your email" value="<?= $info['email'] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="phone">Số điện thoại</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="tel" required maxlength="11" id="phone" name="phone" readonly="readonly" class="form-control editacc" placeholder="enter your phone" value="<?= $_SESSION['customer']['phone_number'] ?>">
+                            <input type="tel" required maxlength="11" id="phone" name="phone" readonly="readonly" class="form-control editacc" placeholder="enter your phone" value="<?= $info['phone_number'] ?>">
                         </div>
                     </div>
 
@@ -77,7 +77,7 @@
                         <label class="col-md-12" for="address">Địa chỉ</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" required id="address" name="address" readonly="readonly" class="form-control editacc" placeholder="enter your address" value="<?= $_SESSION['customer']['address'] ?>">
+                            <input type="text" required id="address" name="address" readonly="readonly" class="form-control editacc" placeholder="enter your address" value="<?= $info['address'] ?>">
                         </div>
                     </div>
                     <div class="form-group" id="ggg" style="float:right; padding-right: 10px">
