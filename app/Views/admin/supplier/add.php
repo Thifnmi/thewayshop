@@ -13,14 +13,14 @@
                         <label class="col-md-12" for="example-text">Company Name</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text" name="name" class="form-control" placeholder="Enter company name">
+                            <input type="text" id="example-text" name="name" require class="form-control" placeholder="Enter company name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="email">Email</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter email address">
+                            <input type="email" id="email" name="email" require class="form-control" placeholder="Enter email address">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>

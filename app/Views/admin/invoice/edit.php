@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Information</h5>
-                <form class="form-horizontal m-t-30" method='POST'>
+                <form class="form-horizontal m-t-30" method='post'>
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Client Name</span>
                         </label>

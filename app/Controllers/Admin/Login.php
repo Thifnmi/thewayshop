@@ -26,8 +26,8 @@ class Login extends BaseController
             if (!$this->validate($rules, $errors)) {
                 $data['validation'] = $this->validator;
             } else {
-                session_start();
                 $model = new accountsModel();
+                $userModel =  new usersModel();
                 $username = $this->request->getVar('username');
                 $password = $this->request->getVar('password');
                 $hashed_password = md5($password);
@@ -35,15 +35,21 @@ class Login extends BaseController
                     'username' => $username,
                     "password" => $hashed_password
                 ];
-                $user = $model->where($data)->first();
-                if ($user) {
-                    $infoModel = new usersModel();
-                    $info = $infoModel->getUserById($user['user_id']) + $user;
-                    $_SESSION['user'] = $info;
-                    return redirect()->to(base_url() . '/admin/dashboard');
-                } else {
-                    echo '<script>alert("Username/Email or Password don\'t match");</script>';
+                $in4 = $model->where($data)->first();
+                if($in4){
+                    $user = $userModel->getUserById($in4['user_id']);
+                    if ($user && $user['role_id'] != 3) {
+                        session_start();
+                        $info = $userModel->getUserById($in4['user_id']) + $in4;
+                        $_SESSION['user'] = $info;
+                        return redirect()->to(base_url() . '/admin/dashboard');
+                    } else {
+                        $data["messLogin"] = "fail";
+                        return view('admin/login',$data);
+                    }
                 }
+                $data["messLogin"] = "fail";
+                return view('admin/login',$data);
             }
         }
         return view('admin/Login');

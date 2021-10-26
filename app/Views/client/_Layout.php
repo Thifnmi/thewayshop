@@ -186,7 +186,7 @@
                                     <li>
                                         <a href="<?= base_url() ?>/Bought">Lịch sử mua hàng</a>
                                     </li>
-                                    <li><a href="<?= base_url() ?>/Login/logout">Đăng xuất</a></li>
+                                    <li><a href="<?= base_url() ?>/logout">Đăng xuất</a></li>
                                 <?php endif ?>
                             </ul>
                         </li>

@@ -78,11 +78,11 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <form class="app-search d-none d-md-block d-lg-block">
                                 <input type="text" class="form-control" placeholder="Search & enter">
                             </form>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- ============================================================== -->
                     <!-- User profile and search -->
@@ -175,13 +175,11 @@
                         <li> <a class="waves-effect waves-dark" href="<?= base_url() ?>/admin/mailbox" aria-expanded="false"><i class="icon-envelope"></i><span class="hide-menu">Mailbox</span></a>
 
                         </li>
-
                         <li class="nav-small-cap">--- QUẢN LÝ</li>
-
-                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-people"></i><span class="hide-menu">Account</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-people"></i><span class="hide-menu">User</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?= base_url() ?>/admin/account">All Account</a></li>
-                                <li><a href="<?= base_url() ?>/admin/account/add">Add Account</a></li>
+                                <li><a href="<?= base_url() ?>/admin/account">All User</a></li>
+                                <li><a href="<?= base_url() ?>/admin/account/add">Add User</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-docs"></i><span class="hide-menu">Products</span></a>
@@ -197,15 +195,12 @@
                                 <li><a href="<?= base_url() ?>/admin/categories/add">Add Category</a></li>
                             </ul>
                         </li>
-
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-receipt"></i><span class="hide-menu">Invoice</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?= base_url() ?>/admin/invoices">All new Invoice</a></li>
+                                <li><a href="<?= base_url() ?>/admin/invoices">All Invoice</a></li>
                                 <li><a href="<?= base_url() ?>/admin/invoices/add">Add Invoice</a></li>
-                                <!-- <li><a href="#">History</a></li> -->
                             </ul>
                         </li>
-
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-receipt"></i><span class="hide-menu">Supplier</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="<?= base_url() ?>/admin/supplier">All Supplier</a></li>

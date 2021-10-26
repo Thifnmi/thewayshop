@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\invoiceDetailModel;
 use App\Models\invoiceModel;
 use App\Models\productModel;
+use App\Models\usersModel;
 
 class Invoices extends BaseController
 {
@@ -27,35 +28,41 @@ class Invoices extends BaseController
         $model = new invoiceModel();
         $product_model = new productModel();
         $invoiceDetailModel = new invoiceDetailModel();
+        $userModel = new usersModel();
+        $db = \Config\Database::connect();
+        $query = "SELECT users.id, users.fullname, users.image, users.phone_number, users.gender, users.role_id, users.birthday, users.address,
+                    users.email, users.facebook, accounts.username, accounts.password FROM users JOIN accounts ON users.id = accounts.user_id";
+        $accounts = $db->query($query)->getResultArray();
+        
         if ($this->request->getMethod() == 'post') {
-            $fullname = $this->request->getVar('fullname');
+            $id = $this->request->getVar('user_id');
             $phone = $this->request->getVar('phone');
             $email = $this->request->getVar('email');
             $bill_address = $this->request->getVar('bill_address');
             $note = $this->request->getVar('note');
             $paid_status = $this->request->getVar('paid_status');
             $data_insert = [
-                'fullname' => $fullname,
+                'user_id' => $id,
                 'phone' => $phone,
                 'email' => $email,
                 'bill_address' => $bill_address,
+                'payment_method' => "0",
+                'transporter_id' => "1",
                 'note' => $note,
                 'paid_status' => (int)$paid_status,
-                'create_on' => date("Y-m-d"),
+                'created_on' => date('Y-m-d H:i:s'),
+                'created_by' =>  $_SESSION['user']['username'],
                 'shipping_status' => 0,
 
             ];
-            // var_dump($data_insert);
+            $data_insert['fullname'] = $userModel->getUserById($id)['fullname'];
             $product_var = $this->request->getVar('name[]');
             $product_amount = $this->request->getVar('value[]');
             $id = $model->insert($data_insert);
             echo $id;
             for ($i = 0; $i < count($product_var); $i++) {
-                // echo $product_var[$i].'  ';
-                // echo $product_amount[$i].'\n';
                 $price = str_replace(".", "", $product_model->find($product_var[$i])['price']);
                 $total = (int)$price * (int) $product_amount[$i];
-                // echo $total;
                 $data_order_insert = [
                     'invoice_id' => $id,
                     'product_id' => (int) $product_var[$i],
@@ -69,6 +76,7 @@ class Invoices extends BaseController
         }
         $data['title'] = 'invoice';
         $data['product'] = $product_model->findAll();
+        $data['accounts'] = $accounts;
         echo view('admin/invoice/add', $data);
     }
 
@@ -103,9 +111,9 @@ class Invoices extends BaseController
                 'bill_address' => $bill_address,
                 'note' => $note,
                 'paid_status' => (int)$paid_status,
-                'create_on' => date("Y-m-d"),
+                // 'created_on' => date('Y-m-d H:i:s'),
                 'shipping_status' => $shipping_status,
-
+                'created_by' =>  $_SESSION['user']['username'],
             ];
             $total_bill = 0;
             for ($i = 0; $i < count($arr_product); $i++) {
@@ -113,10 +121,8 @@ class Invoices extends BaseController
                 $total = (int)$price * (int) $product_amount[$i];
                 $total_bill = $total_bill + $total;
             }
-            $data_insert = [
-                'total_bill' => $total_bill,
-            ];
-            $check = $model->update($id,$data_insert);
+            $data_insert['total_bill'] = $total_bill;
+            $model->update($id,$data_insert);
             $model_detail->where('invoice_id', $id)->delete();
             for ($i = 0; $i < count($arr_product); $i++) {
                 $price = str_replace(".", "", $product_model->find($arr_product[$i])['price']);

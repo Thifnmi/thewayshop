@@ -39,8 +39,7 @@
                                         <label class="col-md-12" for="bdate">Date of Birth</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="date" id="bdate" name="birthday" class="form-control mydatepicker" value='<?php echo date("Y-m-d", strtotime($user["birthday"])); ?>''
-                                                >
+                                            <input type="date" id="bdate" name="birthday" class="form-control mydatepicker" value='<?php echo date("Y-m-d", strtotime($user["birthday"])); ?>'>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -74,19 +73,18 @@
                                     <label class="col-md-12" for="phone">Address</span>
                                         </label>
                                         <div class="col-md-12">
-                                            <input type="text" maxlength="11" id="address" name="address" value='<?= $user['address']?>'
+                                            <input type="text" id="address" name="address" value='<?= $user['address']?>'
                                                 class="form-control" placeholder="enter your address">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                     <label class="col-md-12" for="phone">Facebook</span>
                                         </label>
                                         <div class="col-md-12">
                                             <input type="text" maxlength="11" id="facebook" name="facebook" value='<?= $user['facebook']?>'
                                                 class="form-control" placeholder="enter your facebook">
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
                                     <label class="col-md-12" for="phone">Avatar</span>
                                         </label>

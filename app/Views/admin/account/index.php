@@ -15,12 +15,12 @@
                                 <th>Username</th>
                                 <th>Fullname</th>
                                 <th>Email</th>
+                                <th>Role</th>
                                 <th>Birthday</th>
                                 <th>Phone</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             <?php $total = 0;
                                 foreach ($user as $row):
@@ -30,6 +30,7 @@
                                         <td><?= $row['username'] ?></td>
                                         <td><?= $row['fullname'] ?></td>
                                         <td><?= $row['email'] ?></td>
+                                        <td><?php if($row['role_id'] == 0){ echo "Quản trị viên";} elseif($row['role_id'] == 1){ echo "Quản lý";} elseif($row['role_id'] == 2){ echo "Nhân viên";} else{ echo "Khách hàng";} ?></td>
                                         <td><?= $row['birthday'] ?></td>
                                         <td><?= $row['phone_number'] ?></td>
                                         <td>

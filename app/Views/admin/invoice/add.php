@@ -12,28 +12,33 @@
                         <label class="col-md-12" for="example-text3">Client Name</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text3" name="fullname" class="form-control" placeholder="">
+                            <select class="form-control" id="user_id" name="user_id" onchange="change_value()">
+                                <?php foreach($accounts as $account):?>
+                                    <option value="<?=$account['id']?>"><?=$account['fullname']?></option>
+                                <?php $x = $account['id'];  endforeach; ?>
+                            </select>
+                            <!-- <input type="hidden" id="fullname" name="fullname"  value=""/> -->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Phone Number</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="tel" id="example-text3" name="phone" class="form-control" placeholder="">
+                            <input type="tel" id="example-text3" name="phone" require class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Email</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text3" name="email" class="form-control" placeholder="">
+                            <input type="text" id="example-text3" name="email" require class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Address</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text3" name="bill_address" class="form-control" placeholder="">
+                            <input type="text" id="example-text3" require name="bill_address" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group">
@@ -54,7 +59,6 @@
                                     <div class="row">
                                         <div class="col-sm-3 nopadding">
                                             <div class="form-group">
-                                                <!-- <input type="text" class="form-control" id="Schoolname" name="name[]" value="" placeholder="Name"> -->
                                                 <select name="name[]" class='form-control'>
                                                     <?php foreach ($product as $row) : ?>
                                                         <option value="<?= $row['id'] ?>"><?= $row['product_name'] ?></option>
@@ -88,7 +92,12 @@
         </div>
     </div>
 </div>
-
+<!-- <script>
+function change_value() {
+  var x = document.getElementById("user_id").value;
+  document.getElementById("fullname").value = x;
+}
+</script> -->
 <!-- ============================================================== -->
 <!-- End Page Content -->
 

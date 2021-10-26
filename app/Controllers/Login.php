@@ -28,15 +28,8 @@ class Login extends BaseController
             } else {
                 $data["messLogin"] = "fail";
                 return view('client/login',$data);
-                // echo '<script>alert("Tài khoản hoặc mật khẩu không chính xác");</script>';
             }
         }
         return view('client/login');
-    }
-    public function logout()
-    {
-        session_start();
-        session_destroy();
-        return redirect()->to(base_url());
     }
 }

@@ -13,28 +13,28 @@
                         <label class="col-md-12" for="example-text">Product Name</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="product_name" name="product_name" class="form-control" placeholder="enter product name">
+                            <input type="text" id="product_name" name="product_name" require class="form-control" placeholder="enter product name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="code">Product Code</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="code" name="code" class="form-control " placeholder="Product code">
+                            <input type="text" id="code" name="code" require class="form-control " placeholder="Product code">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="price">Price</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="price" name="price" class="form-control" placeholder="enter product price">
+                            <input type="text" id="price" name="price" require class="form-control" placeholder="enter product price">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="quantity">Quantity</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="quantity" name="quantity" class="form-control" placeholder="enter quantity">
+                            <input type="text" id="quantity" name="quantity" require class="form-control" placeholder="enter quantity">
                         </div>
                     </div>
                     <div class="form-group">
@@ -112,36 +112,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Description</h4>
-                                    <div id="education_fields"></div>
-                                    <div class="row">
-                                        <div class="col-sm-3 nopadding">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="Schoolname" name="name[]" value="" placeholder="Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 nopadding">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="Major" name="value[]" value="" placeholder="value">
-                                            </div>
-                                        </div>
-                                        <div class="input-group-append" style="height: 40px;">
-                                            <button class="btn btn-success" type="button" onclick="education_fields();"><i class="fa fa-plus"></i></button>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-
-
                     <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>
                     <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                 </form>

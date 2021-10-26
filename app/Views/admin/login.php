@@ -11,7 +11,11 @@
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="<?= base_url() ?>/client/images/logo.ico" type="image/x-icon">
     <title>Login Admin Mỹ Hạnh </title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
     <!-- page css -->
     <link rel="stylesheet" href="<?= base_url() ?>/admin/crm/dist/css/pages/login-register-lock.css">
     <!-- Custom CSS -->
@@ -35,6 +39,19 @@
     <!-- ============================================================== -->
     <section id="wrapper">
         <div class="login-register" style="background-image:url(<?= base_url() ?>/admin/assets/images/background/login-register.jpg);">
+            <?php if (isset($messLogin)) { ?>
+                <div class="modal fade bd-example-modal-sm show" id="showmess" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: block;padding-right: 17px;">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content" style="width: 500px;">
+                            <!-- <div class="modal-header">
+                        <h3 align="center" class="modal-title" style="font-weight:bold;width: 450px;">Thông báo</h3>
+                        <a type="button" id="close=modal" onclick="hiddenNoti()" class="close" data-dismiss="modal">×</a>
+                    </div> -->
+                            <h5 align="center">Tài khoản hoặc mật khẩu không chính xác.</h1>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
             <div class="login-box card">
                 <div class="card-body">
                     <form class="form-horizontal form-material" id="loginform" action="<?php echo base_url() . '/admin/login' ?>" method="POST">
@@ -46,7 +63,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" type="password" required="" placeholder="Password" name="password" id="password">
+                                <input class="form-control" type="password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Phải bao gồm ít nhất 01 chữ số, 01 chữ cái viết thường, 01 chữ cái viết hoa, 01 ký tự đặc biệt và ít nhất 08 ký tự" placeholder="Password" name="password" id="password">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -56,7 +73,6 @@
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                                         <label class="custom-control-label" for="customCheck1">Remember me</label>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -72,6 +88,13 @@
             </div>
         </div>
     </section>
+    <script>
+        var x = function hiddenNoti() {
+            document.getElementById('showmess').classList.remove('show');
+            document.getElementById('showmess').style.display = 'none';
+        }
+        setTimeout(x, 2000);
+    </script>
 
     <!-- ============================================================== -->
     <!-- End Wrapper -->
