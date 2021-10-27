@@ -2,6 +2,7 @@ if ( typeof cart !== 'undefined'){
     // console.log(cart);
 } else{
     let feeShip = 0;
+    let base_url = "http://localhost/thewayshop/public";
     let totalPricePayments = 0;
     let inputHidden = document.querySelector('input[name="sum-prices"]');
     let cart = [];
@@ -34,39 +35,9 @@ if ( typeof cart !== 'undefined'){
         CheckUrl();
     };
 
-    checkQuantity = () =>{
-        $.ajax({
-            url: "http://localhost/thewayshop/public/Product/getById",
-            type: "GET",
-            dataType: "json",
-            data: {
-                pid: id,
-            },
-            success: function (result) {
-                if (result.status == 200) {
-                    let { data } = result;
-                    const product = {
-                        id: data.id,
-                        name: data.product_name,
-                        image: data.image,
-                        price: data.price,
-                        maxquantity: data.quantity,
-                        quantity: quantity ? quantity : 1,
-                    };
-
-                    getCart();
-                    cart.push(product);
-                    setCart();
-                    renderCart();
-                    CheckUrl();
-                }
-            },
-        });
-    };
-
     getProductById = (id, quantity) => {
         $.ajax({
-            url: "http://localhost/thewayshop/public/Product/getById",
+            url: base_url+"/Product/getById",
             type: "GET",
             dataType: "json",
             data: {
@@ -83,7 +54,6 @@ if ( typeof cart !== 'undefined'){
                         maxquantity: data.quantity,
                         quantity: quantity ? quantity : 1,
                     };
-
                     getCart();
                     cart.push(product);
                     setCart();
@@ -147,7 +117,7 @@ if ( typeof cart !== 'undefined'){
                 html += `<li>
                 <a href="#" style="float: right;margin-left: 5px;color: #333 !important;" data-id="${i.id}" onclick="deleteItem(event, this)"><i class="fas fa-times"></i></a>
                 <a class="photo"><img src="${i.image}" class="cart-thumb" alt="${i.name}" /></a>
-                <a target="_blank" href="http://localhost/thewayshop/public/Product/${i.id}">${i.name.slice(0, 52) + (i.name.length > 52 ? "..." : "")}</a>
+                <a target="_blank" href="`+base_url+`/Product/${i.id}">${i.name.slice(0, 52) + (i.name.length > 52 ? "..." : "")}</a>
                 <p style="margin-left: 60px">${i.quantity} x <span class="price">${i.price} VNĐ</span></p>
             </li> `;
             });
@@ -307,7 +277,7 @@ if ( typeof cart !== 'undefined'){
             CartView.innerHTML = "";
             CartView.innerHTML = `<div style="text-align: center;" class="container">
             <h1>Giỏ hàng rỗng</h1>
-            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" href="http://localhost:8080/thewayshop/public/" >Tiếp tục mua hàng</a>
+            <a class="btn hvr-hover" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" href="`+base_url+`" >Tiếp tục mua hàng</a>
             </div>`;
         }
         
