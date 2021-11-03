@@ -128,7 +128,7 @@
                                         </h4>
                                         <div align="center">
                                             <h5 class="price" style="color:red;"><?=$item['price']?> VNĐ</h5><p></p>
-                                            <a class="btn hvr-hover <?php if((int)$item['quantity'] == 0){ echo "isDisabled";} ?>" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)" >Thêm vào giỏ hàng</a>
+                                            <a class="btn hvr-hover <?php if((int)$item['quantity'] == 0){ echo "disabled";} ?>" style="color: #ffffff;" data-id="<?=$item['id']?>" type="button" onclick="addToCart(event, this)" >Thêm vào giỏ hàng</a>
                                         </div>
                                     </div>
                                 </div>

@@ -24,21 +24,21 @@
                         <label class="col-md-12" for="example-text3">Phone Number</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="tel" id="example-text3" name="phone" require class="form-control" placeholder="">
+                            <input type="tel" id="example-text3" name="phone" required class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Email</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text3" name="email" require class="form-control" placeholder="">
+                            <input type="text" id="example-text3" name="email" required class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="example-text3">Address</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="example-text3" require name="bill_address" class="form-control" placeholder="">
+                            <input type="text" id="example-text3" required name="bill_address" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="form-group">

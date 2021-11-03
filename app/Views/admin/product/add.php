@@ -13,28 +13,28 @@
                         <label class="col-md-12" for="example-text">Product Name</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="product_name" name="product_name" require class="form-control" placeholder="enter product name">
+                            <input type="text" id="product_name" name="product_name" required class="form-control" placeholder="enter product name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="code">Product Code</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="code" name="code" require class="form-control " placeholder="Product code">
+                            <input type="text" id="code" name="code" required class="form-control " placeholder="Product code">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="price">Price</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="price" name="price" require class="form-control" placeholder="enter product price">
+                            <input type="text" id="price" name="price" required class="form-control" placeholder="enter product price">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-12" for="quantity">Quantity</span>
                         </label>
                         <div class="col-md-12">
-                            <input type="text" id="quantity" name="quantity" require class="form-control" placeholder="enter quantity">
+                            <input type="text" id="quantity" name="quantity" required class="form-control" placeholder="enter quantity">
                         </div>
                     </div>
                     <div class="form-group">
